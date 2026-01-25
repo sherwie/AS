@@ -380,7 +380,14 @@ class IngestorService {
 // ============================================
 
 async function main() {
+  console.log('Starting ingestor...');
+  console.log('Current directory:', process.cwd());
+
   const env = loadEnv();
+  const config = getProviderConfig();
+  console.log('RPC URL:', config.solanaRpcHttp);
+  console.log('Has Helius:', config.heliusApiKey ? 'Yes' : 'No');
+
   const service = new IngestorService();
 
   // Setup HTTP server for health/metrics
@@ -435,6 +442,8 @@ async function main() {
 }
 
 main().catch((error) => {
-  logger.error({ error }, 'Fatal error');
+  console.error('Fatal error:', error);
+  console.error('Message:', error?.message);
+  console.error('Stack:', error?.stack);
   process.exit(1);
 });
