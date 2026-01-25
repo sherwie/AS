@@ -326,12 +326,12 @@ export class ScoringEngine implements IScoringEngine {
       }
 
       const freezeAuth = safety.checks.find(c => c.name === 'FREEZE_AUTHORITY');
-      if (freezeAuth?.passed && !freezeAuth.data.freezeAuthority) {
+      if (freezeAuth?.passed && !freezeAuth.data?.freezeAuthority) {
         greenFlags.push('No freeze authority');
       }
 
       const mintAuth = safety.checks.find(c => c.name === 'MINT_AUTHORITY');
-      if (mintAuth?.passed && !mintAuth.data.mintAuthority) {
+      if (mintAuth?.passed && !mintAuth.data?.mintAuthority) {
         greenFlags.push('Mint authority revoked');
       }
     }

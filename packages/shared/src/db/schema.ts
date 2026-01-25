@@ -15,6 +15,7 @@ import {
   index,
   unique,
   primaryKey,
+  serial,
 } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 
@@ -115,7 +116,7 @@ export const pools = pgTable(
 export const tradesAggregate = pgTable(
   'trades_aggregate',
   {
-    id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+    id: serial('id').primaryKey(),
     tokenMint: varchar('token_mint', { length: 44 }).notNull(),
     poolAddress: varchar('pool_address', { length: 44 }),
     timeframe: varchar('timeframe', { length: 8 }).notNull(),
@@ -160,7 +161,7 @@ export const tradesAggregate = pgTable(
 export const holdersSnapshots = pgTable(
   'holders_snapshots',
   {
-    id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+    id: serial('id').primaryKey(),
     tokenMint: varchar('token_mint', { length: 44 }).notNull(),
     timestamp: timestamp('timestamp').notNull().defaultNow(),
 
@@ -190,7 +191,7 @@ interface HolderData {
 export const socialSnapshots = pgTable(
   'social_snapshots',
   {
-    id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+    id: serial('id').primaryKey(),
     tokenMint: varchar('token_mint', { length: 44 }).notNull(),
     timestamp: timestamp('timestamp').notNull().defaultNow(),
 
@@ -224,7 +225,7 @@ export const socialSnapshots = pgTable(
 export const scores = pgTable(
   'scores',
   {
-    id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+    id: serial('id').primaryKey(),
     tokenMint: varchar('token_mint', { length: 44 }).notNull(),
     scoredAt: timestamp('scored_at').notNull().defaultNow(),
     mode: varchar('mode', { length: 16 }).notNull(),
@@ -321,7 +322,7 @@ interface AlertChannelData {
 export const safetyAnalysis = pgTable(
   'safety_analysis',
   {
-    id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+    id: serial('id').primaryKey(),
     tokenMint: varchar('token_mint', { length: 44 }).notNull(),
     analyzedAt: timestamp('analyzed_at').notNull().defaultNow(),
 
@@ -370,7 +371,7 @@ export const blacklistMints = pgTable('blacklist_mints', {
 export const crossVerification = pgTable(
   'cross_verification',
   {
-    id: integer('id').primaryKey().generatedAlwaysAsIdentity(),
+    id: serial('id').primaryKey(),
     tokenMint: varchar('token_mint', { length: 44 }).notNull(),
     verifiedAt: timestamp('verified_at').notNull().defaultNow(),
 
@@ -445,7 +446,7 @@ export type NewToken = typeof tokens.$inferInsert;
 export type Pool = typeof pools.$inferSelect;
 export type NewPool = typeof pools.$inferInsert;
 
-export type TradesAggregate = typeof tradesAggregate.$inferSelect;
+export type TradesAggregateRow = typeof tradesAggregate.$inferSelect;
 export type NewTradesAggregate = typeof tradesAggregate.$inferInsert;
 
 export type HoldersSnapshot = typeof holdersSnapshots.$inferSelect;
@@ -457,7 +458,7 @@ export type NewSocialSnapshot = typeof socialSnapshots.$inferInsert;
 export type Score = typeof scores.$inferSelect;
 export type NewScore = typeof scores.$inferInsert;
 
-export type Alert = typeof alerts.$inferSelect;
+export type AlertRow = typeof alerts.$inferSelect;
 export type NewAlert = typeof alerts.$inferInsert;
 
 export type SafetyAnalysisRow = typeof safetyAnalysis.$inferSelect;

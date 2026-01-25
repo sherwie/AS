@@ -165,9 +165,10 @@ export class PumpfunProvider implements IPumpfunProvider {
     const preTokenBalances = tx.meta?.preTokenBalances || [];
 
     // Find mint address from token balances
-    const tokenMints = new Set(postTokenBalances.map((b: any) => b.mint));
+    const tokenMints = new Set<string>(postTokenBalances.map((b: any) => b.mint as string));
     tokenMints.delete(PROGRAM_IDS.WRAPPED_SOL.toBase58());
-    mintAddress = Array.from(tokenMints)[0];
+    const mintsArray = Array.from(tokenMints);
+    mintAddress = mintsArray.length > 0 ? mintsArray[0] : undefined;
 
     if (!mintAddress && accountKeys.length > 2) {
       // Try to find mint from account keys for CREATE events
@@ -428,7 +429,7 @@ export class PumpfunProvider implements IPumpfunProvider {
           throw new Error(`Pump.fun API error: ${response.status}`);
         }
 
-        const data = await response.json();
+        const data = await response.json() as any[];
         return this.transformApiTokens(data);
       } catch (error) {
         logger.warn({ error }, 'Failed to fetch from pump.fun API');
@@ -454,7 +455,7 @@ export class PumpfunProvider implements IPumpfunProvider {
           throw new Error(`Pump.fun API error: ${response.status}`);
         }
 
-        const data = await response.json();
+        const data = await response.json() as any[];
         return this.transformApiTokens(data);
       } catch (error) {
         logger.warn({ error }, 'Failed to fetch trending from pump.fun API');

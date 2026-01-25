@@ -39,7 +39,7 @@ export async function GET() {
       `);
 
       return NextResponse.json({
-        totalTokens: Object.values(statusMap).reduce((a, b) => a + b, 0),
+        totalTokens: (Object.values(statusMap) as number[]).reduce((a, b) => a + b, 0),
         candidates: statusMap['CANDIDATE'] || 0,
         tracking: statusMap['TRACKING'] || 0,
         rejected: statusMap['REJECTED'] || 0,

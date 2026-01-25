@@ -184,6 +184,7 @@ export interface SafetyCheck {
   severity: 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW' | 'INFO';
   details: string;
   weight: number;
+  data?: Record<string, unknown>;
 }
 
 export type SafetyCheckType =

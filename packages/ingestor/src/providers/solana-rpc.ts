@@ -15,6 +15,7 @@ import {
 import {
   IChainProvider,
   ProviderStatus,
+  TokenInfo,
   TokenMetadata,
   TokenAuthorities,
   TokenAccountInfo,
@@ -141,10 +142,19 @@ export class SolanaRpcProvider implements IChainProvider {
       const info = parsed.info;
       return {
         mintAddress,
+        name: null,
+        symbol: null,
         decimals: info.decimals,
         supply: BigInt(info.supply),
         mintAuthority: info.mintAuthority || null,
         freezeAuthority: info.freezeAuthority || null,
+        metadataUri: null,
+        image: null,
+        description: null,
+        discoveredAt: new Date(),
+        discoverySource: 'SPL_MINT' as const,
+        creatorWallet: null,
+        status: 'TRACKING' as const,
       };
     });
   }
@@ -714,12 +724,4 @@ export class SolanaRpcProvider implements IChainProvider {
     logger.warn('getRecentTrades polling is expensive - prefer WebSocket subscriptions');
     return [];
   }
-}
-
-interface TokenInfo {
-  mintAddress: string;
-  decimals: number;
-  supply: bigint;
-  mintAuthority: string | null;
-  freezeAuthority: string | null;
 }

@@ -2,7 +2,7 @@
  * BullMQ Queue Setup and Job Definitions
  */
 
-import { Queue, Worker, Job, QueueEvents, ConnectionOptions } from 'bullmq';
+import { Queue, Worker, Job, QueueEvents } from 'bullmq';
 import { Redis } from 'ioredis';
 import { createLogger } from '../utils/logger.js';
 
@@ -110,14 +110,14 @@ export interface PollMarketDataJob {
 // ============================================
 
 export class QueueManager {
-  private connection: ConnectionOptions;
+  private connection: Redis;
   private queues: Map<string, Queue> = new Map();
   private workers: Map<string, Worker> = new Map();
   private events: Map<string, QueueEvents> = new Map();
 
   constructor(redisUrl?: string) {
     const url = redisUrl || process.env.REDIS_URL || 'redis://localhost:6379';
-    this.connection = { url };
+    this.connection = new Redis(url, { maxRetriesPerRequest: null });
   }
 
   getQueue<T>(name: string): Queue<T> {

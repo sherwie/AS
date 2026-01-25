@@ -15,6 +15,7 @@
     "@solana/web3.js": "^1.87.6",
     "@solana/spl-token": "^0.3.9",
     "@metaplex-foundation/mpl-token-metadata": "^3.1.0",
+    "drizzle-orm": "^0.29.1",
     "ioredis": "^5.3.2",
     "express": "^4.18.2"
   },
