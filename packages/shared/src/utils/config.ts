@@ -3,13 +3,36 @@
  */
 
 import { config } from 'dotenv';
-import { resolve } from 'path';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { existsSync } from 'fs';
 import { z } from 'zod';
 
-// Load .env from project root (handles running from any package)
-config({ path: resolve(process.cwd(), '.env') });
-config({ path: resolve(process.cwd(), '..', '..', '.env') });
-config({ path: resolve(process.cwd(), '..', '.env') });
+// Find .env file by searching up from current directory
+function findEnvFile(): string | undefined {
+  const possiblePaths = [
+    resolve(process.cwd(), '.env'),
+    resolve(process.cwd(), '..', '.env'),
+    resolve(process.cwd(), '..', '..', '.env'),
+    resolve(process.cwd(), '..', '..', '..', '.env'),
+  ];
+
+  for (const p of possiblePaths) {
+    if (existsSync(p)) {
+      console.log('Found .env at:', p);
+      return p;
+    }
+  }
+  console.log('No .env file found, using defaults');
+  return undefined;
+}
+
+// Load .env
+const envPath = findEnvFile();
+if (envPath) {
+  config({ path: envPath });
+}
+
 import { ProviderConfig, ScoringConfig, SignalMode } from '../types/index.js';
 
 // Environment schema
