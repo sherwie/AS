@@ -69,19 +69,25 @@ class IngestorService {
     this.rateLimiters = createProviderRateLimiters(this.redis);
     this.circuitBreakers = createProviderCircuitBreakers();
 
-    // Initialize Solana connection
-    const httpConnection = new Connection(config.solanaRpcHttp, {
+    // Get RPC URLs (with fallback to public RPC)
+    const httpUrl = config.solanaRpcHttp || 'https://api.mainnet-beta.solana.com';
+    const wsUrl = config.solanaRpcWs || 'wss://api.mainnet-beta.solana.com';
+
+    logger.info({ httpUrl: httpUrl.substring(0, 50) + '...' }, 'Using Solana RPC');
+
+    // Initialize Solana connections for PumpfunProvider
+    const httpConnection = new Connection(httpUrl, {
       commitment: 'confirmed',
     });
-    const wsConnection = new Connection(config.solanaRpcWs, {
+    const wsConnection = new Connection(wsUrl, {
       commitment: 'confirmed',
-      wsEndpoint: config.solanaRpcWs,
+      wsEndpoint: wsUrl,
     });
 
     // Initialize providers
     this.solanaProvider = new SolanaRpcProvider(
-      config.solanaRpcHttp,
-      config.solanaRpcWs,
+      httpUrl,
+      wsUrl,
       this.rateLimiters.rpc,
       this.circuitBreakers.rpc
     );
