@@ -1,0 +1,235 @@
+{
+  "tokenMint": "ExampleMintAddress11111111111111111111111111",
+  "scoredAt": "2024-01-15T10:30:00.000Z",
+  "mode": "BOTH",
+
+  "survivalScore": 72,
+  "runnerScore": 58,
+  "dataCompleteness": 0.78,
+  "confidenceBand": "MED",
+
+  "componentBreakdown": {
+    "safetyComponent": {
+      "score": 72,
+      "weight": 0.35,
+      "contribution": 25.2,
+      "checks": {
+        "FREEZE_AUTHORITY": {
+          "passed": true,
+          "severity": "CRITICAL",
+          "details": "No freeze authority (safe)",
+          "weight": 100
+        },
+        "MINT_AUTHORITY": {
+          "passed": true,
+          "severity": "CRITICAL",
+          "details": "Mint authority revoked (safe)",
+          "weight": 100
+        },
+        "SELLABILITY": {
+          "passed": true,
+          "severity": "CRITICAL",
+          "details": "Token is sellable. Buy impact: 2.3%, Sell impact: 3.1%",
+          "weight": 100
+        },
+        "LIQUIDITY_MIN": {
+          "passed": true,
+          "severity": "HIGH",
+          "details": "Liquidity: $15,420 across 2 pool(s)",
+          "weight": 30
+        },
+        "HOLDER_CONCENTRATION": {
+          "passed": false,
+          "severity": "HIGH",
+          "details": "Top holders own 42% (max: 50%)",
+          "weight": 30
+        },
+        "LP_STATUS": {
+          "passed": true,
+          "severity": "MEDIUM",
+          "details": "1 pool(s) with LP burned",
+          "weight": 15
+        },
+        "SNIPER_DETECTION": {
+          "passed": true,
+          "severity": "MEDIUM",
+          "details": "Basic sniper check passed",
+          "weight": 15
+        },
+        "METADATA_VALID": {
+          "passed": true,
+          "severity": "LOW",
+          "details": "Metaplex metadata found",
+          "weight": 5
+        },
+        "BLACKLIST": {
+          "passed": true,
+          "severity": "CRITICAL",
+          "details": "Token is not blacklisted",
+          "weight": 100
+        }
+      },
+      "riskScore": 28,
+      "hardReject": false
+    },
+
+    "momentumComponent": {
+      "score": 68,
+      "weight": 0.35,
+      "contribution": 23.8,
+      "metrics": {
+        "volumeVelocity": {
+          "timeframe": "5m",
+          "current": 12500,
+          "previous": 8200,
+          "changePercent": 52.4,
+          "score": 76
+        },
+        "tradeVelocity": {
+          "timeframe": "5m",
+          "current": 45,
+          "previous": 32,
+          "changePercent": 40.6,
+          "score": 70
+        },
+        "traderGrowth": {
+          "timeframe": "15m",
+          "current": 128,
+          "previous": 95,
+          "changePercent": 34.7,
+          "score": 67
+        },
+        "holderGrowth": {
+          "timeframe": "1h",
+          "current": 342,
+          "previous": 298,
+          "changePercent": 14.8,
+          "score": 57
+        }
+      },
+      "patterns": {
+        "dipBuyDetected": true,
+        "liquidityStable": true
+      }
+    },
+
+    "socialComponent": {
+      "score": 50,
+      "weight": 0.15,
+      "contribution": 7.5,
+      "platforms": {
+        "telegram": {
+          "enabled": false,
+          "reason": "TELEGRAM_BOT_TOKEN not configured"
+        },
+        "twitter": {
+          "enabled": false,
+          "reason": "X_BEARER_TOKEN not configured"
+        },
+        "discord": {
+          "enabled": false,
+          "reason": "DISCORD_BOT_TOKEN not configured"
+        }
+      },
+      "note": "Social score set to neutral baseline (50) due to no enabled connectors",
+      "botLikelihood": 0,
+      "coordinatedActivity": false
+    },
+
+    "verificationComponent": {
+      "score": 85,
+      "weight": 0.15,
+      "contribution": 12.75,
+      "sources": [
+        {
+          "name": "DexScreener",
+          "enabled": true,
+          "available": true,
+          "price": 0.00001234,
+          "volume24h": 45000,
+          "liquidity": 15420
+        },
+        {
+          "name": "GeckoTerminal",
+          "enabled": true,
+          "available": true,
+          "price": 0.00001228,
+          "volume24h": 44200,
+          "liquidity": 15100
+        },
+        {
+          "name": "Birdeye",
+          "enabled": false,
+          "available": false,
+          "reason": "BIRDEYE_API_KEY not configured"
+        }
+      ],
+      "discrepancies": {
+        "price": 0.49,
+        "volume": 1.8,
+        "liquidity": 2.1
+      },
+      "confidencePenalty": 0.15
+    }
+  },
+
+  "finalCalculation": {
+    "survivalScore": {
+      "formula": "100 - riskScore + bonuses",
+      "riskScore": 28,
+      "bonuses": 0,
+      "result": 72
+    },
+    "runnerScore": {
+      "formula": "weighted_sum(components) + pattern_bonuses - penalties",
+      "weightedSum": 48,
+      "patternBonuses": 10,
+      "penalties": 0,
+      "result": 58
+    }
+  },
+
+  "candidateEvaluation": {
+    "genesisThresholds": {
+      "survivalMin": 60,
+      "runnerMin": 40,
+      "survivalMet": true,
+      "runnerMet": true,
+      "qualifies": true
+    },
+    "ignitionThresholds": {
+      "survivalMin": 50,
+      "runnerMin": 70,
+      "survivalMet": true,
+      "runnerMet": false,
+      "qualifies": false
+    },
+    "hardRejectThreshold": 20,
+    "hardRejected": false,
+    "isCandidate": true,
+    "candidateType": "GENESIS"
+  },
+
+  "explanation": [
+    "Token discovered via Raydium pool creation",
+    "Safety analysis: 8/9 checks passed, riskScore=28",
+    "Volume surging: +52.4% in 5m",
+    "Trade activity increasing: +40.6% trades",
+    "Dip-buy accumulation pattern detected",
+    "Liquidity stable"
+  ],
+
+  "greenFlags": [
+    "Mint authority revoked",
+    "No freeze authority",
+    "Token is sellable on Jupiter",
+    "LP burned on primary pool",
+    "Dip-buy accumulation pattern detected",
+    "Liquidity stable",
+    "Verified across 2 data sources"
+  ],
+
+  "redFlags": [
+    "Warning: Top holders own 42% (approaching 50% threshold)"
+  ]
+}

@@ -1,24 +1,39 @@
 {
-  "name": "as",
+  "name": "solana-meme-signal-bot",
   "version": "1.0.0",
+  "description": "Production-grade Solana Meme Early Signal Bot with on-chain detection and optional social connectors",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "tools"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "^16.1.1",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:integration": "turbo run test:integration",
+    "db:migrate": "pnpm --filter @solana-signal/shared db:migrate",
+    "db:seed": "pnpm --filter @solana-signal/shared db:seed",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "key-wizard": "node tools/key-wizard.js",
+    "start:ingestor": "pnpm --filter @solana-signal/ingestor start",
+    "start:analyzer": "pnpm --filter @solana-signal/analyzer start",
+    "start:notifier": "pnpm --filter @solana-signal/notifier start",
+    "start:dashboard": "pnpm --filter @solana-signal/dashboard start",
+    "start:all": "concurrently \"pnpm start:ingestor\" \"pnpm start:analyzer\" \"pnpm start:notifier\" \"pnpm start:dashboard\""
   },
   "devDependencies": {
-    "@types/node": "^25.0.3",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "eslint": "^9.39.2",
-    "eslint-config-next": "^16.1.1",
-    "typescript": "^5.9.3"
+    "@types/node": "^20.10.0",
+    "concurrently": "^8.2.2",
+    "turbo": "^1.11.0",
+    "typescript": "^5.3.2",
+    "vitest": "^1.0.4",
+    "prettier": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
