@@ -2,8 +2,14 @@
  * Configuration loader with validation
  */
 
-import 'dotenv/config';
+import { config } from 'dotenv';
+import { resolve } from 'path';
 import { z } from 'zod';
+
+// Load .env from project root (handles running from any package)
+config({ path: resolve(process.cwd(), '.env') });
+config({ path: resolve(process.cwd(), '..', '..', '.env') });
+config({ path: resolve(process.cwd(), '..', '.env') });
 import { ProviderConfig, ScoringConfig, SignalMode } from '../types/index.js';
 
 // Environment schema
