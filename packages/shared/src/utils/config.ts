@@ -2,6 +2,7 @@
  * Configuration loader with validation
  */
 
+import 'dotenv/config';
 import { z } from 'zod';
 import { ProviderConfig, ScoringConfig, SignalMode } from '../types/index.js';
 
