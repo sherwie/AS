@@ -70,8 +70,18 @@ class IngestorService {
     this.circuitBreakers = createProviderCircuitBreakers();
 
     // Get RPC URLs (with fallback to public RPC)
-    const httpUrl = config.solanaRpcHttp || 'https://api.mainnet-beta.solana.com';
-    const wsUrl = config.solanaRpcWs || 'wss://api.mainnet-beta.solana.com';
+    const defaultHttp = 'https://api.mainnet-beta.solana.com';
+    const defaultWs = 'wss://api.mainnet-beta.solana.com';
+
+    const httpUrl = (config.solanaRpcHttp && config.solanaRpcHttp.startsWith('http'))
+      ? config.solanaRpcHttp
+      : defaultHttp;
+    const wsUrl = (config.solanaRpcWs && config.solanaRpcWs.startsWith('ws'))
+      ? config.solanaRpcWs
+      : defaultWs;
+
+    console.log('Using HTTP RPC:', httpUrl);
+    console.log('Using WS RPC:', wsUrl);
 
     logger.info({ httpUrl: httpUrl.substring(0, 50) + '...' }, 'Using Solana RPC');
 
