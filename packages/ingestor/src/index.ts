@@ -69,35 +69,24 @@ class IngestorService {
     this.rateLimiters = createProviderRateLimiters(this.redis);
     this.circuitBreakers = createProviderCircuitBreakers();
 
-    // Get RPC URLs (with fallback to public RPC)
-    const defaultHttp = 'https://api.mainnet-beta.solana.com';
-    const defaultWs = 'wss://api.mainnet-beta.solana.com';
+    // HARDCODED URLs - bypassing config completely
+    const httpUrl = 'https://api.mainnet-beta.solana.com';
+    const wsUrl = 'https://api.mainnet-beta.solana.com';
 
-    const httpUrl = (config.solanaRpcHttp && config.solanaRpcHttp.startsWith('http'))
-      ? config.solanaRpcHttp
-      : defaultHttp;
-    const wsUrl = (config.solanaRpcWs && config.solanaRpcWs.startsWith('ws'))
-      ? config.solanaRpcWs
-      : defaultWs;
-
-    console.log('Using HTTP RPC:', httpUrl);
-    console.log('Using WS RPC:', wsUrl);
-
-    logger.info({ httpUrl: httpUrl.substring(0, 50) + '...' }, 'Using Solana RPC');
+    console.log('HARDCODED HTTP RPC:', httpUrl);
 
     // Initialize Solana connections for PumpfunProvider
     const httpConnection = new Connection(httpUrl, {
       commitment: 'confirmed',
     });
-    const wsConnection = new Connection(wsUrl, {
+    const wsConnection = new Connection(httpUrl, {
       commitment: 'confirmed',
-      wsEndpoint: wsUrl,
     });
 
-    // Initialize providers
+    // Initialize providers with hardcoded URLs
     this.solanaProvider = new SolanaRpcProvider(
-      httpUrl,
-      wsUrl,
+      'https://api.mainnet-beta.solana.com',
+      'wss://api.mainnet-beta.solana.com',
       this.rateLimiters.rpc,
       this.circuitBreakers.rpc
     );
