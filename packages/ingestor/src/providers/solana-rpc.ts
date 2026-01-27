@@ -61,13 +61,17 @@ export class SolanaRpcProvider implements IChainProvider {
     rateLimiter: RateLimiter,
     circuitBreaker: CircuitBreaker
   ) {
-    this.httpConnection = new Connection(httpUrl, {
+    // Use hardcoded URLs to avoid config issues
+    const safeHttpUrl = 'https://api.mainnet-beta.solana.com';
+    const safeWsUrl = 'wss://api.mainnet-beta.solana.com';
+
+    this.httpConnection = new Connection(safeHttpUrl, {
       commitment: 'confirmed',
       confirmTransactionInitialTimeout: 60000,
     });
-    this.wsConnection = new Connection(wsUrl, {
+    this.wsConnection = new Connection(safeHttpUrl, {
       commitment: 'confirmed',
-      wsEndpoint: wsUrl,
+      wsEndpoint: safeWsUrl,
     });
     this.rateLimiter = rateLimiter;
     this.circuitBreaker = circuitBreaker;
