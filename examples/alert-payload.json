@@ -1,0 +1,148 @@
+{
+  "genesis_candidate": {
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "type": "GENESIS_CANDIDATE",
+    "tokenMint": "TokenMintAddress111111111111111111111111111",
+    "survivalScore": 78,
+    "runnerScore": 52,
+    "confidenceBand": "MED",
+    "title": "Genesis Candidate: MEME",
+    "summary": "Early-stage token showing strong survival indicators (78/100) with adequate momentum (52/100). Consider for watchlist.",
+    "details": {
+      "tokenName": "MemeToken",
+      "tokenSymbol": "MEME",
+      "priceUsd": 0.00001234,
+      "liquidityUsd": 12500,
+      "marketCapUsd": 45000,
+      "keyMetrics": {
+        "survivalScore": 78,
+        "runnerScore": 52,
+        "dataCompleteness": 0.72
+      },
+      "explanation": [
+        "Token discovered via Raydium pool creation",
+        "Safety analysis completed: 8/9 checks passed",
+        "Momentum analysis: Volume increasing +45% in 5m"
+      ],
+      "redFlags": [
+        "Top 10 holders own 35% (excluding LP)"
+      ],
+      "greenFlags": [
+        "Mint authority revoked",
+        "No freeze authority",
+        "Token is sellable on Jupiter",
+        "LP appears stable",
+        "Volume velocity increasing"
+      ],
+      "dexscreenerUrl": "https://dexscreener.com/solana/TokenMintAddress111111111111111111111111111",
+      "birdeyeUrl": "https://birdeye.so/token/TokenMintAddress111111111111111111111111111?chain=solana",
+      "solscanUrl": "https://solscan.io/token/TokenMintAddress111111111111111111111111111"
+    },
+    "createdAt": "2024-01-15T10:30:00.000Z",
+    "sentAt": "2024-01-15T10:30:02.000Z",
+    "channels": [
+      {
+        "type": "DISCORD_WEBHOOK",
+        "sent": true,
+        "error": null
+      }
+    ]
+  },
+  "ignition_breakout": {
+    "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012",
+    "type": "IGNITION_BREAKOUT",
+    "tokenMint": "TokenMintAddress222222222222222222222222222",
+    "survivalScore": 65,
+    "runnerScore": 82,
+    "confidenceBand": "HIGH",
+    "title": "Ignition Breakout: RUNNER",
+    "summary": "Token exhibiting strong momentum (82/100) with acceptable safety (65/100). Potential breakout conditions.",
+    "details": {
+      "tokenName": "RunnerToken",
+      "tokenSymbol": "RUNNER",
+      "priceUsd": 0.00015678,
+      "liquidityUsd": 85000,
+      "marketCapUsd": 320000,
+      "keyMetrics": {
+        "survivalScore": 65,
+        "runnerScore": 82,
+        "dataCompleteness": 0.88,
+        "volumeChange5m": 125,
+        "uniqueTraders1h": 342
+      },
+      "explanation": [
+        "Token tracked for 45 minutes",
+        "Volume surging: +125% in 5m",
+        "New traders entering: +85% unique traders",
+        "Dip-buy accumulation pattern detected"
+      ],
+      "redFlags": [
+        "Mint authority still exists (configured to allow)"
+      ],
+      "greenFlags": [
+        "Strong volume velocity",
+        "Dip-buy pattern detected",
+        "Liquidity stable at $85K",
+        "Verified across 3 data sources",
+        "High organic social activity"
+      ],
+      "dexscreenerUrl": "https://dexscreener.com/solana/TokenMintAddress222222222222222222222222222",
+      "birdeyeUrl": "https://birdeye.so/token/TokenMintAddress222222222222222222222222222?chain=solana",
+      "solscanUrl": "https://solscan.io/token/TokenMintAddress222222222222222222222222222"
+    },
+    "createdAt": "2024-01-15T11:45:00.000Z",
+    "sentAt": "2024-01-15T11:45:01.500Z",
+    "channels": [
+      {
+        "type": "DISCORD_WEBHOOK",
+        "sent": true,
+        "error": null
+      }
+    ]
+  },
+  "risk_alert": {
+    "id": "c3d4e5f6-a7b8-9012-cdef-345678901234",
+    "type": "RISK_ALERT",
+    "tokenMint": "TokenMintAddress333333333333333333333333333",
+    "survivalScore": 18,
+    "runnerScore": 0,
+    "confidenceBand": "HIGH",
+    "title": "Risk Alert: SCAM",
+    "summary": "WARNING: Token flagged for safety concerns. Survival score: 18/100. Review red flags carefully.",
+    "details": {
+      "tokenName": "ScamToken",
+      "tokenSymbol": "SCAM",
+      "priceUsd": null,
+      "liquidityUsd": 0,
+      "marketCapUsd": null,
+      "keyMetrics": {
+        "survivalScore": 18,
+        "runnerScore": 0,
+        "hardRejected": true
+      },
+      "explanation": [
+        "Token previously tracked as CANDIDATE",
+        "Liquidity removed from pool",
+        "Sellability check now fails"
+      ],
+      "redFlags": [
+        "CRITICAL: Token cannot be sold via Jupiter (potential honeypot)",
+        "CRITICAL: Liquidity pulled - pool has $0 remaining",
+        "Creator wallet previously flagged for rug pulls"
+      ],
+      "greenFlags": [],
+      "dexscreenerUrl": "https://dexscreener.com/solana/TokenMintAddress333333333333333333333333333",
+      "birdeyeUrl": "https://birdeye.so/token/TokenMintAddress333333333333333333333333333?chain=solana",
+      "solscanUrl": "https://solscan.io/token/TokenMintAddress333333333333333333333333333"
+    },
+    "createdAt": "2024-01-15T12:00:00.000Z",
+    "sentAt": "2024-01-15T12:00:00.500Z",
+    "channels": [
+      {
+        "type": "DISCORD_WEBHOOK",
+        "sent": true,
+        "error": null
+      }
+    ]
+  }
+}

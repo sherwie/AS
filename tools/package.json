@@ -1,0 +1,12 @@
+{
+  "name": "@solana-signal/tools",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "key-wizard": "./key-wizard.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.12"
+  }
+}

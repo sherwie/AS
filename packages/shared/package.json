@@ -1,0 +1,31 @@
+{
+  "name": "@solana-signal/shared",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/",
+    "test": "vitest run",
+    "db:migrate": "node dist/db/migrate.js",
+    "db:seed": "node dist/db/seed.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "@solana/spl-token": "^0.3.9",
+    "bullmq": "^4.14.0",
+    "ioredis": "^5.3.2",
+    "pg": "^8.11.3",
+    "drizzle-orm": "^0.29.1",
+    "zod": "^3.22.4",
+    "pino": "^8.17.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.10.9",
+    "drizzle-kit": "^0.20.6",
+    "typescript": "^5.3.2",
+    "vitest": "^1.0.4"
+  }
+}

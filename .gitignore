@@ -1,12 +1,16 @@
 # Dependencies
-/node_modules
+node_modules/
 
 # Next.js
-/.next/
+.next/
 /out/
 
 # Production
 /build
+dist/
+
+# Turbo
+.turbo/
 
 # Misc
 .DS_Store
@@ -19,6 +23,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # Env files
+.env
 .env*.local
 
 # Vercel
@@ -27,3 +32,6 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Lock files (using pnpm)
+package-lock.json
