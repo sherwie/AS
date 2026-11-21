@@ -34,3 +34,7 @@ public/renders/*/keyframes/
 public/renders/*/scenes_audio/*.wav
 public/renders/*/*.wav
 public/renders/*/visuals_only.mp4
+
+public/renders/ep01-20min-calm-budgeting-masterclass/ep01-20min-calm-budgeting-masterclass.mp4
+public/renders/ep01-20min-calm-budgeting-masterclass/visuals_30fps.mp4
+public/renders/ep01-20min-calm-budgeting-masterclass/chapter_clips/

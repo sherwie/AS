@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "historyId": "2a5e8de5-1e04-436c-8d05-83312df36727",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "assets/patrickhand.ttf": {
+      "hash": "0f173b3e6cb6d1af25babf7f0057c5ac4ee11f9992b0469bb817e967ef4ad0fc",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/0f/0f173b3e6cb6d1af25babf7f0057c5ac4ee11f9992b0469bb817e967ef4ad0fc"
+    },
+    "assets/s01_receipts_desk.jpg": {
+      "hash": "6eaee7efe7350dac425f2f6d0fc01777581ff8ad65da8093b97ff2aef16abbe8",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/6e/6eaee7efe7350dac425f2f6d0fc01777581ff8ad65da8093b97ff2aef16abbe8"
+    },
+    "assets/s02_bank_ledger.jpg": {
+      "hash": "6255d757fc8fea7edfe70ac9ee695cd66d8be9ff9dad07bcffd6238507e774b4",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/62/6255d757fc8fea7edfe70ac9ee695cd66d8be9ff9dad07bcffd6238507e774b4"
+    },
+    "assets/s03_retail_store.jpg": {
+      "hash": "c13706ea84b06856df415bb5d48190bdd7d1319f347c6f8ee8b8be784f44d17c",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/c1/c13706ea84b06856df415bb5d48190bdd7d1319f347c6f8ee8b8be784f44d17c"
+    },
+    "assets/s04_vault_architecture.jpg": {
+      "hash": "983413073cfab8e36e36d1eb45b522d93a88a97878fec0ffa8aded6c8d4ab95c",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/98/983413073cfab8e36e36d1eb45b522d93a88a97878fec0ffa8aded6c8d4ab95c"
+    },
+    "assets/s05_artisan_luxury.jpg": {
+      "hash": "dffa50e94b7b2b0170a54fda0811ca96ce446f6259ac021442910738240eb4ee",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/df/dffa50e94b7b2b0170a54fda0811ca96ce446f6259ac021442910738240eb4ee"
+    },
+    "assets/s06_checkout_terminal.jpg": {
+      "hash": "4927085913d6193d720d5014ba357733542993a74ba378ec12fc50179e5819f6",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/49/4927085913d6193d720d5014ba357733542993a74ba378ec12fc50179e5819f6"
+    },
+    "assets/s07_trading_terminal.jpg": {
+      "hash": "ab27a5cb6bf2df95f52f9b86dc71ae4106cffd6fc4f1cbb7196634b2e994ea6d",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/ab/ab27a5cb6bf2df95f52f9b86dc71ae4106cffd6fc4f1cbb7196634b2e994ea6d"
+    },
+    "assets/s08_financial_skyline.jpg": {
+      "hash": "b1fd7f137538945b6b94f181f240ef57afbef4ccd2b72544b6fd1a2c5e36a79a",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/b1/b1fd7f137538945b6b94f181f240ef57afbef4ccd2b72544b6fd1a2c5e36a79a"
+    },
+    "audio/sample_timing.json": {
+      "hash": "02bd6e5f69adb535ba8ec01b8388c56e0d8e6e0d1c0fa4cdf9d1aaf9c4606a75",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/02/02bd6e5f69adb535ba8ec01b8388c56e0d8e6e0d1c0fa4cdf9d1aaf9c4606a75"
+    },
+    "audio/sample_vo.mp3": {
+      "hash": "c8c1e44ef6330987d4021ff22aae27080deb09293df3d2228c8f26b2c5ebd822",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/c8/c8c1e44ef6330987d4021ff22aae27080deb09293df3d2228c8f26b2c5ebd822"
+    },
+    "audio/sample_vo.words.json": {
+      "hash": "631f3ef25b2e47a4ae9ee8a997b5a3462799250d493d10822c36769e8e7b2f5d",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/63/631f3ef25b2e47a4ae9ee8a997b5a3462799250d493d10822c36769e8e7b2f5d"
+    },
+    "clips.js": {
+      "hash": "f6bc186fb37e0a6ab347b17dd220459f4b0e57890253207ae570b0032826c71d",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/f6/f6bc186fb37e0a6ab347b17dd220459f4b0e57890253207ae570b0032826c71d"
+    },
+    "index.html": {
+      "hash": "9d97868ae0cdf7aff1abdf7d9624bae111a0ee6488997550d8c2717e1be12d81",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/9d/9d97868ae0cdf7aff1abdf7d9624bae111a0ee6488997550d8c2717e1be12d81"
+    },
+    "ink-puppet.js": {
+      "hash": "a27ec2ae730003c5f2a95d6e5b838aec24add808b8428c45b3ed5a2b987f8f13",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/a2/a27ec2ae730003c5f2a95d6e5b838aec24add808b8428c45b3ed5a2b987f8f13"
+    },
+    "ink-theater.js": {
+      "hash": "6e4e32c4dc69c20a2988039d9932918b7996f56d1d193d986982734d3b9169b0",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/6e/6e4e32c4dc69c20a2988039d9932918b7996f56d1d193d986982734d3b9169b0"
+    },
+    "audio/sample_master_14lufs.wav": {
+      "hash": "0566fd2e60dffc688780d1f4981d3d071fa251e6aebf3e65641228c0832b0b3f",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/05/0566fd2e60dffc688780d1f4981d3d071fa251e6aebf3e65641228c0832b0b3f"
+    },
+    "audio/sample_music.wav": {
+      "hash": "34984342b8fc0f0b3c00515db9f92dea4b7c328c8e865113e45265f30e8ef9d8",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/34/34984342b8fc0f0b3c00515db9f92dea4b7c328c8e865113e45265f30e8ef9d8"
+    },
+    "audio/sample_vo.wav": {
+      "hash": "882da687653a5dc8d90d8b06ba024127bd16bdae281d206d86ed2c5f4718048e",
+      "content": "/home/antigravity/.cache/hyperframes/history/2a5e8de5-1e04-436c-8d05-83312df36727/blobs/88/882da687653a5dc8d90d8b06ba024127bd16bdae281d206d86ed2c5f4718048e"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "a0255c18-5051-4176-b7b3-a8382a7e5c30",
+      "completedAt": 1795288745979,
+      "output": "/home/antigravity/sherwie/AS/projects/sample-holiday-trap/visuals_30fps.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

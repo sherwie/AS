@@ -1,0 +1,550 @@
+{
+  "duration": 44.93,
+  "words": [
+    {
+      "word": "Every",
+      "start": 0.1,
+      "end": 0.325
+    },
+    {
+      "word": "November",
+      "start": 0.338,
+      "end": 0.926
+    },
+    {
+      "word": "millions",
+      "start": 1.337,
+      "end": 1.712
+    },
+    {
+      "word": "of",
+      "start": 1.712,
+      "end": 1.792
+    },
+    {
+      "word": "households",
+      "start": 1.775,
+      "end": 2.388
+    },
+    {
+      "word": "set",
+      "start": 2.5,
+      "end": 2.663
+    },
+    {
+      "word": "a",
+      "start": 2.663,
+      "end": 2.743
+    },
+    {
+      "word": "strict",
+      "start": 2.725,
+      "end": 3.2
+    },
+    {
+      "word": "four",
+      "start": 3.212,
+      "end": 3.587
+    },
+    {
+      "word": "hundred",
+      "start": 3.6,
+      "end": 3.875
+    },
+    {
+      "word": "euro",
+      "start": 3.888,
+      "end": 4.213
+    },
+    {
+      "word": "holiday",
+      "start": 4.225,
+      "end": 4.613
+    },
+    {
+      "word": "budget",
+      "start": 4.612,
+      "end": 5.062
+    },
+    {
+      "word": "Yet",
+      "start": 5.463,
+      "end": 5.675
+    },
+    {
+      "word": "by",
+      "start": 5.688,
+      "end": 5.826
+    },
+    {
+      "word": "January",
+      "start": 5.825,
+      "end": 6.35
+    },
+    {
+      "word": "fifteenth",
+      "start": 6.35,
+      "end": 7.137
+    },
+    {
+      "word": "bank",
+      "start": 7.425,
+      "end": 7.675
+    },
+    {
+      "word": "clearing",
+      "start": 7.688,
+      "end": 8.026
+    },
+    {
+      "word": "data",
+      "start": 8.025,
+      "end": 8.437
+    },
+    {
+      "word": "shows",
+      "start": 8.738,
+      "end": 9.05
+    },
+    {
+      "word": "the",
+      "start": 9.05,
+      "end": 9.2
+    },
+    {
+      "word": "average",
+      "start": 9.287,
+      "end": 9.662
+    },
+    {
+      "word": "shopper",
+      "start": 9.662,
+      "end": 10.212
+    },
+    {
+      "word": "actually",
+      "start": 10.525,
+      "end": 10.85
+    },
+    {
+      "word": "spent",
+      "start": 10.85,
+      "end": 11.25
+    },
+    {
+      "word": "nine",
+      "start": 11.262,
+      "end": 11.587
+    },
+    {
+      "word": "hundred",
+      "start": 11.588,
+      "end": 11.838
+    },
+    {
+      "word": "and",
+      "start": 11.85,
+      "end": 11.93
+    },
+    {
+      "word": "twenty",
+      "start": 11.887,
+      "end": 12.112
+    },
+    {
+      "word": "euros",
+      "start": 12.125,
+      "end": 12.662
+    },
+    {
+      "word": "That",
+      "start": 13.062,
+      "end": 13.187
+    },
+    {
+      "word": "five",
+      "start": 13.188,
+      "end": 13.438
+    },
+    {
+      "word": "hundred",
+      "start": 13.438,
+      "end": 13.601
+    },
+    {
+      "word": "and",
+      "start": 13.613,
+      "end": 13.693
+    },
+    {
+      "word": "twenty",
+      "start": 13.662,
+      "end": 13.874
+    },
+    {
+      "word": "euro",
+      "start": 13.875,
+      "end": 14.162
+    },
+    {
+      "word": "leak",
+      "start": 14.162,
+      "end": 14.55
+    },
+    {
+      "word": "is",
+      "start": 14.75,
+      "end": 14.85
+    },
+    {
+      "word": "not",
+      "start": 14.85,
+      "end": 15.162
+    },
+    {
+      "word": "a",
+      "start": 15.162,
+      "end": 15.242
+    },
+    {
+      "word": "lack",
+      "start": 15.225,
+      "end": 15.65
+    },
+    {
+      "word": "of",
+      "start": 15.65,
+      "end": 15.75
+    },
+    {
+      "word": "willpower",
+      "start": 15.762,
+      "end": 16.462
+    },
+    {
+      "word": "It",
+      "start": 16.875,
+      "end": 16.955
+    },
+    {
+      "word": "is",
+      "start": 16.925,
+      "end": 17.012
+    },
+    {
+      "word": "triggered",
+      "start": 17.012,
+      "end": 17.4
+    },
+    {
+      "word": "by",
+      "start": 17.4,
+      "end": 17.588
+    },
+    {
+      "word": "four",
+      "start": 17.6,
+      "end": 18.038
+    },
+    {
+      "word": "hidden",
+      "start": 18.038,
+      "end": 18.413
+    },
+    {
+      "word": "retail",
+      "start": 18.413,
+      "end": 18.925
+    },
+    {
+      "word": "traps",
+      "start": 18.925,
+      "end": 19.587
+    },
+    {
+      "word": "decoy",
+      "start": 19.837,
+      "end": 20.249
+    },
+    {
+      "word": "price",
+      "start": 20.262,
+      "end": 20.7
+    },
+    {
+      "word": "anchors",
+      "start": 20.712,
+      "end": 21.287
+    },
+    {
+      "word": "guilt",
+      "start": 21.525,
+      "end": 21.812
+    },
+    {
+      "word": "upgrades",
+      "start": 21.887,
+      "end": 22.549
+    },
+    {
+      "word": "panic",
+      "start": 22.625,
+      "end": 22.987
+    },
+    {
+      "word": "shipping",
+      "start": 22.988,
+      "end": 23.35
+    },
+    {
+      "word": "fees",
+      "start": 23.363,
+      "end": 23.925
+    },
+    {
+      "word": "and",
+      "start": 24.188,
+      "end": 24.313
+    },
+    {
+      "word": "fake",
+      "start": 24.312,
+      "end": 24.587
+    },
+    {
+      "word": "forty-percent-off",
+      "start": 24.6,
+      "end": 25.5
+    },
+    {
+      "word": "checkout",
+      "start": 25.5,
+      "end": 25.912
+    },
+    {
+      "word": "deals",
+      "start": 25.913,
+      "end": 26.4
+    },
+    {
+      "word": "To",
+      "start": 26.812,
+      "end": 26.892
+    },
+    {
+      "word": "beat",
+      "start": 26.887,
+      "end": 27.162
+    },
+    {
+      "word": "it",
+      "start": 27.163,
+      "end": 27.338
+    },
+    {
+      "word": "use",
+      "start": 27.8,
+      "end": 28.075
+    },
+    {
+      "word": "the",
+      "start": 28.075,
+      "end": 28.188
+    },
+    {
+      "word": "Three-Column",
+      "start": 28.188,
+      "end": 28.888
+    },
+    {
+      "word": "Calm",
+      "start": 28.887,
+      "end": 29.237
+    },
+    {
+      "word": "Budgeting",
+      "start": 29.312,
+      "end": 29.787
+    },
+    {
+      "word": "Rule",
+      "start": 29.8,
+      "end": 30.025
+    },
+    {
+      "word": "lock",
+      "start": 30.562,
+      "end": 30.849
+    },
+    {
+      "word": "a",
+      "start": 30.925,
+      "end": 31.005
+    },
+    {
+      "word": "sixty-euro",
+      "start": 30.988,
+      "end": 31.613
+    },
+    {
+      "word": "friction",
+      "start": 31.613,
+      "end": 31.988
+    },
+    {
+      "word": "buffer",
+      "start": 31.988,
+      "end": 32.338
+    },
+    {
+      "word": "first",
+      "start": 32.337,
+      "end": 32.899
+    },
+    {
+      "word": "cap",
+      "start": 33.163,
+      "end": 33.4
+    },
+    {
+      "word": "four",
+      "start": 33.413,
+      "end": 33.65
+    },
+    {
+      "word": "core",
+      "start": 33.65,
+      "end": 33.913
+    },
+    {
+      "word": "gifts",
+      "start": 33.913,
+      "end": 34.263
+    },
+    {
+      "word": "at",
+      "start": 34.263,
+      "end": 34.363
+    },
+    {
+      "word": "fifty-five",
+      "start": 34.362,
+      "end": 35.05
+    },
+    {
+      "word": "euros",
+      "start": 35.062,
+      "end": 35.574
+    },
+    {
+      "word": "and",
+      "start": 35.938,
+      "end": 36.025
+    },
+    {
+      "word": "buy",
+      "start": 36.025,
+      "end": 36.2
+    },
+    {
+      "word": "at",
+      "start": 36.2,
+      "end": 36.28
+    },
+    {
+      "word": "the",
+      "start": 36.263,
+      "end": 36.343
+    },
+    {
+      "word": "top",
+      "start": 36.337,
+      "end": 36.624
+    },
+    {
+      "word": "of",
+      "start": 36.625,
+      "end": 36.705
+    },
+    {
+      "word": "a",
+      "start": 36.663,
+      "end": 36.743
+    },
+    {
+      "word": "twenty-euro",
+      "start": 36.712,
+      "end": 37.212
+    },
+    {
+      "word": "artisan",
+      "start": 37.225,
+      "end": 37.563
+    },
+    {
+      "word": "category",
+      "start": 37.562,
+      "end": 38.187
+    },
+    {
+      "word": "Same",
+      "start": 38.587,
+      "end": 38.937
+    },
+    {
+      "word": "ten",
+      "start": 38.95,
+      "end": 39.2
+    },
+    {
+      "word": "recipients",
+      "start": 39.2,
+      "end": 39.987
+    },
+    {
+      "word": "Zero",
+      "start": 40.388,
+      "end": 40.726
+    },
+    {
+      "word": "January",
+      "start": 40.737,
+      "end": 41.237
+    },
+    {
+      "word": "debt",
+      "start": 41.237,
+      "end": 41.587
+    },
+    {
+      "word": "Five",
+      "start": 42.075,
+      "end": 42.287
+    },
+    {
+      "word": "hundred",
+      "start": 42.3,
+      "end": 42.5
+    },
+    {
+      "word": "and",
+      "start": 42.5,
+      "end": 42.58
+    },
+    {
+      "word": "twenty-eight",
+      "start": 42.55,
+      "end": 43.037
+    },
+    {
+      "word": "euros",
+      "start": 43.05,
+      "end": 43.438
+    },
+    {
+      "word": "saved",
+      "start": 43.438,
+      "end": 43.95
+    }
+  ]
+}
