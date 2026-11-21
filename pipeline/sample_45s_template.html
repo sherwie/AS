@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>The €400 Holiday Money Trap — 45s True-30fps HyperFrames Sample</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --bg-void: #05080f;
+        --bg-panel: rgba(12, 18, 32, 0.88);
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --gold: #f59e0b;
+        --crimson: #ef4444;
+        --emerald: #10b981;
+        --cyan: #22d3ee;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #05080f;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--text-main);
+      }
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+      .stage-fill {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 80% 60% at 50% 45%, rgba(16, 26, 48, 0.95) 0%, #04070d 100%);
+      }
+      /* Procedural Canvas Particle & Data Grid Layer */
+      #bg-canvas {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        display: block;
+      }
+      /* Oversized Ghost Watermark Type */
+      .ghost-type {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 320px;
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        color: rgba(248, 250, 252, 0.025);
+        white-space: nowrap;
+        pointer-events: none;
+        user-select: none;
+      }
+      /* Top Broadcast Forensic Telemetry Bar */
+      .telemetry-bar {
+        position: absolute;
+        top: 32px;
+        left: 64px;
+        right: 64px;
+        height: 54px;
+        background: rgba(9, 14, 26, 0.86);
+        border: 1px solid rgba(248, 250, 252, 0.14);
+        border-left: 4px solid var(--gold);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px;
+        z-index: 50;
+      }
+      .telemetry-left {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .rec-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--crimson);
+        box-shadow: 0 0 12px var(--crimson);
+      }
+      .telemetry-tag {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 15px;
+        font-weight: 800;
+        color: var(--gold);
+        letter-spacing: 0.12em;
+      }
+      .telemetry-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #f8fafc;
+        letter-spacing: 0.06em;
+      }
+      .telemetry-right {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 14px;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      /* Beat Containers */
+      .beat {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* =====================================================
+         BEAT 1 (0 - 16.6s): LIVE COUNTER & RING GAUGE
+         ===================================================== */
+      .b1-layout {
+        position: absolute;
+        top: 118px;
+        left: 72px;
+        right: 72px;
+        bottom: 130px;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 44px;
+        align-items: center;
+      }
+      .b1-left-card {
+        background: linear-gradient(155deg, rgba(13, 20, 36, 0.92) 0%, rgba(6, 10, 20, 0.96) 100%);
+        border: 1px solid rgba(248, 250, 252, 0.16);
+        border-top: 5px solid var(--emerald);
+        border-radius: 26px;
+        padding: 46px 54px;
+        box-shadow: 0 36px 80px rgba(0, 0, 0, 0.72);
+        position: relative;
+      }
+      .b1-eyebrow {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        color: var(--emerald);
+        margin-bottom: 12px;
+      }
+      .b1-counter-row {
+        display: flex;
+        align-items: baseline;
+        gap: 24px;
+      }
+      .b1-main-counter {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 162px;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        color: #f8fafc;
+        text-shadow: 0 0 48px rgba(16, 185, 129, 0.45);
+      }
+      .b1-delta-pill {
+        padding: 10px 20px;
+        border-radius: 999px;
+        background: rgba(239, 68, 68, 0.18);
+        border: 2px solid var(--crimson);
+        color: #fca5a5;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 26px;
+        font-weight: 900;
+        opacity: 0;
+      }
+      .b1-bar-track {
+        margin-top: 28px;
+        height: 22px;
+        border-radius: 999px;
+        background: rgba(248, 250, 252, 0.08);
+        overflow: hidden;
+        position: relative;
+      }
+      .b1-bar-fill {
+        width: 0%;
+        height: 100%;
+        border-radius: 999px;
+        background: var(--emerald);
+        box-shadow: 0 0 24px var(--emerald);
+      }
+      .b1-bar-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 15px;
+        color: var(--text-muted);
+      }
+      .b1-quote-strip {
+        margin-top: 32px;
+        padding: 20px 26px;
+        border-radius: 14px;
+        background: rgba(30, 41, 59, 0.55);
+        border-left: 5px solid var(--gold);
+        position: relative;
+        overflow: hidden;
+      }
+      .b1-highlight-swipe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        background: linear-gradient(90deg, rgba(245, 158, 11, 0.25) 0%, rgba(245, 158, 11, 0.04) 100%);
+      }
+      .b1-quote-text {
+        position: relative;
+        font-size: 26px;
+        font-weight: 700;
+        color: #f8fafc;
+        line-height: 1.35;
+      }
+      /* Right Side SVG Ring Gauge Card */
+      .b1-right-card {
+        background: linear-gradient(155deg, rgba(13, 20, 36, 0.92) 0%, rgba(6, 10, 20, 0.96) 100%);
+        border: 1px solid rgba(248, 250, 252, 0.16);
+        border-radius: 26px;
+        padding: 38px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 36px 80px rgba(0, 0, 0, 0.72);
+      }
+
+      /* =====================================================
+         BEAT 2 (16.6 - 26.8s): 4 HIDDEN RETAIL TRAPS (3D TILT)
+         ===================================================== */
+      .b2-container {
+        position: absolute;
+        top: 112px;
+        left: 72px;
+        right: 72px;
+        bottom: 130px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        perspective: 1100px;
+      }
+      .b2-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .b2-title {
+        font-size: 46px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+      }
+      .b2-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+        flex: 1;
+        transform-style: preserve-3d;
+      }
+      .trap-card {
+        background: linear-gradient(155deg, rgba(16, 22, 38, 0.94) 0%, rgba(8, 12, 22, 0.97) 100%);
+        border: 1px solid rgba(248, 250, 252, 0.16);
+        border-top: 5px solid var(--crimson);
+        border-radius: 22px;
+        padding: 28px 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 28px 60px rgba(0, 0, 0, 0.68);
+        transform-style: preserve-3d;
+        opacity: 0;
+      }
+      .trap-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .trap-badge {
+        padding: 6px 14px;
+        border-radius: 6px;
+        background: rgba(239, 68, 68, 0.18);
+        border: 1px solid var(--crimson);
+        color: #fca5a5;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 14px;
+        font-weight: 800;
+      }
+      .trap-cost {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 44px;
+        font-weight: 900;
+        color: var(--crimson);
+      }
+      .trap-name {
+        font-size: 32px;
+        font-weight: 800;
+        color: #f8fafc;
+      }
+      .trap-desc {
+        font-size: 20px;
+        color: #cbd5e1;
+        line-height: 1.4;
+      }
+
+      /* =====================================================
+         BEAT 3 (26.8 - 38.4s): 3-COLUMN CALM BUDGETING RULE
+         ===================================================== */
+      .b3-container {
+        position: absolute;
+        top: 112px;
+        left: 72px;
+        right: 72px;
+        bottom: 130px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .b3-root-node {
+        margin: 0 auto;
+        padding: 20px 44px;
+        border-radius: 18px;
+        background: rgba(15, 23, 42, 0.94);
+        border: 2px solid var(--cyan);
+        box-shadow: 0 0 40px rgba(34, 211, 238, 0.22);
+        font-size: 32px;
+        font-weight: 900;
+        text-align: center;
+        color: #f8fafc;
+      }
+      .b3-cols {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        flex: 1;
+      }
+      .col-card {
+        background: linear-gradient(160deg, rgba(11, 22, 34, 0.94) 0%, rgba(6, 12, 20, 0.97) 100%);
+        border: 2px solid var(--emerald);
+        border-radius: 22px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 28px 65px rgba(0, 0, 0, 0.65);
+        opacity: 0;
+      }
+
+      /* =====================================================
+         BEAT 4 (38.4 - 44.93s): DUAL RECEIPT PAYOFF (+€528 SAVED)
+         ===================================================== */
+      .b4-container {
+        position: absolute;
+        top: 112px;
+        left: 72px;
+        right: 72px;
+        bottom: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 26px;
+        perspective: 1100px;
+      }
+      .b4-grid {
+        display: grid;
+        grid-template-columns: 1fr 140px 1fr;
+        gap: 24px;
+        align-items: center;
+      }
+      .b4-card {
+        border-radius: 24px;
+        padding: 40px 44px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        box-shadow: 0 32px 75px rgba(0, 0, 0, 0.72);
+      }
+
+      /* =====================================================
+         LIVE WORD-SYNCED DOCUMENTARY SUBTITLE BAR
+         ===================================================== */
+      .caption-bar {
+        position: absolute;
+        bottom: 36px;
+        left: 120px;
+        right: 120px;
+        display: flex;
+        justify-content: center;
+        z-index: 60;
+      }
+      .caption-box {
+        padding: 12px 32px;
+        border-radius: 14px;
+        background: rgba(5, 8, 15, 0.85);
+        border: 1px solid rgba(248, 250, 252, 0.16);
+        box-shadow: 0 14px 36px rgba(0, 0, 0, 0.65);
+        font-size: 38px;
+        font-weight: 800;
+        text-align: center;
+        letter-spacing: -0.01em;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="44.93"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div class="stage-fill"></div>
+      <canvas id="bg-canvas" width="1920" height="1080"></canvas>
+      <div id="ghost-watermark" class="ghost-type">€400 → €920</div>
+
+      <!-- Broadcast Telemetry Bar -->
+      <div class="telemetry-bar">
+        <div class="telemetry-left">
+          <div id="rec-indicator" class="rec-dot"></div>
+          <span id="telemetry-chapter" class="telemetry-tag">BEAT 01 // EMPIRICAL BANK AUTOPSY</span>
+          <span style="color: rgba(248,250,252,0.25)">|</span>
+          <span id="telemetry-title" class="telemetry-title">THE €400 → €920 HOLIDAY SPENDING ILLUSION</span>
+        </div>
+        <div class="telemetry-right">
+          <span>THE DECISION LEDGER // CALM BUDGETING ENGINE</span>
+          <span id="telemetry-clock" style="color: #f8fafc; font-weight: 800">00:00.00</span>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           BEAT 1 (0.0s - 16.6s): LIVE COUNTER & RING GAUGE
+           ========================================================= -->
+      <div id="beat1" class="beat">
+        <div class="b1-layout">
+          <div id="b1-card" class="b1-left-card">
+            <div id="b1-eyebrow" class="b1-eyebrow">
+              NOVEMBER PLANNED HOLIDAY BUDGET CAP
+            </div>
+            <div class="b1-counter-row">
+              <div id="b1-counter" class="b1-main-counter">€0</div>
+              <div id="b1-delta" class="b1-delta-pill">▲ +€520 LEAK</div>
+            </div>
+            <div class="b1-bar-track">
+              <div id="b1-bar" class="b1-bar-fill"></div>
+            </div>
+            <div class="b1-bar-labels">
+              <span>€0.00</span>
+              <span style="color: #10b981; font-weight: 800">PLANNED CAP: €400.00</span>
+              <span style="color: #ef4444; font-weight: 800">JAN 15 BANK BILL: €920.00</span>
+            </div>
+            <div class="b1-quote-strip">
+              <div id="b1-swipe" class="b1-highlight-swipe"></div>
+              <div id="b1-quote" class="b1-quote-text">
+                “That €520 leak is not a lack of willpower — it is an engineered retail math trap.”
+              </div>
+            </div>
+          </div>
+
+          <div id="b1-right" class="b1-right-card">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #94a3b8; letter-spacing: 0.1em; margin-bottom: 16px;">
+              HOUSEHOLD BUDGET UTILIZATION METER
+            </div>
+            <svg width="360" height="360" viewBox="0 0 360 360">
+              <circle
+                cx="180"
+                cy="180"
+                r="142"
+                fill="none"
+                stroke="rgba(248, 250, 252, 0.08)"
+                stroke-width="24"
+              />
+              <circle
+                id="b1-ring"
+                cx="180"
+                cy="180"
+                r="142"
+                fill="none"
+                stroke="#10b981"
+                stroke-width="24"
+                stroke-linecap="round"
+                stroke-dasharray="892"
+                stroke-dashoffset="892"
+                transform="rotate(-90 180 180)"
+              />
+              <text
+                id="b1-ring-pct"
+                x="180"
+                y="175"
+                text-anchor="middle"
+                fill="#f8fafc"
+                font-family="JetBrains Mono, monospace"
+                font-size="68"
+                font-weight="900"
+              >
+                0%
+              </text>
+              <text
+                id="b1-ring-sub"
+                x="180"
+                y="218"
+                text-anchor="middle"
+                fill="#94a3b8"
+                font-family="JetBrains Mono, monospace"
+                font-size="18"
+                font-weight="700"
+              >
+                OF €400 CAP
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           BEAT 2 (16.6s - 26.8s): 4 HIDDEN RETAIL TRAPS
+           ========================================================= -->
+      <div id="beat2" class="beat">
+        <div class="b2-container">
+          <div class="b2-header">
+            <div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #ef4444; font-weight: 800; letter-spacing: 0.14em;">
+                FORENSIC BREAKDOWN // WHERE THE €520 ACTUALLY GOES
+              </div>
+              <div class="b2-title">The 4 Invisible Retail Multipliers</div>
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 900; color: #ef4444; background: rgba(239,68,68,0.14); padding: 10px 24px; border-radius: 12px; border: 1px solid #ef4444;">
+              TOTAL UNPLANNED DRAIN: <span id="b2-leak-sum">+€0</span>
+            </div>
+          </div>
+
+          <div class="b2-grid">
+            <div id="trap1" class="trap-card">
+              <div class="trap-top">
+                <span class="trap-badge">TRAP 01 // ANCHOR CREEP</span>
+                <span class="trap-cost">+€130</span>
+              </div>
+              <div class="trap-name">Decoy Price Anchors</div>
+              <div class="trap-desc">
+                Placing a €150 item next to a €79 bundle makes €79 feel cheap—even when your cap was €55.
+              </div>
+            </div>
+
+            <div id="trap2" class="trap-card" style="border-top-color: #f59e0b">
+              <div class="trap-top">
+                <span class="trap-badge" style="color: #fcd34d; border-color: #f59e0b; background: rgba(245,158,11,0.16)">TRAP 02 // RECIPROCITY</span>
+                <span class="trap-cost" style="color: #f59e0b">+€115</span>
+              </div>
+              <div class="trap-name">Social Guilt Upgrades</div>
+              <div class="trap-desc">
+                Last-minute panic upgrades for extended family &amp; co-worker exchanges without fixed caps.
+              </div>
+            </div>
+
+            <div id="trap3" class="trap-card" style="border-top-color: #ec4899">
+              <div class="trap-top">
+                <span class="trap-badge" style="color: #f9a8d4; border-color: #ec4899; background: rgba(236,72,153,0.16)">TRAP 03 // FRICTION TAX</span>
+                <span class="trap-cost" style="color: #ec4899">+€125</span>
+              </div>
+              <div class="trap-name">Panic Shipping &amp; Wrapping</div>
+              <div class="trap-desc">
+                Unbudgeted express delivery fees, gift bags, ribbons, and holiday hosting contributions.
+              </div>
+            </div>
+
+            <div id="trap4" class="trap-card" style="border-top-color: #ef4444">
+              <div class="trap-top">
+                <span class="trap-badge">TRAP 04 // SELF-CHECKOUT</span>
+                <span class="trap-cost">+€150</span>
+              </div>
+              <div class="trap-name">Fake “40% Off” Checkout Deals</div>
+              <div class="trap-desc">
+                “One for them, one for me” impulse add-ons triggered by artificially inflated reference prices.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           BEAT 3 (26.8s - 38.4s): 3-COLUMN CALM BUDGETING RULE
+           ========================================================= -->
+      <div id="beat3" class="beat">
+        <div class="b3-container">
+          <div id="b3-root" class="b3-root-node">
+            THE 3-COLUMN CALM BUDGETING RULE // HARD CEILING: €400.00
+          </div>
+
+          <div class="b3-cols">
+            <div id="col1" class="col-card" style="border-color: #f59e0b">
+              <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 800; color: #f59e0b; margin-bottom: 12px;">
+                  COLUMN 01 // LOCK FIRST (15%)
+                </div>
+                <div style="font-size: 32px; font-weight: 900; margin-bottom: 14px;">
+                  The €60 Friction Buffer
+                </div>
+                <div style="font-size: 20px; color: #cbd5e1; line-height: 1.45;">
+                  Deduct €60 before searching for gift #1. Absorbs all wrapping, shipping, and host bottles so credit card spillover is zero.
+                </div>
+              </div>
+              <div style="padding-top: 18px; border-top: 1px solid rgba(248,250,252,0.14); display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: monospace; color: #94a3b8; font-size: 18px;">LOCKED ESCROW</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 40px; font-weight: 900; color: #f59e0b;">€60.00</span>
+              </div>
+            </div>
+
+            <div id="col2" class="col-card" style="border-color: #22d3ee">
+              <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 800; color: #22d3ee; margin-bottom: 12px;">
+                  COLUMN 02 // CORE CIRCLE (55%)
+                </div>
+                <div style="font-size: 32px; font-weight: 900; margin-bottom: 14px;">
+                  4 Core Gifts × €55 Cap
+                </div>
+                <div style="font-size: 20px; color: #cbd5e1; line-height: 1.45;">
+                  Assign a hard €55 ceiling next to each inner-circle name before opening a browser tab. Price cap precedes product search.
+                </div>
+              </div>
+              <div style="padding-top: 18px; border-top: 1px solid rgba(248,250,252,0.14); display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: monospace; color: #94a3b8; font-size: 18px;">4 RECIPIENTS</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 40px; font-weight: 900; color: #22d3ee;">€220.00</span>
+              </div>
+            </div>
+
+            <div id="col3" class="col-card" style="border-color: #10b981">
+              <div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 800; color: #10b981; margin-bottom: 12px;">
+                  COLUMN 03 // CATEGORY TOP (30%)
+                </div>
+                <div style="font-size: 32px; font-weight: 900; margin-bottom: 14px;">
+                  6 Artisan Gifts × €20
+                </div>
+                <div style="font-size: 20px; color: #cbd5e1; line-height: 1.45;">
+                  Buy at the top of a €20 category (single-origin olive oil, craft coffee, curated book)—never the bottom of a €60 category.
+                </div>
+              </div>
+              <div style="padding-top: 18px; border-top: 1px solid rgba(248,250,252,0.14); display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: monospace; color: #94a3b8; font-size: 18px;">6 RECIPIENTS</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 40px; font-weight: 900; color: #10b981;">€120.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           BEAT 4 (38.4s - 44.93s): FINAL PAYOFF (+€528 SAVED)
+           ========================================================= -->
+      <div id="beat4" class="beat">
+        <div class="b4-container">
+          <div style="text-align: center; font-size: 44px; font-weight: 900; letter-spacing: -0.02em;">
+            SAME 10 RECIPIENTS // ZERO JANUARY DEBT
+          </div>
+
+          <div class="b4-grid">
+            <div
+              id="b4-left"
+              class="b4-card"
+              style="background: linear-gradient(155deg, rgba(28, 11, 18, 0.94) 0%, rgba(12, 6, 10, 0.97) 100%); border: 2px solid #ef4444;"
+            >
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; color: #fca5a5; font-weight: 800;">
+                REACTIVE DECEMBER SHOPPER
+              </div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 92px; font-weight: 900; color: #ef4444; line-height: 1;">
+                €920.00
+              </div>
+              <div style="font-size: 20px; color: #fca5a5;">
+                4 unbudgeted retail traps + January credit card hangover.
+              </div>
+            </div>
+
+            <div
+              id="b4-vs"
+              style="width: 108px; height: 108px; border-radius: 50%; background: #0f172a; border: 3px solid #f59e0b; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 900; color: #f59e0b; box-shadow: 0 0 36px rgba(245,158,11,0.4);"
+            >
+              VS
+            </div>
+
+            <div
+              id="b4-right"
+              class="b4-card"
+              style="background: linear-gradient(155deg, rgba(8, 28, 24, 0.94) 0%, rgba(5, 14, 14, 0.97) 100%); border: 2px solid #10b981;"
+            >
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; color: #6ee7b7; font-weight: 800;">
+                3-COLUMN CALM BUDGETING LEDGER
+              </div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 92px; font-weight: 900; color: #10b981; line-height: 1;">
+                €392.00
+              </div>
+              <div style="font-size: 20px; color: #6ee7b7;">
+                100% cash-settled • Higher perceived luxury score.
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="b4-savings"
+            style="margin: 0 auto; padding: 16px 42px; border-radius: 999px; background: rgba(16, 185, 129, 0.2); border: 2px solid #10b981; color: #10b981; font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 900; box-shadow: 0 0 45px rgba(16,185,129,0.35);"
+          >
+            NET JANUARY WEALTH ADVANTAGE: +€528.00 SAVED
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Word-Synced Caption Bar -->
+      <div class="caption-bar">
+        <div id="caption-box" class="caption-box"></div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+
+      // Exact word timings from Edge-TTS WordBoundary
+      var WORDS = __WORDS_JSON__;
+
+      // Build pages of 7 words
+      var PAGES = [];
+      for (var i = 0; i < WORDS.length; i += 7) {
+        var slice = WORDS.slice(i, i + 7);
+        if (slice.length > 0) {
+          PAGES.push({
+            start: slice[0].start,
+            end: slice[slice.length - 1].end + 0.25,
+            words: slice
+          });
+        }
+      }
+
+      // Deterministic Procedural Canvas Background (30fps animated grid + drifting data particles)
+      var canvas = document.getElementById("bg-canvas");
+      var ctx = canvas.getContext("2d");
+      function hash(n) {
+        var x = Math.sin(n * 12.9898 + 78.233) * 43758.5453;
+        return x - Math.floor(x);
+      }
+
+      function renderProceduralCanvas(t) {
+        ctx.clearRect(0, 0, 1920, 1080);
+
+        // Moving architectural grid
+        ctx.strokeStyle = "rgba(248, 250, 252, 0.035)";
+        ctx.lineWidth = 1;
+        var offsetX = (t * 14) % 120;
+        var offsetY = (t * 8) % 120;
+        for (var x = -120 + offsetX; x < 1920; x += 120) {
+          ctx.beginPath();
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, 1080);
+          ctx.stroke();
+        }
+        for (var y = -120 + offsetY; y < 1080; y += 120) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(1920, y);
+          ctx.stroke();
+        }
+
+        // 45 drifting ambient data nodes
+        for (var i = 0; i < 45; i++) {
+          var px = (hash(i * 3 + 1) * 1920 + t * (12 + hash(i) * 20)) % 1920;
+          var py = (hash(i * 7 + 2) * 1080 + Math.sin(t * 0.8 + i) * 25 + 1080) % 1080;
+          var r = 1.5 + hash(i * 11) * 2.5;
+          var alpha = 0.12 + 0.18 * (0.5 + 0.5 * Math.sin(t * 2 + i));
+          ctx.fillStyle = i % 3 === 0 ? "rgba(245, 158, 11, " + alpha + ")" : "rgba(34, 211, 238, " + alpha + ")";
+          ctx.beginPath();
+          ctx.arc(px, py, r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // Caption renderer
+      var captionBox = document.getElementById("caption-box");
+      function updateCaptions(t) {
+        var activePage = null;
+        for (var p = 0; p < PAGES.length; p++) {
+          if (t >= PAGES[p].start - 0.08 && t <= PAGES[p].end) {
+            activePage = PAGES[p];
+            break;
+          }
+        }
+        if (!activePage) {
+          captionBox.style.opacity = "0";
+          return;
+        }
+        captionBox.style.opacity = "1";
+        var html = "";
+        for (var w = 0; w < activePage.words.length; w++) {
+          var wordObj = activePage.words[w];
+          var isCurrent = t >= wordObj.start - 0.04 && t <= wordObj.end + 0.08;
+          var isPast = t > wordObj.end + 0.08;
+          var color = isCurrent ? "#f59e0b" : isPast ? "#f8fafc" : "rgba(248, 250, 252, 0.55)";
+          var shadow = isCurrent ? "0 0 22px rgba(245, 158, 11, 0.65)" : "none";
+          html += '<span style="color:' + color + '; text-shadow:' + shadow + ';">' + wordObj.word + "</span>";
+          if (w < activePage.words.length - 1) html += " ";
+        }
+        captionBox.innerHTML = html;
+      }
+
+      // =====================================================
+      // BEAT 1 CHOREOGRAPHY (0.0s -> 16.6s)
+      // =====================================================
+      tl.set("#beat1", { opacity: 1 }, 0);
+      tl.fromTo("#b1-card", { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.4)" }, 0.1);
+      tl.fromTo("#b1-right", { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.4)" }, 0.3);
+
+      // Phase A (2.8s -> 4.8s): Count up to €400 Planned Budget
+      var b1State = { euro: 0, pct: 0 };
+      var counterEl = document.getElementById("b1-counter");
+      var barEl = document.getElementById("b1-bar");
+      var ringEl = document.getElementById("b1-ring");
+      var ringPctEl = document.getElementById("b1-ring-pct");
+      var eyebrowEl = document.getElementById("b1-eyebrow");
+      var card1El = document.getElementById("b1-card");
+
+      tl.to(b1State, {
+        euro: 400,
+        pct: 100,
+        duration: 1.8,
+        ease: "power2.out",
+        onUpdate: function () {
+          var e = Math.round(b1State.euro);
+          var p = Math.round(b1State.pct);
+          counterEl.textContent = "€" + e;
+          barEl.style.width = Math.min(100, (e / 920) * 100) + "%";
+          ringEl.style.strokeDashoffset = String(892 - (892 * Math.min(100, p)) / 100);
+          ringPctEl.textContent = p + "%";
+        }
+      }, 2.9);
+
+      // Phase B (9.8s -> 12.6s): Spike to €920 Actual Spend (Crimson Alert!)
+      tl.to(b1State, {
+        euro: 920,
+        pct: 230,
+        duration: 2.2,
+        ease: "power3.inOut",
+        onUpdate: function () {
+          var e = Math.round(b1State.euro);
+          var p = Math.round(b1State.pct);
+          counterEl.textContent = "€" + e;
+          barEl.style.width = Math.min(100, (e / 920) * 100) + "%";
+          ringPctEl.textContent = p + "%";
+          if (e > 420) {
+            counterEl.style.color = "#ef4444";
+            counterEl.style.textShadow = "0 0 48px rgba(239, 68, 68, 0.55)";
+            barEl.style.background = "#ef4444";
+            barEl.style.boxShadow = "0 0 24px #ef4444";
+            ringEl.setAttribute("stroke", "#ef4444");
+            card1El.style.borderTopColor = "#ef4444";
+            eyebrowEl.textContent = "JANUARY 15TH ACTUAL BANK CLEARING";
+            eyebrowEl.style.color = "#ef4444";
+          } else {
+            counterEl.style.color = "#f8fafc";
+            barEl.style.background = "#10b981";
+            ringEl.setAttribute("stroke", "#10b981");
+            card1El.style.borderTopColor = "#10b981";
+            eyebrowEl.textContent = "NOVEMBER PLANNED HOLIDAY BUDGET CAP";
+            eyebrowEl.style.color = "#10b981";
+          }
+        }
+      }, 9.8);
+
+      tl.fromTo("#b1-delta", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.8)" }, 12.8);
+      tl.to("#b1-swipe", { width: "100%", duration: 1.2, ease: "power2.out" }, 13.4);
+      tl.to("#beat1", { opacity: 0, duration: 0.45, ease: "power2.in" }, 16.3);
+
+      // =====================================================
+      // BEAT 2 CHOREOGRAPHY (16.6s -> 26.8s): 4 RETAIL TRAPS
+      // =====================================================
+      tl.set("#beat2", { opacity: 1 }, 16.6);
+      var leakProxy = { sum: 0 };
+      var leakSumEl = document.getElementById("b2-leak-sum");
+
+      // Trap 1: Decoy Price Anchors (19.6s)
+      tl.fromTo("#trap1", { y: 40, rotationX: 14, opacity: 0, scale: 0.92 }, { y: 0, rotationX: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.5)" }, 19.5);
+      tl.to(leakProxy, { sum: 130, duration: 0.6, onUpdate: function() { leakSumEl.textContent = "+€" + Math.round(leakProxy.sum); } }, 19.6);
+
+      // Trap 2: Guilt Upgrades (21.3s)
+      tl.fromTo("#trap2", { y: 40, rotationX: 14, opacity: 0, scale: 0.92 }, { y: 0, rotationX: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.5)" }, 21.3);
+      tl.to(leakProxy, { sum: 245, duration: 0.6, onUpdate: function() { leakSumEl.textContent = "+€" + Math.round(leakProxy.sum); } }, 21.4);
+
+      // Trap 3: Panic Shipping Fees (22.6s)
+      tl.fromTo("#trap3", { y: 40, rotationX: 14, opacity: 0, scale: 0.92 }, { y: 0, rotationX: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.5)" }, 22.6);
+      tl.to(leakProxy, { sum: 370, duration: 0.6, onUpdate: function() { leakSumEl.textContent = "+€" + Math.round(leakProxy.sum); } }, 22.7);
+
+      // Trap 4: Fake 40%-Off Checkout Deals (24.2s)
+      tl.fromTo("#trap4", { y: 40, rotationX: 14, opacity: 0, scale: 0.92 }, { y: 0, rotationX: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.5)" }, 24.2);
+      tl.to(leakProxy, { sum: 520, duration: 0.6, onUpdate: function() { leakSumEl.textContent = "+€" + Math.round(leakProxy.sum); } }, 24.3);
+
+      tl.to("#beat2", { opacity: 0, duration: 0.45, ease: "power2.in" }, 26.5);
+
+      // =====================================================
+      // BEAT 3 CHOREOGRAPHY (26.8s -> 38.4s): 3-COLUMN RULE
+      // =====================================================
+      tl.set("#beat3", { opacity: 1 }, 26.8);
+      tl.fromTo("#b3-root", { y: -30, opacity: 0, scale: 0.92 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.4)" }, 27.0);
+      tl.fromTo("#col1", { y: 50, opacity: 0, scale: 0.92 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.5)" }, 30.4);
+      tl.fromTo("#col2", { y: 50, opacity: 0, scale: 0.92 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.5)" }, 33.1);
+      tl.fromTo("#col3", { y: 50, opacity: 0, scale: 0.92 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.5)" }, 35.9);
+      tl.to("#beat3", { opacity: 0, duration: 0.45, ease: "power2.in" }, 38.2);
+
+      // =====================================================
+      // BEAT 4 CHOREOGRAPHY (38.4s -> 44.93s): FINAL PAYOFF
+      // =====================================================
+      tl.set("#beat4", { opacity: 1 }, 38.4);
+      tl.fromTo("#b4-left", { x: -80, rotationY: 16, opacity: 0 }, { x: 0, rotationY: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 38.6);
+      tl.fromTo("#b4-vs", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.8)" }, 39.2);
+      tl.fromTo("#b4-right", { x: 80, rotationY: -16, opacity: 0 }, { x: 0, rotationY: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 39.6);
+      tl.fromTo("#b4-savings", { y: 30, scale: 0.85, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 0.65, ease: "back.out(1.7)" }, 41.8);
+
+      // Master 30fps Frame Ticker driving Procedural Canvas, Captions, Telemetry & Continuous Breathing
+      var clockEl = document.getElementById("telemetry-clock");
+      var chapEl = document.getElementById("telemetry-chapter");
+      var titleEl = document.getElementById("telemetry-title");
+      var ghostEl = document.getElementById("ghost-watermark");
+
+      var masterTicker = { t: 0 };
+      tl.to(masterTicker, {
+        t: 44.93,
+        duration: 44.93,
+        ease: "none",
+        onUpdate: function () {
+          var t = masterTicker.t;
+          renderProceduralCanvas(t);
+          updateCaptions(t);
+
+          // Format clock
+          var s = Math.floor(t);
+          var ms = Math.floor((t - s) * 100);
+          clockEl.textContent = "00:" + (s < 10 ? "0" + s : s) + "." + (ms < 10 ? "0" + ms : ms);
+
+          // Ghost watermark drift & dynamic chapter title
+          ghostEl.style.transform = "translate(calc(-50% + " + Math.sin(t * 0.4) * 35 + "px), -50%)";
+          if (t < 16.6) {
+            chapEl.textContent = "BEAT 01 // EMPIRICAL BANK AUTOPSY";
+            titleEl.textContent = "THE €400 → €920 HOLIDAY SPENDING ILLUSION";
+            ghostEl.textContent = "€400 → €920";
+          } else if (t < 26.8) {
+            chapEl.textContent = "BEAT 02 // BEHAVIORAL FORENSICS";
+            titleEl.textContent = "THE 4 INVISIBLE RETAIL MULTIPLIERS (+€520 LEAK)";
+            ghostEl.textContent = "+€520 LEAK";
+          } else if (t < 38.4) {
+            chapEl.textContent = "BEAT 03 // CALM BUDGETING PROTOCOL";
+            titleEl.textContent = "THE 3-COLUMN HARD-CAP ALLOCATION RULE";
+            ghostEl.textContent = "3-COLUMN RULE";
+          } else {
+            chapEl.textContent = "BEAT 04 // NET WEALTH PAYOFF";
+            titleEl.textContent = "10 RECIPIENTS • €0 DEBT • +€528.00 SAVED";
+            ghostEl.textContent = "+€528 SAVED";
+          }
+        }
+      }, 0);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
