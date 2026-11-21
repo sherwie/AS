@@ -1,0 +1,117 @@
+{
+  "id": "ep02-january-debt-reset",
+  "episode_number": 2,
+  "series": "Evergreen Personal Finance & Decision-Math Series",
+  "title": "The January Debt Reset: Why Snowball vs. Avalanche Costs You €1,420 (And the Hybrid Velocity Protocol)",
+  "channel": "The Decision Ledger",
+  "niche": "Practical Personal Finance & Decision-Math",
+  "target_rpm": "$20–$32",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "theme": "flat-motion-graphics",
+  "scenes": [
+    {
+      "id": "scene_01_hook",
+      "section": "01 // THE JANUARY INTEREST TRAP",
+      "narration": "On January second, the average household wakes up with three separate debt balances and makes the most expensive mistake in personal finance: paying a little bit extra on all three at the same time. Across an eight thousand five hundred euro debt stack, splitting your extra cash evenly wastes one thousand four hundred and twenty euros in avoidable compound interest.",
+      "visual": {
+        "type": "stat_card",
+        "stat": "-€1,420",
+        "subtitle": "Avoidable Interest Lost by Splitting Extra Payments Across Balances",
+        "accentColor": "#EF4444"
+      },
+      "overlay": {
+        "type": "section_title",
+        "text": "01 // THE JANUARY DEBT AUTOPSY",
+        "subtitle": "Why 'Paying Extra Everywhere' Fails Mathematically",
+        "accentColor": "#EF4444",
+        "position": "top-left"
+      }
+    },
+    {
+      "id": "scene_02_debt_ledger",
+      "section": "02 // THE 3-BALANCE HOUSEHOLD LEDGER",
+      "narration": "Look at a standard January debt ledger totaling eight thousand five hundred euros. You have a store card from December at twenty-four point nine percent APR, a primary credit card at nineteen point five percent, and an auto loan tail at six point eight percent. Notice how the store card alone generates more monthly interest decay per euro than the auto loan generates in three months.",
+      "visual": {
+        "type": "spreadsheet",
+        "title": "JANUARY HOUSEHOLD LIABILITY LEDGER (€8,500 TOTAL)",
+        "subtitle": "Comparing Principal Balance vs. True Monthly Interest Burn",
+        "headers": ["LIABILITY ACCOUNT", "BALANCE", "APR RATE", "MONTHLY BURN"],
+        "rows": [
+          {
+            "category": "Retail Store / BNPL Rollover Card",
+            "planned": "€1,200",
+            "actual": "24.9% APR",
+            "leak": "-€24.90/mo burn",
+            "status": "danger"
+          },
+          {
+            "category": "Primary Revolving Credit Card",
+            "planned": "€3,100",
+            "actual": "19.5% APR",
+            "leak": "-€50.38/mo burn",
+            "status": "danger"
+          },
+          {
+            "category": "Remaining Auto Loan Principal",
+            "planned": "€4,200",
+            "actual": "6.8% APR",
+            "leak": "-€23.80/mo burn",
+            "status": "warn"
+          }
+        ],
+        "totalPlanned": "€8,500",
+        "totalActual": "17.1% WAVG",
+        "totalLeak": "-€99.08/mo Interest",
+        "accentColor": "#22D3EE"
+      }
+    },
+    {
+      "id": "scene_03_decision_protocol",
+      "section": "03 // THE HYBRID VELOCITY DECISION TREE",
+      "narration": "Pure Snowball attacks the smallest balance for dopamine, while pure Avalanche attacks the highest APR for math. When your smallest balance is also your highest APR—which happens every January with holiday store cards—the two formulas merge into the Hybrid Velocity Protocol.",
+      "visual": {
+        "type": "decision_tree",
+        "title": "JANUARY DEBT ERADICATION DECISION TREE",
+        "rootQuestion": "TOTAL MONTHLY PAYDOWN CAPACITY: €550/MO (€210 MINIMUMS + €340 ATTACK SURPLUS)",
+        "branches": [
+          {
+            "label": "PHASE 1 // DAYS 1–90",
+            "condition": "Direct 100% of €340 Surplus to 24.9% Store Card (€1,200)",
+            "outcome": "Eliminates highest APR and smallest balance in 3.2 months. Frees €45/mo minimum.",
+            "costImpact": "€385/mo Rollover",
+            "verdict": "optimal"
+          },
+          {
+            "label": "PHASE 2 // MONTHS 4–11",
+            "condition": "Roll €385 Surplus Into 19.5% Revolving Credit Card (€3,100)",
+            "outcome": "Crushes primary toxic APR in 7.4 months. Frees another €90/mo minimum.",
+            "costImpact": "€475/mo Rollover",
+            "verdict": "optimal"
+          },
+          {
+            "label": "PHASE 3 // MONTHS 12–18",
+            "condition": "Deploy Full €550 Waterfall Into 6.8% Auto Loan Tail",
+            "outcome": "Entire €8,500 debt stack reaches zero 19 months ahead of bank schedule.",
+            "costImpact": "€1,420 Saved",
+            "verdict": "optimal"
+          }
+        ],
+        "accentColor": "#10B981"
+      }
+    },
+    {
+      "id": "scene_04_comparison",
+      "section": "04 // 36-MONTH PAYOFF SIMULATION",
+      "narration": "Look at the final thirty-six month simulation. Paying unfocused extra payments takes thirty-seven months and costs two thousand one hundred andten euros in interest. The Hybrid Velocity Waterfall clears the entire ledger in eighteen months and saves one thousand four hundred and twenty euros in pure cash.",
+      "visual": {
+        "type": "comparison",
+        "title": "€8,500 DEBT STACK: UNFOCUSED PAYMENTS VS. HYBRID WATERFALL",
+        "leftLabel": "Unfocused Extra Payments",
+        "leftValue": "37 Mos / -€2,110",
+        "rightLabel": "Hybrid Velocity Waterfall",
+        "rightValue": "18 Mos / -€690",
+        "accentColor": "#10B981"
+      }
+    }
+  ]
+}

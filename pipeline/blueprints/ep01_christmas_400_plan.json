@@ -1,0 +1,287 @@
+{
+  "id": "ep01-400-christmas-money-trap",
+  "episode_number": 1,
+  "series": "Holiday & Year-End Money Autopsy Series",
+  "title": "The €400 Christmas Money Trap: Why 78% of Shoppers Overspend by €520 (And the Exact Math to Beat It)",
+  "channel": "The Decision Ledger",
+  "niche": "Practical Personal Finance & Decision-Math",
+  "target_rpm": "$18–$28",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "local_mac_voice_kokoro": "af_heart",
+  "local_mac_voice_piper": "en_US-lessac-medium",
+  "theme": "flat-motion-graphics",
+  "scenes": [
+    {
+      "id": "scene_01_hook",
+      "section": "01 // THE €920 HOLIDAY ILLUSION",
+      "narration": "Every November, millions of households sit down and set a strict four hundred euro Christmas budget. Yet by January fifteenth, bank transaction data shows the average shopper actually spent nine hundred and twenty euros. That five hundred and twenty euro leak is not a lack of willpower. It is a mathematical trap engineered into every store you walk into.",
+      "visual": {
+        "type": "stat_card",
+        "stat": "€400 → €920",
+        "subtitle": "The +130% Holiday Overspend Illusion (Average Household Bank Ledger)",
+        "accentColor": "#EF4444"
+      },
+      "overlay": {
+        "type": "section_title",
+        "text": "01 // THE €920 HOLIDAY ILLUSION",
+        "subtitle": "Consumer Bank Ledger Autopsy",
+        "accentColor": "#EF4444",
+        "position": "top-left"
+      }
+    },
+    {
+      "id": "scene_02_ledger_autopsy",
+      "section": "02 // WHERE THE €520 ACTUALLY LEAKS",
+      "narration": "Look at a real holiday bank autopsy. When people say they have a four hundred euro budget, they only count the core gifts on their list. They completely ignore the four invisible multipliers: price-anchor inflation, last-minute panic shipping, social reciprocity guilt, and checkout impulse add-ons. Watch what happens when we put the planned ledger next to actual December bank statements.",
+      "visual": {
+        "type": "spreadsheet",
+        "title": "DECEMBER BANK STATEMENT AUTOPSY",
+        "subtitle": "Why a '€400 Mental Budget' Turns Into a €920 January Bill",
+        "headers": ["EXPENSE VECTOR", "PLANNED", "ACTUAL SPENT", "HIDDEN LEAK"],
+        "rows": [
+          {
+            "category": "Tier-1 Core Family Gifts (6 people)",
+            "planned": "€280",
+            "actual": "€410",
+            "leak": "+€130 Anchor Creep",
+            "status": "danger"
+          },
+          {
+            "category": "Extended Circle & Co-Worker Exchanges",
+            "planned": "€80",
+            "actual": "€195",
+            "leak": "+€115 Guilt Upgrade",
+            "status": "danger"
+          },
+          {
+            "category": "Wrapping, Cards, Shipping & Hosting",
+            "planned": "€40",
+            "actual": "€165",
+            "leak": "+€125 Friction Tax",
+            "status": "warn"
+          },
+          {
+            "category": "'One For Them, One For Me' Checkout Deals",
+            "planned": "€0",
+            "actual": "€150",
+            "leak": "+€150 Fake Discount",
+            "status": "danger"
+          }
+        ],
+        "totalPlanned": "€400",
+        "totalActual": "€920",
+        "totalLeak": "+€520 LEAK",
+        "accentColor": "#22D3EE"
+      },
+      "overlay": {
+        "type": "stat_reveal",
+        "text": "-€520.00",
+        "subtitle": "Unplanned Cash Drain",
+        "accentColor": "#EF4444",
+        "position": "bottom-right"
+      }
+    },
+    {
+      "id": "scene_03_retail_traps",
+      "section": "03 // THE 3 RETAIL PRICING TRAPS",
+      "narration": "Retailers use three specific behavioral formulas to break your mental calculator. First is the Decoy Anchor: placing a one hundred and fifty euro espresso machine next to a seventy-nine euro bundle so seventy-nine feels cheap, even when your cap was forty. Second is the Minimum Spend Threshold: spending twenty-two euros extra just to save five euros and ninety-nine cents on shipping. And third is Buy Now Pay Later splitting, which numbs the brain to the total price by dividing it by four.",
+      "visual": {
+        "type": "kpi_grid",
+        "title": "THE 3 RETAIL BEHAVIORAL MULTIPLIERS",
+        "columns": 3,
+        "chartAnimation": "count-up",
+        "chartColors": ["#EF4444", "#F59E0B", "#EC4899"],
+        "chartData": [
+          {
+            "label": "Decoy Anchor Inflation",
+            "value": 64,
+            "prefix": "+",
+            "suffix": "%",
+            "change": 64.0,
+            "icon": "🎯"
+          },
+          {
+            "label": "Free-Shipping Cart Padding",
+            "value": 28,
+            "prefix": "+€",
+            "suffix": "/order",
+            "change": 38.5,
+            "icon": "📦"
+          },
+          {
+            "label": "BNPL 4-Pay Overspend Rate",
+            "value": 42,
+            "prefix": "+",
+            "suffix": "%",
+            "change": 42.0,
+            "icon": "💳"
+          }
+        ]
+      },
+      "overlay": {
+        "type": "section_title",
+        "text": "03 // RETAIL PSYCHOLOGY FORMULAS",
+        "subtitle": "How Stores Hijack Your Mental Math",
+        "accentColor": "#F59E0B",
+        "position": "top-left"
+      }
+    },
+    {
+      "id": "scene_04_decision_tree",
+      "section": "04 // THE €400 HARD-CAP DECISION PROTOCOL",
+      "narration": "To beat a system built on behavioral math, you cannot use vague good intentions. You need a deterministic decision tree before you open a single browser tab. We lock the total ceiling at four hundred euros first, slice off a mandatory fifteen percent buffer for hidden friction costs, and divide every recipient into three strict mathematical tiers.",
+      "visual": {
+        "type": "decision_tree",
+        "title": "THE €400 ZERO-LEAK DECISION TREE",
+        "rootQuestion": "HARD CEILING: €400.00 TOTAL HOLIDAY CAPITAL → STEP 1: LOCK €60 FRICTION BUFFER FIRST",
+        "branches": [
+          {
+            "label": "TIER 1 // CORE CIRCLE (55%)",
+            "condition": "4 Inner-Circle Recipients × €55 Hard Cap Each",
+            "outcome": "High-impact physical or experience anchor gift. Zero add-on stocking fillers allowed.",
+            "costImpact": "€220.00",
+            "verdict": "optimal"
+          },
+          {
+            "label": "TIER 2 // EXTENDED LIST (30%)",
+            "condition": "6 Extended Family & Friends × €20 Asymmetric Gift",
+            "outcome": "Consumable artisan batch or book with handwritten note. High perceived value, fixed unit cost.",
+            "costImpact": "€120.00",
+            "verdict": "optimal"
+          },
+          {
+            "label": "TIER 3 // FRICTION VAULT (15%)",
+            "condition": "Pre-Allocated Wrapping, Shipping & Host Bottle Buffer",
+            "outcome": "Absorbs every delivery fee, ribbon, and party contribution so January credit card debt equals zero.",
+            "costImpact": "€60.00",
+            "verdict": "neutral"
+          }
+        ],
+        "accentColor": "#10B981"
+      }
+    },
+    {
+      "id": "scene_05_asymmetric_value",
+      "section": "05 // THE ASYMMETRIC PERCEIVED-VALUE CURVE",
+      "narration": "Here is the secret that luxury brands never tell you: perceived gift value does not scale linearly with price. Buying a forty euro generic sweater feels cheap because it sits at the bottom of the clothing category. Buying a twenty-four euro single-origin olive oil or specialty coffee set feels luxurious because it sits at the absolute top of its category. Always buy at the top of a low-cost category, never the bottom of an expensive one.",
+      "visual": {
+        "type": "bar_chart",
+        "title": "PERCEIVED LUXURY SCORE (OUT OF 100) BY CATEGORY POSITION",
+        "chartAnimation": "grow-up",
+        "showGrid": true,
+        "showValues": true,
+        "chartColors": ["#EF4444", "#F59E0B", "#10B981", "#22D3EE"],
+        "chartData": [
+          { "label": "€45 Bottom-Tier Apparel", "value": 34 },
+          { "label": "€50 Generic Tech Gadget", "value": 41 },
+          { "label": "€22 Top-Tier Artisan Food", "value": 88 },
+          { "label": "€25 Curated Book + Note", "value": 92 }
+        ]
+      },
+      "overlay": {
+        "type": "section_title",
+        "text": "05 // ASYMMETRIC VALUE ARBITRAGE",
+        "subtitle": "Top of a €20 Category Beats Bottom of a €60 Category",
+        "accentColor": "#10B981",
+        "position": "top-left"
+      }
+    },
+    {
+      "id": "scene_06_receipt_comparison",
+      "section": "06 // SIDE-BY-SIDE CHECKOUT RECEIPT",
+      "narration": "Let's put both strategies side by side on ten recipients. On the left is the standard December shopper reacting to sales banners and last-minute guilt. On the right is the engineered four hundred euro decision protocol. Notice how the engineered plan covers the exact same ten people, scores higher on perceived thoughtfulness, and leaves five hundred and twenty-eight euros in your bank account on January first.",
+      "visual": {
+        "type": "receipt_comparison",
+        "title": "10 RECIPIENTS: REACTIVE SHOPPER VS. DECISION-MATH PROTOCOL",
+        "leftReceiptTitle": "REACTIVE DECEMBER SHOPPER",
+        "leftItems": [
+          { "item": "4× Core Gifts (Anchor-Inflated)", "price": "€410.00", "tag": "Over cap by €47.50/person" },
+          { "item": "6× Last-Minute Mall Runs", "price": "€210.00", "tag": "Panic pricing + zero comparison" },
+          { "item": "Express Shipping & Gift Bags", "price": "€148.00", "tag": "Unbudgeted friction costs" },
+          { "item": "Checkout 'Deal' Self-Purchases", "price": "€152.00", "tag": "Fake 40%-off impulse items" }
+        ],
+        "leftTotal": "€920.00",
+        "rightReceiptTitle": "THE €400 ENGINEERED LEDGER",
+        "rightItems": [
+          { "item": "4× Tier-1 Anchor Gifts (€55 cap)", "price": "€214.00", "tag": "Pre-selected 30 days early" },
+          { "item": "6× Tier-2 Category-Top Consumables", "price": "€118.00", "tag": "€19.66 avg • 90+ luxury score" },
+          { "item": "Bulk Kraft Wrap + Zero-Fee Pickup", "price": "€34.00", "tag": "Paid from €60 Friction Vault" },
+          { "item": "2× Host Bottles from Vault Buffer", "price": "€26.00", "tag": "Zero credit card spillover" }
+        ],
+        "rightTotal": "€392.00",
+        "savingsBadge": "NET JANUARY WEALTH ADVANTAGE: +€528.00 SAVED (ZERO DEBT)"
+      }
+    },
+    {
+      "id": "scene_07_terminal_execution",
+      "section": "07 // THE 15-MINUTE EXECUTION CHECKLIST",
+      "narration": "Here is how you execute this in fifteen minutes today. Step one: transfer four hundred euros into a separate sub-account or prepaid card—when the balance hits zero, shopping is mathematically over. Step two: deduct your sixty euro friction vault immediately. Step three: assign every name on your list a fixed euro cap before searching for a single product. Never pick the item first and justify the price second.",
+      "visual": {
+        "type": "terminal_scene",
+        "terminalTitle": "holiday-budget-engine — zsh — 1920×1080",
+        "prompt": "ledger@decision-math ~ %",
+        "accentColor": "#22D3EE",
+        "steps": [
+          {
+            "kind": "cmd",
+            "text": "budget init --season christmas-2026 --cap 400 --currency EUR"
+          },
+          {
+            "kind": "out",
+            "text": "✔ Isolated €400.00 Holiday Vault initialized"
+          },
+          {
+            "kind": "out",
+            "text": "✔ Reserved €60.00 (15.0%) in Friction Buffer [Wrap / Shipping / Hosting]"
+          },
+          {
+            "kind": "out",
+            "text": "✔ Remaining Distributable Gift Capital: €340.00"
+          },
+          {
+            "kind": "cmd",
+            "text": "budget allocate --tier1 4x55 --tier2 6x20 --lock-caps"
+          },
+          {
+            "kind": "out",
+            "text": "✔ Tier 1 (4 Core Recipients): €220.00 locked [Max €55.00/person]"
+          },
+          {
+            "kind": "out",
+            "text": "✔ Tier 2 (6 Extended Recipients): €120.00 locked [Max €20.00/person]"
+          },
+          {
+            "kind": "out",
+            "text": "✔ Rule Enforced: Price Cap Precedes Product Search"
+          },
+          {
+            "kind": "pill",
+            "text": "JANUARY DEBT PROJECTION: €0.00 // SURPLUS RETAINED: +€528.00",
+            "durationSeconds": 8.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "scene_08_january_bridge",
+      "section": "08 // COMPOUNDING THE €528 JANUARY SURPLUS",
+      "narration": "Saving five hundred and twenty-eight euros every December is not just about surviving Christmas. If you redirect that five hundred and twenty-eight euro holiday leak into a global index fund earning eight percent annually, over ten winters that single decision compounds into eight thousand two hundred and sixty-one euros. Download the free four hundred euro Decision Ledger below, and in episode two, we will run the exact math on the January Debt Reset.",
+      "visual": {
+        "type": "comparison",
+        "title": "10-YEAR COMPOUND IMPACT OF STOPPING THE €528 DECEMBER LEAK",
+        "leftLabel": "10 Years of Reactive Decembers",
+        "leftValue": "-€5,280 Lost",
+        "rightLabel": "€528/Yr Invested at 8% Return",
+        "rightValue": "+€8,261 Wealth",
+        "accentColor": "#10B981"
+      },
+      "overlay": {
+        "type": "section_title",
+        "text": "NEXT EPISODE // THE JANUARY DEBT RESET",
+        "subtitle": "Subscribe for Weekly Decision-Math Autopsies",
+        "accentColor": "#22D3EE",
+        "position": "top-left"
+      }
+    }
+  ]
+}

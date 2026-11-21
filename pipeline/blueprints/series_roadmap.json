@@ -1,0 +1,71 @@
+{
+  "series_title": "The Decision Ledger — 90-Day High-RPM Launch Roadmap",
+  "positioning": "Practical Personal Finance, Behavioral Decision-Math & Consumer Autopsies",
+  "monetization_guardrails": {
+    "target_rpm": "$15–$28+",
+    "youtube_2026_compliance": "100% programmatic data storytelling — rotates 8+ React Remotion visual components (AnimatedSpreadsheet, DecisionTree, ReceiptComparison, KPIGrid, BarChart, LineChart, TerminalScene, ComparisonCard) with word-synced narration to eliminate repetitive slideshow flags.",
+    "educational_framing": "Transparent decision-math and empirical ledger comparisons — zero fake AI advisor personas."
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "season": "Holiday Launch Series (Late Nov)",
+      "id": "ep01-400-christmas-money-trap",
+      "title": "The €400 Christmas Money Trap: Why 78% of Shoppers Overspend by €520 (And the Exact Math to Beat It)",
+      "status": "RENDERED_AND_READY",
+      "hook_tension": "€400 planned budget vs. €920 actual January bank statement",
+      "key_visuals": ["StatCard", "AnimatedSpreadsheet", "KPIGrid", "DecisionTree", "BarChart", "ReceiptComparison", "TerminalScene", "ComparisonCard"],
+      "digital_product_cta": "€400 Zero-Leak Holiday Decision Ledger (Interactive & Printable)"
+    },
+    {
+      "episode": 2,
+      "season": "Holiday Launch Series (Early Dec)",
+      "id": "ep02-black-friday-bnpl-trap",
+      "title": "Buy Now, Pay Later: The 4-Payment Illusion Draining €1,840/Year From Your Checking Account",
+      "status": "BLUEPRINT_QUEUED",
+      "hook_tension": "Why splitting a €120 purchase into 4×€30 increases total annual cart spend by +42%",
+      "key_visuals": ["ReceiptComparison", "LineChart", "DecisionTree", "AnimatedSpreadsheet"],
+      "digital_product_cta": "Impulse-Override Checkout Calculator"
+    },
+    {
+      "episode": 3,
+      "season": "Holiday Launch Series (Mid Dec)",
+      "id": "ep03-gift-card-breakage-math",
+      "title": "The €24 Billion Gift Card Scam: Why Stores Love Selling You Plastic Cash",
+      "status": "BLUEPRINT_QUEUED",
+      "hook_tension": "How breakage, category locking, and overspend margins turn a €50 gift card into €72 of store profit",
+      "key_visuals": ["BarChart", "AnimatedSpreadsheet", "ComparisonCard", "DecisionTree"],
+      "digital_product_cta": "Asymmetric Gift Matrix"
+    },
+    {
+      "episode": 4,
+      "season": "Holiday Launch Series (Late Dec)",
+      "id": "ep04-year-end-tax-and-subscription-purge",
+      "title": "The 48-Hour December Money Audit: 7 Silent Leaks to Cut Before January 1st",
+      "status": "BLUEPRINT_QUEUED",
+      "hook_tension": "Uncovering €2,340/year in zombie subscriptions, insurance creep, and lazy cash drag",
+      "key_visuals": ["AnimatedSpreadsheet", "KPIGrid", "TerminalScene", "ReceiptComparison"],
+      "digital_product_cta": "Annual Cash-Flow Autopsy Template"
+    },
+    {
+      "episode": 5,
+      "season": "Evergreen Transition (January Week 1)",
+      "id": "ep05-january-debt-reset-math",
+      "title": "The January Debt Reset: Avalanche vs. Snowball vs. Velocity Banking (Simulated Over 36 Months)",
+      "status": "BLUEPRINT_QUEUED",
+      "hook_tension": "Running 10,000 simulations on €8,500 of credit & car debt to find the fastest mathematical exit",
+      "key_visuals": ["LineChart", "AnimatedSpreadsheet", "DecisionTree", "ComparisonCard"],
+      "digital_product_cta": "Debt Eradication Simulator Sheet"
+    },
+    {
+      "episode": 6,
+      "season": "Evergreen Transition (January Week 2)",
+      "id": "ep06-real-cost-of-35k-car",
+      "title": "Why a €35,000 Car Actually Costs You €74,200 (The 5-Year Total Cost of Ownership Autopsy)",
+      "status": "BLUEPRINT_QUEUED",
+      "hook_tension": "Depreciation curves, opportunity cost of down payments, insurance multipliers, and financing drag",
+      "key_visuals": ["AnimatedSpreadsheet", "LineChart", "ReceiptComparison", "DecisionTree"],
+      "digital_product_cta": "True Car Cost vs. Net-Worth Calculator"
+    }
+  ]
+}

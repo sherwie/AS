@@ -1,0 +1,3944 @@
+{
+  "id": "ep01-400-christmas-money-trap",
+  "title": "The €400 Christmas Money Trap: Why 78% of Shoppers Overspend by €520 (And the Exact Math to Beat It)",
+  "series": "Holiday & Year-End Money Autopsy Series",
+  "channel": "The Decision Ledger",
+  "niche": "Practical Personal Finance & Decision-Math",
+  "target_rpm": "$18–$28",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "total_duration_seconds": 216.04,
+  "total_words": 542,
+  "scene_count": 8,
+  "video_url": "/renders/ep01-400-christmas-money-trap/ep01-400-christmas-money-trap.mp4",
+  "master_audio_url": "/renders/ep01-400-christmas-money-trap/Master_Audio_14LUFS.wav",
+  "voiceover_url": "/renders/ep01-400-christmas-money-trap/A1_Voiceover_Master.wav",
+  "music_url": "/renders/ep01-400-christmas-money-trap/A2_Music_Bed.wav",
+  "otio_url": "/renders/ep01-400-christmas-money-trap/ep01-400-christmas-money-trap_davinci_resolve.otio",
+  "props_url": "/renders/ep01-400-christmas-money-trap/remotion_props.json",
+  "loudness_standard": "-14.0 LUFS (YouTube EBU R128 Normalized + Sidechain Ducked)",
+  "resolution": "1920x1080 @ 30fps (H.264 / AAC 192kbps)",
+  "scenes": [
+    {
+      "id": "scene_01_hook",
+      "section": "01 // THE €920 HOLIDAY ILLUSION",
+      "narration": "Every November, millions of households sit down and set a strict four hundred euro Christmas budget. Yet by January fifteenth, bank transaction data shows the average shopper actually spent nine hundred and twenty euros. That five hundred and twenty euro leak is not a lack of willpower. It is a mathematical trap engineered into every store you walk into.",
+      "visual_type": "stat_card",
+      "in_seconds": 0.0,
+      "out_seconds": 23.054,
+      "duration": 23.054,
+      "audio_file": "/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/00_scene_01_hook.wav",
+      "word_count": 59,
+      "words": [
+        {
+          "word": "Every",
+          "start": 0.087,
+          "end": 0.299,
+          "startMs": 87,
+          "endMs": 299
+        },
+        {
+          "word": "November",
+          "start": 0.3,
+          "end": 0.937,
+          "startMs": 300,
+          "endMs": 937
+        },
+        {
+          "word": "millions",
+          "start": 1.413,
+          "end": 1.801,
+          "startMs": 1413,
+          "endMs": 1801
+        },
+        {
+          "word": "of",
+          "start": 1.8,
+          "end": 1.88,
+          "startMs": 1800,
+          "endMs": 1880
+        },
+        {
+          "word": "households",
+          "start": 1.85,
+          "end": 2.425,
+          "startMs": 1850,
+          "endMs": 2425
+        },
+        {
+          "word": "sit",
+          "start": 2.438,
+          "end": 2.663,
+          "startMs": 2438,
+          "endMs": 2663
+        },
+        {
+          "word": "down",
+          "start": 2.663,
+          "end": 3.088,
+          "startMs": 2663,
+          "endMs": 3088
+        },
+        {
+          "word": "and",
+          "start": 3.325,
+          "end": 3.438,
+          "startMs": 3325,
+          "endMs": 3438
+        },
+        {
+          "word": "set",
+          "start": 3.438,
+          "end": 3.613,
+          "startMs": 3438,
+          "endMs": 3613
+        },
+        {
+          "word": "a",
+          "start": 3.612,
+          "end": 3.692,
+          "startMs": 3612,
+          "endMs": 3692
+        },
+        {
+          "word": "strict",
+          "start": 3.663,
+          "end": 4.138,
+          "startMs": 3663,
+          "endMs": 4138
+        },
+        {
+          "word": "four",
+          "start": 4.25,
+          "end": 4.612,
+          "startMs": 4250,
+          "endMs": 4612
+        },
+        {
+          "word": "hundred",
+          "start": 4.625,
+          "end": 4.888,
+          "startMs": 4625,
+          "endMs": 4888
+        },
+        {
+          "word": "euro",
+          "start": 4.9,
+          "end": 5.2,
+          "startMs": 4900,
+          "endMs": 5200
+        },
+        {
+          "word": "Christmas",
+          "start": 5.2,
+          "end": 5.575,
+          "startMs": 5200,
+          "endMs": 5575
+        },
+        {
+          "word": "budget",
+          "start": 5.575,
+          "end": 6.025,
+          "startMs": 5575,
+          "endMs": 6025
+        },
+        {
+          "word": "Yet",
+          "start": 6.438,
+          "end": 6.65,
+          "startMs": 6438,
+          "endMs": 6650
+        },
+        {
+          "word": "by",
+          "start": 6.65,
+          "end": 6.775,
+          "startMs": 6650,
+          "endMs": 6775
+        },
+        {
+          "word": "January",
+          "start": 6.775,
+          "end": 7.287,
+          "startMs": 6775,
+          "endMs": 7287
+        },
+        {
+          "word": "fifteenth",
+          "start": 7.287,
+          "end": 8.037,
+          "startMs": 7287,
+          "endMs": 8037
+        },
+        {
+          "word": "bank",
+          "start": 8.275,
+          "end": 8.525,
+          "startMs": 8275,
+          "endMs": 8525
+        },
+        {
+          "word": "transaction",
+          "start": 8.537,
+          "end": 9.15,
+          "startMs": 8537,
+          "endMs": 9150
+        },
+        {
+          "word": "data",
+          "start": 9.15,
+          "end": 9.475,
+          "startMs": 9150,
+          "endMs": 9475
+        },
+        {
+          "word": "shows",
+          "start": 9.825,
+          "end": 10.15,
+          "startMs": 9825,
+          "endMs": 10150
+        },
+        {
+          "word": "the",
+          "start": 10.162,
+          "end": 10.337,
+          "startMs": 10162,
+          "endMs": 10337
+        },
+        {
+          "word": "average",
+          "start": 10.45,
+          "end": 10.838,
+          "startMs": 10450,
+          "endMs": 10838
+        },
+        {
+          "word": "shopper",
+          "start": 10.85,
+          "end": 11.45,
+          "startMs": 10850,
+          "endMs": 11450
+        },
+        {
+          "word": "actually",
+          "start": 11.738,
+          "end": 12.05,
+          "startMs": 11738,
+          "endMs": 12050
+        },
+        {
+          "word": "spent",
+          "start": 12.05,
+          "end": 12.362,
+          "startMs": 12050,
+          "endMs": 12362
+        },
+        {
+          "word": "nine",
+          "start": 12.363,
+          "end": 12.725,
+          "startMs": 12363,
+          "endMs": 12725
+        },
+        {
+          "word": "hundred",
+          "start": 12.725,
+          "end": 12.962,
+          "startMs": 12725,
+          "endMs": 12962
+        },
+        {
+          "word": "and",
+          "start": 12.963,
+          "end": 13.043,
+          "startMs": 12963,
+          "endMs": 13043
+        },
+        {
+          "word": "twenty",
+          "start": 13.012,
+          "end": 13.237,
+          "startMs": 13012,
+          "endMs": 13237
+        },
+        {
+          "word": "euros",
+          "start": 13.238,
+          "end": 13.813,
+          "startMs": 13238,
+          "endMs": 13813
+        },
+        {
+          "word": "That",
+          "start": 14.225,
+          "end": 14.363,
+          "startMs": 14225,
+          "endMs": 14363
+        },
+        {
+          "word": "five",
+          "start": 14.375,
+          "end": 14.625,
+          "startMs": 14375,
+          "endMs": 14625
+        },
+        {
+          "word": "hundred",
+          "start": 14.625,
+          "end": 14.788,
+          "startMs": 14625,
+          "endMs": 14788
+        },
+        {
+          "word": "and",
+          "start": 14.787,
+          "end": 14.867,
+          "startMs": 14787,
+          "endMs": 14867
+        },
+        {
+          "word": "twenty",
+          "start": 14.825,
+          "end": 15.013,
+          "startMs": 14825,
+          "endMs": 15013
+        },
+        {
+          "word": "euro",
+          "start": 15.012,
+          "end": 15.275,
+          "startMs": 15012,
+          "endMs": 15275
+        },
+        {
+          "word": "leak",
+          "start": 15.275,
+          "end": 15.675,
+          "startMs": 15275,
+          "endMs": 15675
+        },
+        {
+          "word": "is",
+          "start": 15.912,
+          "end": 16.012,
+          "startMs": 15912,
+          "endMs": 16012
+        },
+        {
+          "word": "not",
+          "start": 16.025,
+          "end": 16.325,
+          "startMs": 16025,
+          "endMs": 16325
+        },
+        {
+          "word": "a",
+          "start": 16.325,
+          "end": 16.405,
+          "startMs": 16325,
+          "endMs": 16405
+        },
+        {
+          "word": "lack",
+          "start": 16.375,
+          "end": 16.813,
+          "startMs": 16375,
+          "endMs": 16813
+        },
+        {
+          "word": "of",
+          "start": 16.812,
+          "end": 16.912,
+          "startMs": 16812,
+          "endMs": 16912
+        },
+        {
+          "word": "willpower",
+          "start": 16.925,
+          "end": 17.663,
+          "startMs": 16925,
+          "endMs": 17663
+        },
+        {
+          "word": "It",
+          "start": 18.062,
+          "end": 18.142,
+          "startMs": 18062,
+          "endMs": 18142
+        },
+        {
+          "word": "is",
+          "start": 18.125,
+          "end": 18.212,
+          "startMs": 18125,
+          "endMs": 18212
+        },
+        {
+          "word": "a",
+          "start": 18.212,
+          "end": 18.292,
+          "startMs": 18212,
+          "endMs": 18292
+        },
+        {
+          "word": "mathematical",
+          "start": 18.25,
+          "end": 18.988,
+          "startMs": 18250,
+          "endMs": 18988
+        },
+        {
+          "word": "trap",
+          "start": 18.988,
+          "end": 19.438,
+          "startMs": 18988,
+          "endMs": 19438
+        },
+        {
+          "word": "engineered",
+          "start": 19.575,
+          "end": 20.2,
+          "startMs": 19575,
+          "endMs": 20200
+        },
+        {
+          "word": "into",
+          "start": 20.363,
+          "end": 20.663,
+          "startMs": 20363,
+          "endMs": 20663
+        },
+        {
+          "word": "every",
+          "start": 20.837,
+          "end": 21.162,
+          "startMs": 20837,
+          "endMs": 21162
+        },
+        {
+          "word": "store",
+          "start": 21.175,
+          "end": 21.462,
+          "startMs": 21175,
+          "endMs": 21462
+        },
+        {
+          "word": "you",
+          "start": 21.462,
+          "end": 21.575,
+          "startMs": 21462,
+          "endMs": 21575
+        },
+        {
+          "word": "walk",
+          "start": 21.575,
+          "end": 21.887,
+          "startMs": 21575,
+          "endMs": 21887
+        },
+        {
+          "word": "into",
+          "start": 21.887,
+          "end": 22.337,
+          "startMs": 21887,
+          "endMs": 22337
+        }
+      ],
+      "total_duration": 216.04,
+      "thumbnail_url": "/renders/ep01-400-christmas-money-trap/thumbnails/scene_01_hook.jpg",
+      "audio_url": "/renders/ep01-400-christmas-money-trap/scenes_audio/00_scene_01_hook.wav"
+    },
+    {
+      "id": "scene_02_ledger_autopsy",
+      "section": "02 // WHERE THE €520 ACTUALLY LEAKS",
+      "narration": "Look at a real holiday bank autopsy. When people say they have a four hundred euro budget, they only count the core gifts on their list. They completely ignore the four invisible multipliers: price-anchor inflation, last-minute panic shipping, social reciprocity guilt, and checkout impulse add-ons. Watch what happens when we put the planned ledger next to actual December bank statements.",
+      "visual_type": "spreadsheet",
+      "in_seconds": 23.054,
+      "out_seconds": 47.404,
+      "duration": 24.35,
+      "audio_file": "/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/01_scene_02_ledger_autopsy.wav",
+      "word_count": 60,
+      "words": [
+        {
+          "word": "Look",
+          "start": 23.141,
+          "end": 23.304,
+          "startMs": 23141,
+          "endMs": 23304
+        },
+        {
+          "word": "at",
+          "start": 23.304,
+          "end": 23.384,
+          "startMs": 23304,
+          "endMs": 23384
+        },
+        {
+          "word": "a",
+          "start": 23.354,
+          "end": 23.434,
+          "startMs": 23354,
+          "endMs": 23434
+        },
+        {
+          "word": "real",
+          "start": 23.429,
+          "end": 23.754,
+          "startMs": 23429,
+          "endMs": 23754
+        },
+        {
+          "word": "holiday",
+          "start": 23.754,
+          "end": 24.204,
+          "startMs": 23754,
+          "endMs": 24204
+        },
+        {
+          "word": "bank",
+          "start": 24.204,
+          "end": 24.579,
+          "startMs": 24204,
+          "endMs": 24579
+        },
+        {
+          "word": "autopsy",
+          "start": 24.592,
+          "end": 25.28,
+          "startMs": 24592,
+          "endMs": 25280
+        },
+        {
+          "word": "When",
+          "start": 25.679,
+          "end": 25.779,
+          "startMs": 25679,
+          "endMs": 25779
+        },
+        {
+          "word": "people",
+          "start": 25.791,
+          "end": 26.116,
+          "startMs": 25791,
+          "endMs": 26116
+        },
+        {
+          "word": "say",
+          "start": 26.129,
+          "end": 26.467,
+          "startMs": 26129,
+          "endMs": 26467
+        },
+        {
+          "word": "they",
+          "start": 26.479,
+          "end": 26.604,
+          "startMs": 26479,
+          "endMs": 26604
+        },
+        {
+          "word": "have",
+          "start": 26.616,
+          "end": 26.928,
+          "startMs": 26616,
+          "endMs": 26928
+        },
+        {
+          "word": "a",
+          "start": 27.041,
+          "end": 27.121,
+          "startMs": 27041,
+          "endMs": 27121
+        },
+        {
+          "word": "four",
+          "start": 27.104,
+          "end": 27.442,
+          "startMs": 27104,
+          "endMs": 27442
+        },
+        {
+          "word": "hundred",
+          "start": 27.442,
+          "end": 27.654,
+          "startMs": 27442,
+          "endMs": 27654
+        },
+        {
+          "word": "euro",
+          "start": 27.666,
+          "end": 27.903,
+          "startMs": 27666,
+          "endMs": 27903
+        },
+        {
+          "word": "budget",
+          "start": 27.916,
+          "end": 28.328,
+          "startMs": 27916,
+          "endMs": 28328
+        },
+        {
+          "word": "they",
+          "start": 28.604,
+          "end": 28.742,
+          "startMs": 28604,
+          "endMs": 28742
+        },
+        {
+          "word": "only",
+          "start": 28.754,
+          "end": 29.041,
+          "startMs": 28754,
+          "endMs": 29041
+        },
+        {
+          "word": "count",
+          "start": 29.054,
+          "end": 29.341,
+          "startMs": 29054,
+          "endMs": 29341
+        },
+        {
+          "word": "the",
+          "start": 29.354,
+          "end": 29.434,
+          "startMs": 29354,
+          "endMs": 29434
+        },
+        {
+          "word": "core",
+          "start": 29.429,
+          "end": 29.754,
+          "startMs": 29429,
+          "endMs": 29754
+        },
+        {
+          "word": "gifts",
+          "start": 29.754,
+          "end": 30.104,
+          "startMs": 29754,
+          "endMs": 30104
+        },
+        {
+          "word": "on",
+          "start": 30.104,
+          "end": 30.191,
+          "startMs": 30104,
+          "endMs": 30191
+        },
+        {
+          "word": "their",
+          "start": 30.192,
+          "end": 30.317,
+          "startMs": 30192,
+          "endMs": 30317
+        },
+        {
+          "word": "list",
+          "start": 30.329,
+          "end": 30.779,
+          "startMs": 30329,
+          "endMs": 30779
+        },
+        {
+          "word": "They",
+          "start": 31.191,
+          "end": 31.291,
+          "startMs": 31191,
+          "endMs": 31291
+        },
+        {
+          "word": "completely",
+          "start": 31.292,
+          "end": 31.954,
+          "startMs": 31292,
+          "endMs": 31954
+        },
+        {
+          "word": "ignore",
+          "start": 31.954,
+          "end": 32.554,
+          "startMs": 31954,
+          "endMs": 32554
+        },
+        {
+          "word": "the",
+          "start": 32.742,
+          "end": 32.842,
+          "startMs": 32742,
+          "endMs": 32842
+        },
+        {
+          "word": "four",
+          "start": 32.854,
+          "end": 33.391,
+          "startMs": 32854,
+          "endMs": 33391
+        },
+        {
+          "word": "invisible",
+          "start": 33.404,
+          "end": 34.129,
+          "startMs": 33404,
+          "endMs": 34129
+        },
+        {
+          "word": "multipliers",
+          "start": 34.129,
+          "end": 35.104,
+          "startMs": 34129,
+          "endMs": 35104
+        },
+        {
+          "word": "price-anchor",
+          "start": 35.316,
+          "end": 35.966,
+          "startMs": 35316,
+          "endMs": 35966
+        },
+        {
+          "word": "inflation",
+          "start": 35.979,
+          "end": 36.554,
+          "startMs": 35979,
+          "endMs": 36554
+        },
+        {
+          "word": "last-minute",
+          "start": 36.954,
+          "end": 37.542,
+          "startMs": 36954,
+          "endMs": 37542
+        },
+        {
+          "word": "panic",
+          "start": 37.542,
+          "end": 37.854,
+          "startMs": 37542,
+          "endMs": 37854
+        },
+        {
+          "word": "shipping",
+          "start": 37.866,
+          "end": 38.304,
+          "startMs": 37866,
+          "endMs": 38304
+        },
+        {
+          "word": "social",
+          "start": 38.554,
+          "end": 39.066,
+          "startMs": 38554,
+          "endMs": 39066
+        },
+        {
+          "word": "reciprocity",
+          "start": 39.066,
+          "end": 39.766,
+          "startMs": 39066,
+          "endMs": 39766
+        },
+        {
+          "word": "guilt",
+          "start": 39.766,
+          "end": 40.104,
+          "startMs": 39766,
+          "endMs": 40104
+        },
+        {
+          "word": "and",
+          "start": 40.516,
+          "end": 40.603,
+          "startMs": 40516,
+          "endMs": 40603
+        },
+        {
+          "word": "checkout",
+          "start": 40.604,
+          "end": 41.054,
+          "startMs": 40604,
+          "endMs": 41054
+        },
+        {
+          "word": "impulse",
+          "start": 41.116,
+          "end": 41.504,
+          "startMs": 41116,
+          "endMs": 41504
+        },
+        {
+          "word": "add-ons",
+          "start": 41.504,
+          "end": 42.166,
+          "startMs": 41504,
+          "endMs": 42166
+        },
+        {
+          "word": "Watch",
+          "start": 42.566,
+          "end": 42.791,
+          "startMs": 42566,
+          "endMs": 42791
+        },
+        {
+          "word": "what",
+          "start": 42.792,
+          "end": 42.879,
+          "startMs": 42792,
+          "endMs": 42879
+        },
+        {
+          "word": "happens",
+          "start": 42.879,
+          "end": 43.267,
+          "startMs": 42879,
+          "endMs": 43267
+        },
+        {
+          "word": "when",
+          "start": 43.266,
+          "end": 43.366,
+          "startMs": 43266,
+          "endMs": 43366
+        },
+        {
+          "word": "we",
+          "start": 43.366,
+          "end": 43.479,
+          "startMs": 43366,
+          "endMs": 43479
+        },
+        {
+          "word": "put",
+          "start": 43.479,
+          "end": 43.654,
+          "startMs": 43479,
+          "endMs": 43654
+        },
+        {
+          "word": "the",
+          "start": 43.654,
+          "end": 43.754,
+          "startMs": 43654,
+          "endMs": 43754
+        },
+        {
+          "word": "planned",
+          "start": 43.754,
+          "end": 44.166,
+          "startMs": 43754,
+          "endMs": 44166
+        },
+        {
+          "word": "ledger",
+          "start": 44.167,
+          "end": 44.442,
+          "startMs": 44167,
+          "endMs": 44442
+        },
+        {
+          "word": "next",
+          "start": 44.441,
+          "end": 44.841,
+          "startMs": 44441,
+          "endMs": 44841
+        },
+        {
+          "word": "to",
+          "start": 44.842,
+          "end": 44.992,
+          "startMs": 44842,
+          "endMs": 44992
+        },
+        {
+          "word": "actual",
+          "start": 45.004,
+          "end": 45.404,
+          "startMs": 45004,
+          "endMs": 45404
+        },
+        {
+          "word": "December",
+          "start": 45.404,
+          "end": 45.779,
+          "startMs": 45404,
+          "endMs": 45779
+        },
+        {
+          "word": "bank",
+          "start": 45.779,
+          "end": 46.029,
+          "startMs": 45779,
+          "endMs": 46029
+        },
+        {
+          "word": "statements",
+          "start": 46.042,
+          "end": 46.679,
+          "startMs": 46042,
+          "endMs": 46679
+        }
+      ],
+      "total_duration": 216.04,
+      "thumbnail_url": "/renders/ep01-400-christmas-money-trap/thumbnails/scene_02_ledger_autopsy.jpg",
+      "audio_url": "/renders/ep01-400-christmas-money-trap/scenes_audio/01_scene_02_ledger_autopsy.wav"
+    },
+    {
+      "id": "scene_03_retail_traps",
+      "section": "03 // THE 3 RETAIL PRICING TRAPS",
+      "narration": "Retailers use three specific behavioral formulas to break your mental calculator. First is the Decoy Anchor: placing a one hundred and fifty euro espresso machine next to a seventy-nine euro bundle so seventy-nine feels cheap, even when your cap was forty. Second is the Minimum Spend Threshold: spending twenty-two euros extra just to save five euros and ninety-nine cents on shipping. And third is Buy Now Pay Later splitting, which numbs the brain to the total price by dividing it by four.",
+      "visual_type": "kpi_grid",
+      "in_seconds": 47.404,
+      "out_seconds": 79.986,
+      "duration": 32.582,
+      "audio_file": "/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/02_scene_03_retail_traps.wav",
+      "word_count": 82,
+      "words": [
+        {
+          "word": "Retailers",
+          "start": 47.504,
+          "end": 48.092,
+          "startMs": 47504,
+          "endMs": 48092
+        },
+        {
+          "word": "use",
+          "start": 48.092,
+          "end": 48.492,
+          "startMs": 48092,
+          "endMs": 48492
+        },
+        {
+          "word": "three",
+          "start": 48.567,
+          "end": 49.155,
+          "startMs": 48567,
+          "endMs": 49155
+        },
+        {
+          "word": "specific",
+          "start": 49.166,
+          "end": 49.816,
+          "startMs": 49166,
+          "endMs": 49816
+        },
+        {
+          "word": "behavioral",
+          "start": 49.829,
+          "end": 50.354,
+          "startMs": 49829,
+          "endMs": 50354
+        },
+        {
+          "word": "formulas",
+          "start": 50.354,
+          "end": 50.942,
+          "startMs": 50354,
+          "endMs": 50942
+        },
+        {
+          "word": "to",
+          "start": 51.167,
+          "end": 51.28,
+          "startMs": 51167,
+          "endMs": 51280
+        },
+        {
+          "word": "break",
+          "start": 51.292,
+          "end": 51.692,
+          "startMs": 51292,
+          "endMs": 51692
+        },
+        {
+          "word": "your",
+          "start": 51.704,
+          "end": 51.804,
+          "startMs": 51704,
+          "endMs": 51804
+        },
+        {
+          "word": "mental",
+          "start": 51.816,
+          "end": 52.141,
+          "startMs": 51816,
+          "endMs": 52141
+        },
+        {
+          "word": "calculator",
+          "start": 52.141,
+          "end": 52.829,
+          "startMs": 52141,
+          "endMs": 52829
+        },
+        {
+          "word": "First",
+          "start": 53.279,
+          "end": 53.717,
+          "startMs": 53279,
+          "endMs": 53717
+        },
+        {
+          "word": "is",
+          "start": 54.004,
+          "end": 54.129,
+          "startMs": 54004,
+          "endMs": 54129
+        },
+        {
+          "word": "the",
+          "start": 54.129,
+          "end": 54.292,
+          "startMs": 54129,
+          "endMs": 54292
+        },
+        {
+          "word": "Decoy",
+          "start": 54.391,
+          "end": 54.941,
+          "startMs": 54391,
+          "endMs": 54941
+        },
+        {
+          "word": "Anchor",
+          "start": 54.954,
+          "end": 55.342,
+          "startMs": 54954,
+          "endMs": 55342
+        },
+        {
+          "word": "placing",
+          "start": 55.816,
+          "end": 56.178,
+          "startMs": 55816,
+          "endMs": 56178
+        },
+        {
+          "word": "a",
+          "start": 56.179,
+          "end": 56.259,
+          "startMs": 56179,
+          "endMs": 56259
+        },
+        {
+          "word": "one",
+          "start": 56.254,
+          "end": 56.354,
+          "startMs": 56254,
+          "endMs": 56354
+        },
+        {
+          "word": "hundred",
+          "start": 56.354,
+          "end": 56.629,
+          "startMs": 56354,
+          "endMs": 56629
+        },
+        {
+          "word": "and",
+          "start": 56.629,
+          "end": 56.709,
+          "startMs": 56629,
+          "endMs": 56709
+        },
+        {
+          "word": "fifty",
+          "start": 56.704,
+          "end": 57.066,
+          "startMs": 56704,
+          "endMs": 57066
+        },
+        {
+          "word": "euro",
+          "start": 57.066,
+          "end": 57.404,
+          "startMs": 57066,
+          "endMs": 57404
+        },
+        {
+          "word": "espresso",
+          "start": 57.404,
+          "end": 57.816,
+          "startMs": 57404,
+          "endMs": 57816
+        },
+        {
+          "word": "machine",
+          "start": 57.816,
+          "end": 58.216,
+          "startMs": 57816,
+          "endMs": 58216
+        },
+        {
+          "word": "next",
+          "start": 58.229,
+          "end": 58.529,
+          "startMs": 58229,
+          "endMs": 58529
+        },
+        {
+          "word": "to",
+          "start": 58.541,
+          "end": 58.641,
+          "startMs": 58541,
+          "endMs": 58641
+        },
+        {
+          "word": "a",
+          "start": 58.654,
+          "end": 58.734,
+          "startMs": 58654,
+          "endMs": 58734
+        },
+        {
+          "word": "seventy-nine",
+          "start": 58.716,
+          "end": 59.366,
+          "startMs": 58716,
+          "endMs": 59366
+        },
+        {
+          "word": "euro",
+          "start": 59.379,
+          "end": 59.666,
+          "startMs": 59379,
+          "endMs": 59666
+        },
+        {
+          "word": "bundle",
+          "start": 59.679,
+          "end": 60.041,
+          "startMs": 59679,
+          "endMs": 60041
+        },
+        {
+          "word": "so",
+          "start": 60.279,
+          "end": 60.454,
+          "startMs": 60279,
+          "endMs": 60454
+        },
+        {
+          "word": "seventy-nine",
+          "start": 60.466,
+          "end": 61.241,
+          "startMs": 60466,
+          "endMs": 61241
+        },
+        {
+          "word": "feels",
+          "start": 61.367,
+          "end": 61.742,
+          "startMs": 61367,
+          "endMs": 61742
+        },
+        {
+          "word": "cheap",
+          "start": 61.742,
+          "end": 62.117,
+          "startMs": 61742,
+          "endMs": 62117
+        },
+        {
+          "word": "even",
+          "start": 62.691,
+          "end": 62.879,
+          "startMs": 62691,
+          "endMs": 62879
+        },
+        {
+          "word": "when",
+          "start": 62.879,
+          "end": 62.979,
+          "startMs": 62879,
+          "endMs": 62979
+        },
+        {
+          "word": "your",
+          "start": 62.979,
+          "end": 63.079,
+          "startMs": 62979,
+          "endMs": 63079
+        },
+        {
+          "word": "cap",
+          "start": 63.079,
+          "end": 63.354,
+          "startMs": 63079,
+          "endMs": 63354
+        },
+        {
+          "word": "was",
+          "start": 63.367,
+          "end": 63.517,
+          "startMs": 63367,
+          "endMs": 63517
+        },
+        {
+          "word": "forty",
+          "start": 63.529,
+          "end": 63.967,
+          "startMs": 63529,
+          "endMs": 63967
+        },
+        {
+          "word": "Second",
+          "start": 64.366,
+          "end": 64.878,
+          "startMs": 64366,
+          "endMs": 64878
+        },
+        {
+          "word": "is",
+          "start": 65.041,
+          "end": 65.154,
+          "startMs": 65041,
+          "endMs": 65154
+        },
+        {
+          "word": "the",
+          "start": 65.154,
+          "end": 65.234,
+          "startMs": 65154,
+          "endMs": 65234
+        },
+        {
+          "word": "Minimum",
+          "start": 65.241,
+          "end": 65.816,
+          "startMs": 65241,
+          "endMs": 65816
+        },
+        {
+          "word": "Spend",
+          "start": 65.829,
+          "end": 66.404,
+          "startMs": 65829,
+          "endMs": 66404
+        },
+        {
+          "word": "Threshold",
+          "start": 66.504,
+          "end": 67.179,
+          "startMs": 66504,
+          "endMs": 67179
+        },
+        {
+          "word": "spending",
+          "start": 67.567,
+          "end": 67.905,
+          "startMs": 67567,
+          "endMs": 67905
+        },
+        {
+          "word": "twenty-two",
+          "start": 67.916,
+          "end": 68.341,
+          "startMs": 67916,
+          "endMs": 68341
+        },
+        {
+          "word": "euros",
+          "start": 68.342,
+          "end": 68.73,
+          "startMs": 68342,
+          "endMs": 68730
+        },
+        {
+          "word": "extra",
+          "start": 68.729,
+          "end": 69.167,
+          "startMs": 68729,
+          "endMs": 69167
+        },
+        {
+          "word": "just",
+          "start": 69.404,
+          "end": 69.567,
+          "startMs": 69404,
+          "endMs": 69567
+        },
+        {
+          "word": "to",
+          "start": 69.579,
+          "end": 69.659,
+          "startMs": 69579,
+          "endMs": 69659
+        },
+        {
+          "word": "save",
+          "start": 69.642,
+          "end": 69.892,
+          "startMs": 69642,
+          "endMs": 69892
+        },
+        {
+          "word": "five",
+          "start": 69.892,
+          "end": 70.23,
+          "startMs": 69892,
+          "endMs": 70230
+        },
+        {
+          "word": "euros",
+          "start": 70.229,
+          "end": 70.704,
+          "startMs": 70229,
+          "endMs": 70704
+        },
+        {
+          "word": "and",
+          "start": 70.704,
+          "end": 70.842,
+          "startMs": 70704,
+          "endMs": 70842
+        },
+        {
+          "word": "ninety-nine",
+          "start": 70.854,
+          "end": 71.592,
+          "startMs": 70854,
+          "endMs": 71592
+        },
+        {
+          "word": "cents",
+          "start": 71.604,
+          "end": 71.992,
+          "startMs": 71604,
+          "endMs": 71992
+        },
+        {
+          "word": "on",
+          "start": 71.991,
+          "end": 72.078,
+          "startMs": 71991,
+          "endMs": 72078
+        },
+        {
+          "word": "shipping",
+          "start": 72.079,
+          "end": 72.491,
+          "startMs": 72079,
+          "endMs": 72491
+        },
+        {
+          "word": "And",
+          "start": 72.904,
+          "end": 73.079,
+          "startMs": 72904,
+          "endMs": 73079
+        },
+        {
+          "word": "third",
+          "start": 73.092,
+          "end": 73.654,
+          "startMs": 73092,
+          "endMs": 73654
+        },
+        {
+          "word": "is",
+          "start": 73.892,
+          "end": 74.042,
+          "startMs": 73892,
+          "endMs": 74042
+        },
+        {
+          "word": "Buy",
+          "start": 74.041,
+          "end": 74.179,
+          "startMs": 74041,
+          "endMs": 74179
+        },
+        {
+          "word": "Now",
+          "start": 74.192,
+          "end": 74.442,
+          "startMs": 74192,
+          "endMs": 74442
+        },
+        {
+          "word": "Pay",
+          "start": 74.454,
+          "end": 74.766,
+          "startMs": 74454,
+          "endMs": 74766
+        },
+        {
+          "word": "Later",
+          "start": 74.779,
+          "end": 75.154,
+          "startMs": 74779,
+          "endMs": 75154
+        },
+        {
+          "word": "splitting",
+          "start": 75.154,
+          "end": 75.704,
+          "startMs": 75154,
+          "endMs": 75704
+        },
+        {
+          "word": "which",
+          "start": 75.979,
+          "end": 76.154,
+          "startMs": 75979,
+          "endMs": 76154
+        },
+        {
+          "word": "numbs",
+          "start": 76.154,
+          "end": 76.404,
+          "startMs": 76154,
+          "endMs": 76404
+        },
+        {
+          "word": "the",
+          "start": 76.404,
+          "end": 76.504,
+          "startMs": 76404,
+          "endMs": 76504
+        },
+        {
+          "word": "brain",
+          "start": 76.504,
+          "end": 76.916,
+          "startMs": 76504,
+          "endMs": 76916
+        },
+        {
+          "word": "to",
+          "start": 76.929,
+          "end": 77.009,
+          "startMs": 76929,
+          "endMs": 77009
+        },
+        {
+          "word": "the",
+          "start": 77.004,
+          "end": 77.091,
+          "startMs": 77004,
+          "endMs": 77091
+        },
+        {
+          "word": "total",
+          "start": 77.092,
+          "end": 77.417,
+          "startMs": 77092,
+          "endMs": 77417
+        },
+        {
+          "word": "price",
+          "start": 77.429,
+          "end": 77.841,
+          "startMs": 77429,
+          "endMs": 77841
+        },
+        {
+          "word": "by",
+          "start": 77.854,
+          "end": 77.979,
+          "startMs": 77854,
+          "endMs": 77979
+        },
+        {
+          "word": "dividing",
+          "start": 77.991,
+          "end": 78.454,
+          "startMs": 77991,
+          "endMs": 78454
+        },
+        {
+          "word": "it",
+          "start": 78.454,
+          "end": 78.541,
+          "startMs": 78454,
+          "endMs": 78541
+        },
+        {
+          "word": "by",
+          "start": 78.541,
+          "end": 78.741,
+          "startMs": 78541,
+          "endMs": 78741
+        },
+        {
+          "word": "four",
+          "start": 78.741,
+          "end": 79.253,
+          "startMs": 78741,
+          "endMs": 79253
+        }
+      ],
+      "total_duration": 216.04,
+      "thumbnail_url": "/renders/ep01-400-christmas-money-trap/thumbnails/scene_03_retail_traps.jpg",
+      "audio_url": "/renders/ep01-400-christmas-money-trap/scenes_audio/02_scene_03_retail_traps.wav"
+    },
+    {
+      "id": "scene_04_decision_tree",
+      "section": "04 // THE €400 HARD-CAP DECISION PROTOCOL",
+      "narration": "To beat a system built on behavioral math, you cannot use vague good intentions. You need a deterministic decision tree before you open a single browser tab. We lock the total ceiling at four hundred euros first, slice off a mandatory fifteen percent buffer for hidden friction costs, and divide every recipient into three strict mathematical tiers.",
+      "visual_type": "decision_tree",
+      "in_seconds": 79.986,
+      "out_seconds": 103.208,
+      "duration": 23.222,
+      "audio_file": "/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/03_scene_04_decision_tree.wav",
+      "word_count": 57,
+      "words": [
+        {
+          "word": "To",
+          "start": 80.086,
+          "end": 80.166,
+          "startMs": 80086,
+          "endMs": 80166
+        },
+        {
+          "word": "beat",
+          "start": 80.149,
+          "end": 80.374,
+          "startMs": 80149,
+          "endMs": 80374
+        },
+        {
+          "word": "a",
+          "start": 80.386,
+          "end": 80.466,
+          "startMs": 80386,
+          "endMs": 80466
+        },
+        {
+          "word": "system",
+          "start": 80.449,
+          "end": 80.849,
+          "startMs": 80449,
+          "endMs": 80849
+        },
+        {
+          "word": "built",
+          "start": 80.861,
+          "end": 81.186,
+          "startMs": 80861,
+          "endMs": 81186
+        },
+        {
+          "word": "on",
+          "start": 81.186,
+          "end": 81.286,
+          "startMs": 81186,
+          "endMs": 81286
+        },
+        {
+          "word": "behavioral",
+          "start": 81.286,
+          "end": 81.798,
+          "startMs": 81286,
+          "endMs": 81798
+        },
+        {
+          "word": "math",
+          "start": 81.811,
+          "end": 82.223,
+          "startMs": 81811,
+          "endMs": 82223
+        },
+        {
+          "word": "you",
+          "start": 82.661,
+          "end": 82.741,
+          "startMs": 82661,
+          "endMs": 82741
+        },
+        {
+          "word": "cannot",
+          "start": 82.736,
+          "end": 83.223,
+          "startMs": 82736,
+          "endMs": 83223
+        },
+        {
+          "word": "use",
+          "start": 83.236,
+          "end": 83.598,
+          "startMs": 83236,
+          "endMs": 83598
+        },
+        {
+          "word": "vague",
+          "start": 83.598,
+          "end": 83.973,
+          "startMs": 83598,
+          "endMs": 83973
+        },
+        {
+          "word": "good",
+          "start": 83.973,
+          "end": 84.111,
+          "startMs": 83973,
+          "endMs": 84111
+        },
+        {
+          "word": "intentions",
+          "start": 84.111,
+          "end": 84.836,
+          "startMs": 84111,
+          "endMs": 84836
+        },
+        {
+          "word": "You",
+          "start": 85.236,
+          "end": 85.316,
+          "startMs": 85236,
+          "endMs": 85316
+        },
+        {
+          "word": "need",
+          "start": 85.298,
+          "end": 85.436,
+          "startMs": 85298,
+          "endMs": 85436
+        },
+        {
+          "word": "a",
+          "start": 85.436,
+          "end": 85.516,
+          "startMs": 85436,
+          "endMs": 85516
+        },
+        {
+          "word": "deterministic",
+          "start": 85.473,
+          "end": 86.186,
+          "startMs": 85473,
+          "endMs": 86186
+        },
+        {
+          "word": "decision",
+          "start": 86.186,
+          "end": 86.686,
+          "startMs": 86186,
+          "endMs": 86686
+        },
+        {
+          "word": "tree",
+          "start": 86.686,
+          "end": 87.061,
+          "startMs": 86686,
+          "endMs": 87061
+        },
+        {
+          "word": "before",
+          "start": 87.136,
+          "end": 87.536,
+          "startMs": 87136,
+          "endMs": 87536
+        },
+        {
+          "word": "you",
+          "start": 87.536,
+          "end": 87.699,
+          "startMs": 87536,
+          "endMs": 87699
+        },
+        {
+          "word": "open",
+          "start": 87.711,
+          "end": 88.123,
+          "startMs": 87711,
+          "endMs": 88123
+        },
+        {
+          "word": "a",
+          "start": 88.261,
+          "end": 88.341,
+          "startMs": 88261,
+          "endMs": 88341
+        },
+        {
+          "word": "single",
+          "start": 88.298,
+          "end": 88.636,
+          "startMs": 88298,
+          "endMs": 88636
+        },
+        {
+          "word": "browser",
+          "start": 88.636,
+          "end": 89.011,
+          "startMs": 88636,
+          "endMs": 89011
+        },
+        {
+          "word": "tab",
+          "start": 89.011,
+          "end": 89.386,
+          "startMs": 89011,
+          "endMs": 89386
+        },
+        {
+          "word": "We",
+          "start": 89.786,
+          "end": 89.899,
+          "startMs": 89786,
+          "endMs": 89899
+        },
+        {
+          "word": "lock",
+          "start": 89.898,
+          "end": 90.21,
+          "startMs": 89898,
+          "endMs": 90210
+        },
+        {
+          "word": "the",
+          "start": 90.211,
+          "end": 90.336,
+          "startMs": 90211,
+          "endMs": 90336
+        },
+        {
+          "word": "total",
+          "start": 90.349,
+          "end": 90.724,
+          "startMs": 90349,
+          "endMs": 90724
+        },
+        {
+          "word": "ceiling",
+          "start": 90.724,
+          "end": 91.187,
+          "startMs": 90724,
+          "endMs": 91187
+        },
+        {
+          "word": "at",
+          "start": 91.199,
+          "end": 91.279,
+          "startMs": 91199,
+          "endMs": 91279
+        },
+        {
+          "word": "four",
+          "start": 91.273,
+          "end": 91.685,
+          "startMs": 91273,
+          "endMs": 91685
+        },
+        {
+          "word": "hundred",
+          "start": 91.686,
+          "end": 91.923,
+          "startMs": 91686,
+          "endMs": 91923
+        },
+        {
+          "word": "euros",
+          "start": 91.924,
+          "end": 92.349,
+          "startMs": 91924,
+          "endMs": 92349
+        },
+        {
+          "word": "first",
+          "start": 92.349,
+          "end": 92.949,
+          "startMs": 92349,
+          "endMs": 92949
+        },
+        {
+          "word": "slice",
+          "start": 93.349,
+          "end": 93.749,
+          "startMs": 93349,
+          "endMs": 93749
+        },
+        {
+          "word": "off",
+          "start": 93.761,
+          "end": 94.011,
+          "startMs": 93761,
+          "endMs": 94011
+        },
+        {
+          "word": "a",
+          "start": 94.111,
+          "end": 94.191,
+          "startMs": 94111,
+          "endMs": 94191
+        },
+        {
+          "word": "mandatory",
+          "start": 94.148,
+          "end": 94.848,
+          "startMs": 94148,
+          "endMs": 94848
+        },
+        {
+          "word": "fifteen",
+          "start": 94.849,
+          "end": 95.336,
+          "startMs": 94849,
+          "endMs": 95336
+        },
+        {
+          "word": "percent",
+          "start": 95.349,
+          "end": 95.787,
+          "startMs": 95349,
+          "endMs": 95787
+        },
+        {
+          "word": "buffer",
+          "start": 95.798,
+          "end": 96.16,
+          "startMs": 95798,
+          "endMs": 96160
+        },
+        {
+          "word": "for",
+          "start": 96.448,
+          "end": 96.611,
+          "startMs": 96448,
+          "endMs": 96611
+        },
+        {
+          "word": "hidden",
+          "start": 96.611,
+          "end": 96.874,
+          "startMs": 96611,
+          "endMs": 96874
+        },
+        {
+          "word": "friction",
+          "start": 96.886,
+          "end": 97.248,
+          "startMs": 96886,
+          "endMs": 97248
+        },
+        {
+          "word": "costs",
+          "start": 97.248,
+          "end": 97.81,
+          "startMs": 97248,
+          "endMs": 97810
+        },
+        {
+          "word": "and",
+          "start": 98.224,
+          "end": 98.311,
+          "startMs": 98224,
+          "endMs": 98311
+        },
+        {
+          "word": "divide",
+          "start": 98.311,
+          "end": 98.736,
+          "startMs": 98311,
+          "endMs": 98736
+        },
+        {
+          "word": "every",
+          "start": 98.861,
+          "end": 99.148,
+          "startMs": 98861,
+          "endMs": 99148
+        },
+        {
+          "word": "recipient",
+          "start": 99.149,
+          "end": 99.786,
+          "startMs": 99149,
+          "endMs": 99786
+        },
+        {
+          "word": "into",
+          "start": 99.849,
+          "end": 100.086,
+          "startMs": 99849,
+          "endMs": 100086
+        },
+        {
+          "word": "three",
+          "start": 100.099,
+          "end": 100.586,
+          "startMs": 100099,
+          "endMs": 100586
+        },
+        {
+          "word": "strict",
+          "start": 100.586,
+          "end": 101.148,
+          "startMs": 100586,
+          "endMs": 101148
+        },
+        {
+          "word": "mathematical",
+          "start": 101.311,
+          "end": 101.973,
+          "startMs": 101311,
+          "endMs": 101973
+        },
+        {
+          "word": "tiers",
+          "start": 101.974,
+          "end": 102.486,
+          "startMs": 101974,
+          "endMs": 102486
+        }
+      ],
+      "total_duration": 216.04,
+      "thumbnail_url": "/renders/ep01-400-christmas-money-trap/thumbnails/scene_04_decision_tree.jpg",
+      "audio_url": "/renders/ep01-400-christmas-money-trap/scenes_audio/03_scene_04_decision_tree.wav"
+    },
+    {
+      "id": "scene_05_asymmetric_value",
+      "section": "05 // THE ASYMMETRIC PERCEIVED-VALUE CURVE",
+      "narration": "Here is the secret that luxury brands never tell you: perceived gift value does not scale linearly with price. Buying a forty euro generic sweater feels cheap because it sits at the bottom of the clothing category. Buying a twenty-four euro single-origin olive oil or specialty coffee set feels luxurious because it sits at the absolute top of its category. Always buy at the top of a low-cost category, never the bottom of an expensive one.",
+      "visual_type": "bar_chart",
+      "in_seconds": 103.208,
+      "out_seconds": 132.454,
+      "duration": 29.246,
+      "audio_file": "/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/04_scene_05_asymmetric_value.wav",
+      "word_count": 76,
+      "words": [
+        {
+          "word": "Here",
+          "start": 103.321,
+          "end": 103.509,
+          "startMs": 103321,
+          "endMs": 103509
+        },
+        {
+          "word": "is",
+          "start": 103.52,
+          "end": 103.607,
+          "startMs": 103520,
+          "endMs": 103607
+        },
+        {
+          "word": "the",
+          "start": 103.62,
+          "end": 103.72,
+          "startMs": 103620,
+          "endMs": 103720
+        },
+        {
+          "word": "secret",
+          "start": 103.733,
+          "end": 104.245,
+          "startMs": 103733,
+          "endMs": 104245
+        },
+        {
+          "word": "that",
+          "start": 104.258,
+          "end": 104.458,
+          "startMs": 104258,
+          "endMs": 104458
+        },
+        {
+          "word": "luxury",
+          "start": 104.47,
+          "end": 104.995,
+          "startMs": 104470,
+          "endMs": 104995
+        },
+        {
+          "word": "brands",
+          "start": 104.996,
+          "end": 105.584,
+          "startMs": 104996,
+          "endMs": 105584
+        },
+        {
+          "word": "never",
+          "start": 105.646,
+          "end": 106.058,
+          "startMs": 105646,
+          "endMs": 106058
+        },
+        {
+          "word": "tell",
+          "start": 106.058,
+          "end": 106.321,
+          "startMs": 106058,
+          "endMs": 106321
+        },
+        {
+          "word": "you",
+          "start": 106.333,
+          "end": 106.496,
+          "startMs": 106333,
+          "endMs": 106496
+        },
+        {
+          "word": "perceived",
+          "start": 106.92,
+          "end": 107.457,
+          "startMs": 106920,
+          "endMs": 107457
+        },
+        {
+          "word": "gift",
+          "start": 107.546,
+          "end": 107.796,
+          "startMs": 107546,
+          "endMs": 107796
+        },
+        {
+          "word": "value",
+          "start": 107.796,
+          "end": 108.259,
+          "startMs": 107796,
+          "endMs": 108259
+        },
+        {
+          "word": "does",
+          "start": 108.358,
+          "end": 108.558,
+          "startMs": 108358,
+          "endMs": 108558
+        },
+        {
+          "word": "not",
+          "start": 108.558,
+          "end": 108.87,
+          "startMs": 108558,
+          "endMs": 108870
+        },
+        {
+          "word": "scale",
+          "start": 108.87,
+          "end": 109.345,
+          "startMs": 108870,
+          "endMs": 109345
+        },
+        {
+          "word": "linearly",
+          "start": 109.346,
+          "end": 109.833,
+          "startMs": 109346,
+          "endMs": 109833
+        },
+        {
+          "word": "with",
+          "start": 109.846,
+          "end": 110.009,
+          "startMs": 109846,
+          "endMs": 110009
+        },
+        {
+          "word": "price",
+          "start": 110.02,
+          "end": 110.733,
+          "startMs": 110020,
+          "endMs": 110733
+        },
+        {
+          "word": "Buying",
+          "start": 111.146,
+          "end": 111.571,
+          "startMs": 111146,
+          "endMs": 111571
+        },
+        {
+          "word": "a",
+          "start": 111.646,
+          "end": 111.726,
+          "startMs": 111646,
+          "endMs": 111726
+        },
+        {
+          "word": "forty",
+          "start": 111.696,
+          "end": 112.146,
+          "startMs": 111696,
+          "endMs": 112146
+        },
+        {
+          "word": "euro",
+          "start": 112.146,
+          "end": 112.471,
+          "startMs": 112146,
+          "endMs": 112471
+        },
+        {
+          "word": "generic",
+          "start": 112.483,
+          "end": 112.908,
+          "startMs": 112483,
+          "endMs": 112908
+        },
+        {
+          "word": "sweater",
+          "start": 112.908,
+          "end": 113.258,
+          "startMs": 112908,
+          "endMs": 113258
+        },
+        {
+          "word": "feels",
+          "start": 113.258,
+          "end": 113.646,
+          "startMs": 113258,
+          "endMs": 113646
+        },
+        {
+          "word": "cheap",
+          "start": 113.646,
+          "end": 114.046,
+          "startMs": 113646,
+          "endMs": 114046
+        },
+        {
+          "word": "because",
+          "start": 114.183,
+          "end": 114.483,
+          "startMs": 114183,
+          "endMs": 114483
+        },
+        {
+          "word": "it",
+          "start": 114.483,
+          "end": 114.563,
+          "startMs": 114483,
+          "endMs": 114563
+        },
+        {
+          "word": "sits",
+          "start": 114.558,
+          "end": 114.87,
+          "startMs": 114558,
+          "endMs": 114870
+        },
+        {
+          "word": "at",
+          "start": 114.87,
+          "end": 114.95,
+          "startMs": 114870,
+          "endMs": 114950
+        },
+        {
+          "word": "the",
+          "start": 114.946,
+          "end": 115.033,
+          "startMs": 114946,
+          "endMs": 115033
+        },
+        {
+          "word": "bottom",
+          "start": 115.046,
+          "end": 115.533,
+          "startMs": 115046,
+          "endMs": 115533
+        },
+        {
+          "word": "of",
+          "start": 115.658,
+          "end": 115.745,
+          "startMs": 115658,
+          "endMs": 115745
+        },
+        {
+          "word": "the",
+          "start": 115.745,
+          "end": 115.825,
+          "startMs": 115745,
+          "endMs": 115825
+        },
+        {
+          "word": "clothing",
+          "start": 115.821,
+          "end": 116.246,
+          "startMs": 115821,
+          "endMs": 116246
+        },
+        {
+          "word": "category",
+          "start": 116.258,
+          "end": 116.895,
+          "startMs": 116258,
+          "endMs": 116895
+        },
+        {
+          "word": "Buying",
+          "start": 117.296,
+          "end": 117.596,
+          "startMs": 117296,
+          "endMs": 117596
+        },
+        {
+          "word": "a",
+          "start": 117.595,
+          "end": 117.675,
+          "startMs": 117595,
+          "endMs": 117675
+        },
+        {
+          "word": "twenty-four",
+          "start": 117.658,
+          "end": 118.208,
+          "startMs": 117658,
+          "endMs": 118208
+        },
+        {
+          "word": "euro",
+          "start": 118.208,
+          "end": 118.72,
+          "startMs": 118208,
+          "endMs": 118720
+        },
+        {
+          "word": "single-origin",
+          "start": 118.908,
+          "end": 119.508,
+          "startMs": 118908,
+          "endMs": 119508
+        },
+        {
+          "word": "olive",
+          "start": 119.508,
+          "end": 119.795,
+          "startMs": 119508,
+          "endMs": 119795
+        },
+        {
+          "word": "oil",
+          "start": 119.808,
+          "end": 120.208,
+          "startMs": 119808,
+          "endMs": 120208
+        },
+        {
+          "word": "or",
+          "start": 120.545,
+          "end": 120.658,
+          "startMs": 120545,
+          "endMs": 120658
+        },
+        {
+          "word": "specialty",
+          "start": 120.658,
+          "end": 121.183,
+          "startMs": 120658,
+          "endMs": 121183
+        },
+        {
+          "word": "coffee",
+          "start": 121.183,
+          "end": 121.633,
+          "startMs": 121183,
+          "endMs": 121633
+        },
+        {
+          "word": "set",
+          "start": 122.008,
+          "end": 122.346,
+          "startMs": 122008,
+          "endMs": 122346
+        },
+        {
+          "word": "feels",
+          "start": 122.52,
+          "end": 122.908,
+          "startMs": 122520,
+          "endMs": 122908
+        },
+        {
+          "word": "luxurious",
+          "start": 122.908,
+          "end": 123.646,
+          "startMs": 122908,
+          "endMs": 123646
+        },
+        {
+          "word": "because",
+          "start": 123.646,
+          "end": 123.921,
+          "startMs": 123646,
+          "endMs": 123921
+        },
+        {
+          "word": "it",
+          "start": 123.92,
+          "end": 124.0,
+          "startMs": 123920,
+          "endMs": 124000
+        },
+        {
+          "word": "sits",
+          "start": 123.996,
+          "end": 124.296,
+          "startMs": 123996,
+          "endMs": 124296
+        },
+        {
+          "word": "at",
+          "start": 124.295,
+          "end": 124.375,
+          "startMs": 124295,
+          "endMs": 124375
+        },
+        {
+          "word": "the",
+          "start": 124.358,
+          "end": 124.483,
+          "startMs": 124358,
+          "endMs": 124483
+        },
+        {
+          "word": "absolute",
+          "start": 124.621,
+          "end": 125.246,
+          "startMs": 124621,
+          "endMs": 125246
+        },
+        {
+          "word": "top",
+          "start": 125.246,
+          "end": 125.721,
+          "startMs": 125246,
+          "endMs": 125721
+        },
+        {
+          "word": "of",
+          "start": 125.808,
+          "end": 125.908,
+          "startMs": 125808,
+          "endMs": 125908
+        },
+        {
+          "word": "its",
+          "start": 125.908,
+          "end": 126.008,
+          "startMs": 125908,
+          "endMs": 126008
+        },
+        {
+          "word": "category",
+          "start": 126.02,
+          "end": 126.682,
+          "startMs": 126020,
+          "endMs": 126682
+        },
+        {
+          "word": "Always",
+          "start": 127.095,
+          "end": 127.395,
+          "startMs": 127095,
+          "endMs": 127395
+        },
+        {
+          "word": "buy",
+          "start": 127.396,
+          "end": 127.534,
+          "startMs": 127396,
+          "endMs": 127534
+        },
+        {
+          "word": "at",
+          "start": 127.533,
+          "end": 127.613,
+          "startMs": 127533,
+          "endMs": 127613
+        },
+        {
+          "word": "the",
+          "start": 127.583,
+          "end": 127.663,
+          "startMs": 127583,
+          "endMs": 127663
+        },
+        {
+          "word": "top",
+          "start": 127.67,
+          "end": 127.945,
+          "startMs": 127670,
+          "endMs": 127945
+        },
+        {
+          "word": "of",
+          "start": 127.946,
+          "end": 128.026,
+          "startMs": 127946,
+          "endMs": 128026
+        },
+        {
+          "word": "a",
+          "start": 128.008,
+          "end": 128.088,
+          "startMs": 128008,
+          "endMs": 128088
+        },
+        {
+          "word": "low-cost",
+          "start": 128.045,
+          "end": 128.658,
+          "startMs": 128045,
+          "endMs": 128658
+        },
+        {
+          "word": "category",
+          "start": 128.67,
+          "end": 129.27,
+          "startMs": 128670,
+          "endMs": 129270
+        },
+        {
+          "word": "never",
+          "start": 129.708,
+          "end": 129.92,
+          "startMs": 129708,
+          "endMs": 129920
+        },
+        {
+          "word": "the",
+          "start": 129.92,
+          "end": 130.007,
+          "startMs": 129920,
+          "endMs": 130007
+        },
+        {
+          "word": "bottom",
+          "start": 130.008,
+          "end": 130.608,
+          "startMs": 130008,
+          "endMs": 130608
+        },
+        {
+          "word": "of",
+          "start": 130.746,
+          "end": 130.826,
+          "startMs": 130746,
+          "endMs": 130826
+        },
+        {
+          "word": "an",
+          "start": 130.808,
+          "end": 130.888,
+          "startMs": 130808,
+          "endMs": 130888
+        },
+        {
+          "word": "expensive",
+          "start": 130.871,
+          "end": 131.446,
+          "startMs": 130871,
+          "endMs": 131446
+        },
+        {
+          "word": "one",
+          "start": 131.446,
+          "end": 131.733,
+          "startMs": 131446,
+          "endMs": 131733
+        }
+      ],
+      "total_duration": 216.04,
+      "thumbnail_url": "/renders/ep01-400-christmas-money-trap/thumbnails/scene_05_asymmetric_value.jpg",
+      "audio_url": "/renders/ep01-400-christmas-money-trap/scenes_audio/04_scene_05_asymmetric_value.wav"
+    },
+    {
+      "id": "scene_06_receipt_comparison",
+      "section": "06 // SIDE-BY-SIDE CHECKOUT RECEIPT",
+      "narration": "Let's put both strategies side by side on ten recipients. On the left is the standard December shopper reacting to sales banners and last-minute guilt. On the right is the engineered four hundred euro decision protocol. Notice how the engineered plan covers the exact same ten people, scores higher on perceived thoughtfulness, and leaves five hundred and twenty-eight euros in your bank account on January first.",
+      "visual_type": "receipt_comparison",
+      "in_seconds": 132.454,
+      "out_seconds": 158.556,
+      "duration": 26.102,
+      "audio_file": "/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/05_scene_06_receipt_comparison.wav",
+      "word_count": 66,
+      "words": [
+        {
+          "word": "Let's",
+          "start": 132.554,
+          "end": 132.679,
+          "startMs": 132554,
+          "endMs": 132679
+        },
+        {
+          "word": "put",
+          "start": 132.679,
+          "end": 132.867,
+          "startMs": 132679,
+          "endMs": 132867
+        },
+        {
+          "word": "both",
+          "start": 132.879,
+          "end": 133.104,
+          "startMs": 132879,
+          "endMs": 133104
+        },
+        {
+          "word": "strategies",
+          "start": 133.116,
+          "end": 133.741,
+          "startMs": 133116,
+          "endMs": 133741
+        },
+        {
+          "word": "side",
+          "start": 133.754,
+          "end": 134.092,
+          "startMs": 133754,
+          "endMs": 134092
+        },
+        {
+          "word": "by",
+          "start": 134.091,
+          "end": 134.266,
+          "startMs": 134091,
+          "endMs": 134266
+        },
+        {
+          "word": "side",
+          "start": 134.266,
+          "end": 134.778,
+          "startMs": 134266,
+          "endMs": 134778
+        },
+        {
+          "word": "on",
+          "start": 134.967,
+          "end": 135.117,
+          "startMs": 134967,
+          "endMs": 135117
+        },
+        {
+          "word": "ten",
+          "start": 135.129,
+          "end": 135.366,
+          "startMs": 135129,
+          "endMs": 135366
+        },
+        {
+          "word": "recipients",
+          "start": 135.367,
+          "end": 136.105,
+          "startMs": 135367,
+          "endMs": 136105
+        },
+        {
+          "word": "On",
+          "start": 136.504,
+          "end": 136.591,
+          "startMs": 136504,
+          "endMs": 136591
+        },
+        {
+          "word": "the",
+          "start": 136.592,
+          "end": 136.672,
+          "startMs": 136592,
+          "endMs": 136672
+        },
+        {
+          "word": "left",
+          "start": 136.654,
+          "end": 137.066,
+          "startMs": 136654,
+          "endMs": 137066
+        },
+        {
+          "word": "is",
+          "start": 137.392,
+          "end": 137.492,
+          "startMs": 137392,
+          "endMs": 137492
+        },
+        {
+          "word": "the",
+          "start": 137.491,
+          "end": 137.578,
+          "startMs": 137491,
+          "endMs": 137578
+        },
+        {
+          "word": "standard",
+          "start": 137.592,
+          "end": 138.092,
+          "startMs": 137592,
+          "endMs": 138092
+        },
+        {
+          "word": "December",
+          "start": 138.092,
+          "end": 138.555,
+          "startMs": 138092,
+          "endMs": 138555
+        },
+        {
+          "word": "shopper",
+          "start": 138.566,
+          "end": 139.066,
+          "startMs": 138566,
+          "endMs": 139066
+        },
+        {
+          "word": "reacting",
+          "start": 139.066,
+          "end": 139.654,
+          "startMs": 139066,
+          "endMs": 139654
+        },
+        {
+          "word": "to",
+          "start": 139.741,
+          "end": 139.841,
+          "startMs": 139741,
+          "endMs": 139841
+        },
+        {
+          "word": "sales",
+          "start": 139.842,
+          "end": 140.305,
+          "startMs": 139842,
+          "endMs": 140305
+        },
+        {
+          "word": "banners",
+          "start": 140.304,
+          "end": 140.854,
+          "startMs": 140304,
+          "endMs": 140854
+        },
+        {
+          "word": "and",
+          "start": 141.042,
+          "end": 141.242,
+          "startMs": 141042,
+          "endMs": 141242
+        },
+        {
+          "word": "last-minute",
+          "start": 141.241,
+          "end": 141.854,
+          "startMs": 141241,
+          "endMs": 141854
+        },
+        {
+          "word": "guilt",
+          "start": 141.854,
+          "end": 142.204,
+          "startMs": 141854,
+          "endMs": 142204
+        },
+        {
+          "word": "On",
+          "start": 142.616,
+          "end": 142.703,
+          "startMs": 142616,
+          "endMs": 142703
+        },
+        {
+          "word": "the",
+          "start": 142.716,
+          "end": 142.796,
+          "startMs": 142716,
+          "endMs": 142796
+        },
+        {
+          "word": "right",
+          "start": 142.792,
+          "end": 143.217,
+          "startMs": 142792,
+          "endMs": 143217
+        },
+        {
+          "word": "is",
+          "start": 143.466,
+          "end": 143.566,
+          "startMs": 143466,
+          "endMs": 143566
+        },
+        {
+          "word": "the",
+          "start": 143.579,
+          "end": 143.659,
+          "startMs": 143579,
+          "endMs": 143659
+        },
+        {
+          "word": "engineered",
+          "start": 143.654,
+          "end": 144.291,
+          "startMs": 143654,
+          "endMs": 144291
+        },
+        {
+          "word": "four",
+          "start": 144.429,
+          "end": 144.854,
+          "startMs": 144429,
+          "endMs": 144854
+        },
+        {
+          "word": "hundred",
+          "start": 144.854,
+          "end": 145.154,
+          "startMs": 144854,
+          "endMs": 145154
+        },
+        {
+          "word": "euro",
+          "start": 145.167,
+          "end": 145.454,
+          "startMs": 145167,
+          "endMs": 145454
+        },
+        {
+          "word": "decision",
+          "start": 145.466,
+          "end": 145.904,
+          "startMs": 145466,
+          "endMs": 145904
+        },
+        {
+          "word": "protocol",
+          "start": 145.904,
+          "end": 146.517,
+          "startMs": 145904,
+          "endMs": 146517
+        },
+        {
+          "word": "Notice",
+          "start": 146.904,
+          "end": 147.179,
+          "startMs": 146904,
+          "endMs": 147179
+        },
+        {
+          "word": "how",
+          "start": 147.179,
+          "end": 147.304,
+          "startMs": 147179,
+          "endMs": 147304
+        },
+        {
+          "word": "the",
+          "start": 147.317,
+          "end": 147.397,
+          "startMs": 147317,
+          "endMs": 147397
+        },
+        {
+          "word": "engineered",
+          "start": 147.404,
+          "end": 147.992,
+          "startMs": 147404,
+          "endMs": 147992
+        },
+        {
+          "word": "plan",
+          "start": 147.991,
+          "end": 148.454,
+          "startMs": 147991,
+          "endMs": 148454
+        },
+        {
+          "word": "covers",
+          "start": 148.567,
+          "end": 148.979,
+          "startMs": 148567,
+          "endMs": 148979
+        },
+        {
+          "word": "the",
+          "start": 148.992,
+          "end": 149.072,
+          "startMs": 148992,
+          "endMs": 149072
+        },
+        {
+          "word": "exact",
+          "start": 149.054,
+          "end": 149.691,
+          "startMs": 149054,
+          "endMs": 149691
+        },
+        {
+          "word": "same",
+          "start": 149.704,
+          "end": 150.329,
+          "startMs": 149704,
+          "endMs": 150329
+        },
+        {
+          "word": "ten",
+          "start": 150.442,
+          "end": 150.78,
+          "startMs": 150442,
+          "endMs": 150780
+        },
+        {
+          "word": "people",
+          "start": 150.791,
+          "end": 151.241,
+          "startMs": 150791,
+          "endMs": 151241
+        },
+        {
+          "word": "scores",
+          "start": 151.529,
+          "end": 151.941,
+          "startMs": 151529,
+          "endMs": 151941
+        },
+        {
+          "word": "higher",
+          "start": 151.954,
+          "end": 152.366,
+          "startMs": 151954,
+          "endMs": 152366
+        },
+        {
+          "word": "on",
+          "start": 152.367,
+          "end": 152.467,
+          "startMs": 152367,
+          "endMs": 152467
+        },
+        {
+          "word": "perceived",
+          "start": 152.466,
+          "end": 152.991,
+          "startMs": 152466,
+          "endMs": 152991
+        },
+        {
+          "word": "thoughtfulness",
+          "start": 153.004,
+          "end": 153.754,
+          "startMs": 153004,
+          "endMs": 153754
+        },
+        {
+          "word": "and",
+          "start": 154.154,
+          "end": 154.254,
+          "startMs": 154154,
+          "endMs": 154254
+        },
+        {
+          "word": "leaves",
+          "start": 154.254,
+          "end": 154.442,
+          "startMs": 154254,
+          "endMs": 154442
+        },
+        {
+          "word": "five",
+          "start": 154.454,
+          "end": 154.704,
+          "startMs": 154454,
+          "endMs": 154704
+        },
+        {
+          "word": "hundred",
+          "start": 154.704,
+          "end": 154.892,
+          "startMs": 154704,
+          "endMs": 154892
+        },
+        {
+          "word": "and",
+          "start": 154.892,
+          "end": 154.972,
+          "startMs": 154892,
+          "endMs": 154972
+        },
+        {
+          "word": "twenty-eight",
+          "start": 154.929,
+          "end": 155.317,
+          "startMs": 154929,
+          "endMs": 155317
+        },
+        {
+          "word": "euros",
+          "start": 155.317,
+          "end": 155.755,
+          "startMs": 155317,
+          "endMs": 155755
+        },
+        {
+          "word": "in",
+          "start": 155.754,
+          "end": 155.879,
+          "startMs": 155754,
+          "endMs": 155879
+        },
+        {
+          "word": "your",
+          "start": 155.879,
+          "end": 155.992,
+          "startMs": 155879,
+          "endMs": 155992
+        },
+        {
+          "word": "bank",
+          "start": 155.992,
+          "end": 156.255,
+          "startMs": 155992,
+          "endMs": 156255
+        },
+        {
+          "word": "account",
+          "start": 156.254,
+          "end": 156.642,
+          "startMs": 156254,
+          "endMs": 156642
+        },
+        {
+          "word": "on",
+          "start": 156.654,
+          "end": 156.804,
+          "startMs": 156654,
+          "endMs": 156804
+        },
+        {
+          "word": "January",
+          "start": 156.817,
+          "end": 157.304,
+          "startMs": 156817,
+          "endMs": 157304
+        },
+        {
+          "word": "first",
+          "start": 157.304,
+          "end": 157.829,
+          "startMs": 157304,
+          "endMs": 157829
+        }
+      ],
+      "total_duration": 216.04,
+      "thumbnail_url": "/renders/ep01-400-christmas-money-trap/thumbnails/scene_06_receipt_comparison.jpg",
+      "audio_url": "/renders/ep01-400-christmas-money-trap/scenes_audio/05_scene_06_receipt_comparison.wav"
+    },
+    {
+      "id": "scene_07_terminal_execution",
+      "section": "07 // THE 15-MINUTE EXECUTION CHECKLIST",
+      "narration": "Here is how you execute this in fifteen minutes today. Step one: transfer four hundred euros into a separate sub-account or prepaid card—when the balance hits zero, shopping is mathematically over. Step two: deduct your sixty euro friction vault immediately. Step three: assign every name on your list a fixed euro cap before searching for a single product. Never pick the item first and justify the price second.",
+      "visual_type": "terminal_scene",
+      "in_seconds": 158.556,
+      "out_seconds": 187.202,
+      "duration": 28.646,
+      "audio_file": "/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/06_scene_07_terminal_execution.wav",
+      "word_count": 69,
+      "words": [
+        {
+          "word": "Here",
+          "start": 158.669,
+          "end": 158.844,
+          "startMs": 158669,
+          "endMs": 158844
+        },
+        {
+          "word": "is",
+          "start": 158.856,
+          "end": 158.943,
+          "startMs": 158856,
+          "endMs": 158943
+        },
+        {
+          "word": "how",
+          "start": 158.944,
+          "end": 159.069,
+          "startMs": 158944,
+          "endMs": 159069
+        },
+        {
+          "word": "you",
+          "start": 159.081,
+          "end": 159.219,
+          "startMs": 159081,
+          "endMs": 159219
+        },
+        {
+          "word": "execute",
+          "start": 159.218,
+          "end": 159.755,
+          "startMs": 159218,
+          "endMs": 159755
+        },
+        {
+          "word": "this",
+          "start": 159.756,
+          "end": 159.956,
+          "startMs": 159756,
+          "endMs": 159956
+        },
+        {
+          "word": "in",
+          "start": 159.969,
+          "end": 160.144,
+          "startMs": 159969,
+          "endMs": 160144
+        },
+        {
+          "word": "fifteen",
+          "start": 160.156,
+          "end": 160.693,
+          "startMs": 160156,
+          "endMs": 160693
+        },
+        {
+          "word": "minutes",
+          "start": 160.706,
+          "end": 160.943,
+          "startMs": 160706,
+          "endMs": 160943
+        },
+        {
+          "word": "today",
+          "start": 160.956,
+          "end": 161.368,
+          "startMs": 160956,
+          "endMs": 161368
+        },
+        {
+          "word": "Step",
+          "start": 161.768,
+          "end": 162.106,
+          "startMs": 161768,
+          "endMs": 162106
+        },
+        {
+          "word": "one",
+          "start": 162.118,
+          "end": 162.443,
+          "startMs": 162118,
+          "endMs": 162443
+        },
+        {
+          "word": "transfer",
+          "start": 162.856,
+          "end": 163.406,
+          "startMs": 162856,
+          "endMs": 163406
+        },
+        {
+          "word": "four",
+          "start": 163.406,
+          "end": 163.706,
+          "startMs": 163406,
+          "endMs": 163706
+        },
+        {
+          "word": "hundred",
+          "start": 163.718,
+          "end": 163.993,
+          "startMs": 163718,
+          "endMs": 163993
+        },
+        {
+          "word": "euros",
+          "start": 163.994,
+          "end": 164.481,
+          "startMs": 163994,
+          "endMs": 164481
+        },
+        {
+          "word": "into",
+          "start": 164.543,
+          "end": 164.768,
+          "startMs": 164543,
+          "endMs": 164768
+        },
+        {
+          "word": "a",
+          "start": 164.769,
+          "end": 164.849,
+          "startMs": 164769,
+          "endMs": 164849
+        },
+        {
+          "word": "separate",
+          "start": 164.819,
+          "end": 165.231,
+          "startMs": 164819,
+          "endMs": 165231
+        },
+        {
+          "word": "sub-account",
+          "start": 165.244,
+          "end": 165.906,
+          "startMs": 165244,
+          "endMs": 165906
+        },
+        {
+          "word": "or",
+          "start": 166.006,
+          "end": 166.106,
+          "startMs": 166006,
+          "endMs": 166106
+        },
+        {
+          "word": "prepaid",
+          "start": 166.106,
+          "end": 166.694,
+          "startMs": 166106,
+          "endMs": 166694
+        },
+        {
+          "word": "card",
+          "start": 166.693,
+          "end": 167.031,
+          "startMs": 166693,
+          "endMs": 167031
+        },
+        {
+          "word": "when",
+          "start": 167.506,
+          "end": 167.593,
+          "startMs": 167506,
+          "endMs": 167593
+        },
+        {
+          "word": "the",
+          "start": 167.593,
+          "end": 167.673,
+          "startMs": 167593,
+          "endMs": 167673
+        },
+        {
+          "word": "balance",
+          "start": 167.656,
+          "end": 168.068,
+          "startMs": 167656,
+          "endMs": 168068
+        },
+        {
+          "word": "hits",
+          "start": 168.068,
+          "end": 168.368,
+          "startMs": 168068,
+          "endMs": 168368
+        },
+        {
+          "word": "zero",
+          "start": 168.381,
+          "end": 168.844,
+          "startMs": 168381,
+          "endMs": 168844
+        },
+        {
+          "word": "shopping",
+          "start": 169.256,
+          "end": 169.831,
+          "startMs": 169256,
+          "endMs": 169831
+        },
+        {
+          "word": "is",
+          "start": 169.843,
+          "end": 169.956,
+          "startMs": 169843,
+          "endMs": 169956
+        },
+        {
+          "word": "mathematically",
+          "start": 169.956,
+          "end": 170.806,
+          "startMs": 169956,
+          "endMs": 170806
+        },
+        {
+          "word": "over",
+          "start": 170.806,
+          "end": 171.194,
+          "startMs": 170806,
+          "endMs": 171194
+        },
+        {
+          "word": "Step",
+          "start": 171.581,
+          "end": 171.856,
+          "startMs": 171581,
+          "endMs": 171856
+        },
+        {
+          "word": "two",
+          "start": 171.856,
+          "end": 172.218,
+          "startMs": 171856,
+          "endMs": 172218
+        },
+        {
+          "word": "deduct",
+          "start": 172.681,
+          "end": 173.031,
+          "startMs": 172681,
+          "endMs": 173031
+        },
+        {
+          "word": "your",
+          "start": 173.031,
+          "end": 173.169,
+          "startMs": 173031,
+          "endMs": 173169
+        },
+        {
+          "word": "sixty",
+          "start": 173.169,
+          "end": 173.669,
+          "startMs": 173169,
+          "endMs": 173669
+        },
+        {
+          "word": "euro",
+          "start": 173.681,
+          "end": 173.993,
+          "startMs": 173681,
+          "endMs": 173993
+        },
+        {
+          "word": "friction",
+          "start": 173.994,
+          "end": 174.444,
+          "startMs": 173994,
+          "endMs": 174444
+        },
+        {
+          "word": "vault",
+          "start": 174.443,
+          "end": 174.855,
+          "startMs": 174443,
+          "endMs": 174855
+        },
+        {
+          "word": "immediately",
+          "start": 175.056,
+          "end": 175.831,
+          "startMs": 175056,
+          "endMs": 175831
+        },
+        {
+          "word": "Step",
+          "start": 176.244,
+          "end": 176.544,
+          "startMs": 176244,
+          "endMs": 176544
+        },
+        {
+          "word": "three",
+          "start": 176.544,
+          "end": 177.007,
+          "startMs": 176544,
+          "endMs": 177007
+        },
+        {
+          "word": "assign",
+          "start": 177.456,
+          "end": 177.931,
+          "startMs": 177456,
+          "endMs": 177931
+        },
+        {
+          "word": "every",
+          "start": 178.068,
+          "end": 178.318,
+          "startMs": 178068,
+          "endMs": 178318
+        },
+        {
+          "word": "name",
+          "start": 178.318,
+          "end": 178.706,
+          "startMs": 178318,
+          "endMs": 178706
+        },
+        {
+          "word": "on",
+          "start": 178.831,
+          "end": 178.944,
+          "startMs": 178831,
+          "endMs": 178944
+        },
+        {
+          "word": "your",
+          "start": 178.943,
+          "end": 179.056,
+          "startMs": 178943,
+          "endMs": 179056
+        },
+        {
+          "word": "list",
+          "start": 179.056,
+          "end": 179.343,
+          "startMs": 179056,
+          "endMs": 179343
+        },
+        {
+          "word": "a",
+          "start": 179.393,
+          "end": 179.473,
+          "startMs": 179393,
+          "endMs": 179473
+        },
+        {
+          "word": "fixed",
+          "start": 179.431,
+          "end": 179.906,
+          "startMs": 179431,
+          "endMs": 179906
+        },
+        {
+          "word": "euro",
+          "start": 179.906,
+          "end": 180.206,
+          "startMs": 179906,
+          "endMs": 180206
+        },
+        {
+          "word": "cap",
+          "start": 180.219,
+          "end": 180.569,
+          "startMs": 180219,
+          "endMs": 180569
+        },
+        {
+          "word": "before",
+          "start": 180.744,
+          "end": 181.144,
+          "startMs": 180744,
+          "endMs": 181144
+        },
+        {
+          "word": "searching",
+          "start": 181.156,
+          "end": 181.606,
+          "startMs": 181156,
+          "endMs": 181606
+        },
+        {
+          "word": "for",
+          "start": 181.618,
+          "end": 181.731,
+          "startMs": 181618,
+          "endMs": 181731
+        },
+        {
+          "word": "a",
+          "start": 181.744,
+          "end": 181.824,
+          "startMs": 181744,
+          "endMs": 181824
+        },
+        {
+          "word": "single",
+          "start": 181.781,
+          "end": 182.031,
+          "startMs": 181781,
+          "endMs": 182031
+        },
+        {
+          "word": "product",
+          "start": 182.031,
+          "end": 182.481,
+          "startMs": 182031,
+          "endMs": 182481
+        },
+        {
+          "word": "Never",
+          "start": 182.881,
+          "end": 183.056,
+          "startMs": 182881,
+          "endMs": 183056
+        },
+        {
+          "word": "pick",
+          "start": 183.068,
+          "end": 183.231,
+          "startMs": 183068,
+          "endMs": 183231
+        },
+        {
+          "word": "the",
+          "start": 183.244,
+          "end": 183.369,
+          "startMs": 183244,
+          "endMs": 183369
+        },
+        {
+          "word": "item",
+          "start": 183.381,
+          "end": 183.756,
+          "startMs": 183381,
+          "endMs": 183756
+        },
+        {
+          "word": "first",
+          "start": 183.931,
+          "end": 184.556,
+          "startMs": 183931,
+          "endMs": 184556
+        },
+        {
+          "word": "and",
+          "start": 184.706,
+          "end": 184.894,
+          "startMs": 184706,
+          "endMs": 184894
+        },
+        {
+          "word": "justify",
+          "start": 185.031,
+          "end": 185.656,
+          "startMs": 185031,
+          "endMs": 185656
+        },
+        {
+          "word": "the",
+          "start": 185.656,
+          "end": 185.743,
+          "startMs": 185656,
+          "endMs": 185743
+        },
+        {
+          "word": "price",
+          "start": 185.744,
+          "end": 186.044,
+          "startMs": 185744,
+          "endMs": 186044
+        },
+        {
+          "word": "second",
+          "start": 186.044,
+          "end": 186.482,
+          "startMs": 186044,
+          "endMs": 186482
+        }
+      ],
+      "total_duration": 216.04,
+      "thumbnail_url": "/renders/ep01-400-christmas-money-trap/thumbnails/scene_07_terminal_execution.jpg",
+      "audio_url": "/renders/ep01-400-christmas-money-trap/scenes_audio/06_scene_07_terminal_execution.wav"
+    },
+    {
+      "id": "scene_08_january_bridge",
+      "section": "08 // COMPOUNDING THE €528 JANUARY SURPLUS",
+      "narration": "Saving five hundred and twenty-eight euros every December is not just about surviving Christmas. If you redirect that five hundred and twenty-eight euro holiday leak into a global index fund earning eight percent annually, over ten winters that single decision compounds into eight thousand two hundred and sixty-one euros. Download the free four hundred euro Decision Ledger below, and in episode two, we will run the exact math on the January Debt Reset.",
+      "visual_type": "comparison",
+      "in_seconds": 187.202,
+      "out_seconds": 216.04,
+      "duration": 28.838,
+      "audio_file": "/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/07_scene_08_january_bridge.wav",
+      "word_count": 73,
+      "words": [
+        {
+          "word": "Saving",
+          "start": 187.289,
+          "end": 187.627,
+          "startMs": 187289,
+          "endMs": 187627
+        },
+        {
+          "word": "five",
+          "start": 187.627,
+          "end": 187.952,
+          "startMs": 187627,
+          "endMs": 187952
+        },
+        {
+          "word": "hundred",
+          "start": 187.952,
+          "end": 188.115,
+          "startMs": 187952,
+          "endMs": 188115
+        },
+        {
+          "word": "and",
+          "start": 188.127,
+          "end": 188.207,
+          "startMs": 188127,
+          "endMs": 188207
+        },
+        {
+          "word": "twenty-eight",
+          "start": 188.177,
+          "end": 188.539,
+          "startMs": 188177,
+          "endMs": 188539
+        },
+        {
+          "word": "euros",
+          "start": 188.539,
+          "end": 189.026,
+          "startMs": 188539,
+          "endMs": 189026
+        },
+        {
+          "word": "every",
+          "start": 189.039,
+          "end": 189.289,
+          "startMs": 189039,
+          "endMs": 189289
+        },
+        {
+          "word": "December",
+          "start": 189.289,
+          "end": 189.801,
+          "startMs": 189289,
+          "endMs": 189801
+        },
+        {
+          "word": "is",
+          "start": 190.14,
+          "end": 190.24,
+          "startMs": 190140,
+          "endMs": 190240
+        },
+        {
+          "word": "not",
+          "start": 190.24,
+          "end": 190.54,
+          "startMs": 190240,
+          "endMs": 190540
+        },
+        {
+          "word": "just",
+          "start": 190.539,
+          "end": 190.877,
+          "startMs": 190539,
+          "endMs": 190877
+        },
+        {
+          "word": "about",
+          "start": 190.89,
+          "end": 191.153,
+          "startMs": 190890,
+          "endMs": 191153
+        },
+        {
+          "word": "surviving",
+          "start": 191.164,
+          "end": 191.714,
+          "startMs": 191164,
+          "endMs": 191714
+        },
+        {
+          "word": "Christmas",
+          "start": 191.715,
+          "end": 192.49,
+          "startMs": 191715,
+          "endMs": 192490
+        },
+        {
+          "word": "If",
+          "start": 192.89,
+          "end": 193.015,
+          "startMs": 192890,
+          "endMs": 193015
+        },
+        {
+          "word": "you",
+          "start": 193.014,
+          "end": 193.202,
+          "startMs": 193014,
+          "endMs": 193202
+        },
+        {
+          "word": "redirect",
+          "start": 193.215,
+          "end": 193.89,
+          "startMs": 193215,
+          "endMs": 193890
+        },
+        {
+          "word": "that",
+          "start": 194.102,
+          "end": 194.277,
+          "startMs": 194102,
+          "endMs": 194277
+        },
+        {
+          "word": "five",
+          "start": 194.277,
+          "end": 194.639,
+          "startMs": 194277,
+          "endMs": 194639
+        },
+        {
+          "word": "hundred",
+          "start": 194.64,
+          "end": 194.84,
+          "startMs": 194640,
+          "endMs": 194840
+        },
+        {
+          "word": "and",
+          "start": 194.84,
+          "end": 194.92,
+          "startMs": 194840,
+          "endMs": 194920
+        },
+        {
+          "word": "twenty-eight",
+          "start": 194.89,
+          "end": 195.328,
+          "startMs": 194890,
+          "endMs": 195328
+        },
+        {
+          "word": "euro",
+          "start": 195.327,
+          "end": 195.652,
+          "startMs": 195327,
+          "endMs": 195652
+        },
+        {
+          "word": "holiday",
+          "start": 195.652,
+          "end": 196.289,
+          "startMs": 195652,
+          "endMs": 196289
+        },
+        {
+          "word": "leak",
+          "start": 196.777,
+          "end": 197.089,
+          "startMs": 196777,
+          "endMs": 197089
+        },
+        {
+          "word": "into",
+          "start": 197.165,
+          "end": 197.402,
+          "startMs": 197165,
+          "endMs": 197402
+        },
+        {
+          "word": "a",
+          "start": 197.402,
+          "end": 197.482,
+          "startMs": 197402,
+          "endMs": 197482
+        },
+        {
+          "word": "global",
+          "start": 197.477,
+          "end": 197.964,
+          "startMs": 197477,
+          "endMs": 197964
+        },
+        {
+          "word": "index",
+          "start": 197.964,
+          "end": 198.489,
+          "startMs": 197964,
+          "endMs": 198489
+        },
+        {
+          "word": "fund",
+          "start": 198.502,
+          "end": 198.952,
+          "startMs": 198502,
+          "endMs": 198952
+        },
+        {
+          "word": "earning",
+          "start": 199.052,
+          "end": 199.402,
+          "startMs": 199052,
+          "endMs": 199402
+        },
+        {
+          "word": "eight",
+          "start": 199.527,
+          "end": 199.665,
+          "startMs": 199527,
+          "endMs": 199665
+        },
+        {
+          "word": "percent",
+          "start": 199.665,
+          "end": 200.128,
+          "startMs": 199665,
+          "endMs": 200128
+        },
+        {
+          "word": "annually",
+          "start": 200.14,
+          "end": 200.702,
+          "startMs": 200140,
+          "endMs": 200702
+        },
+        {
+          "word": "over",
+          "start": 201.127,
+          "end": 201.339,
+          "startMs": 201127,
+          "endMs": 201339
+        },
+        {
+          "word": "ten",
+          "start": 201.352,
+          "end": 201.652,
+          "startMs": 201352,
+          "endMs": 201652
+        },
+        {
+          "word": "winters",
+          "start": 201.652,
+          "end": 202.027,
+          "startMs": 201652,
+          "endMs": 202027
+        },
+        {
+          "word": "that",
+          "start": 202.027,
+          "end": 202.14,
+          "startMs": 202027,
+          "endMs": 202140
+        },
+        {
+          "word": "single",
+          "start": 202.152,
+          "end": 202.602,
+          "startMs": 202152,
+          "endMs": 202602
+        },
+        {
+          "word": "decision",
+          "start": 202.602,
+          "end": 203.102,
+          "startMs": 202602,
+          "endMs": 203102
+        },
+        {
+          "word": "compounds",
+          "start": 203.102,
+          "end": 203.877,
+          "startMs": 203102,
+          "endMs": 203877
+        },
+        {
+          "word": "into",
+          "start": 203.964,
+          "end": 204.139,
+          "startMs": 203964,
+          "endMs": 204139
+        },
+        {
+          "word": "eight",
+          "start": 204.24,
+          "end": 204.403,
+          "startMs": 204240,
+          "endMs": 204403
+        },
+        {
+          "word": "thousand",
+          "start": 204.402,
+          "end": 204.84,
+          "startMs": 204402,
+          "endMs": 204840
+        },
+        {
+          "word": "two",
+          "start": 204.852,
+          "end": 205.052,
+          "startMs": 204852,
+          "endMs": 205052
+        },
+        {
+          "word": "hundred",
+          "start": 205.065,
+          "end": 205.277,
+          "startMs": 205065,
+          "endMs": 205277
+        },
+        {
+          "word": "and",
+          "start": 205.277,
+          "end": 205.357,
+          "startMs": 205277,
+          "endMs": 205357
+        },
+        {
+          "word": "sixty-one",
+          "start": 205.327,
+          "end": 205.852,
+          "startMs": 205327,
+          "endMs": 205852
+        },
+        {
+          "word": "euros",
+          "start": 205.852,
+          "end": 206.414,
+          "startMs": 205852,
+          "endMs": 206414
+        },
+        {
+          "word": "Download",
+          "start": 206.789,
+          "end": 207.414,
+          "startMs": 206789,
+          "endMs": 207414
+        },
+        {
+          "word": "the",
+          "start": 207.539,
+          "end": 207.639,
+          "startMs": 207539,
+          "endMs": 207639
+        },
+        {
+          "word": "free",
+          "start": 207.64,
+          "end": 208.04,
+          "startMs": 207640,
+          "endMs": 208040
+        },
+        {
+          "word": "four",
+          "start": 208.052,
+          "end": 208.352,
+          "startMs": 208052,
+          "endMs": 208352
+        },
+        {
+          "word": "hundred",
+          "start": 208.365,
+          "end": 208.64,
+          "startMs": 208365,
+          "endMs": 208640
+        },
+        {
+          "word": "euro",
+          "start": 208.64,
+          "end": 208.903,
+          "startMs": 208640,
+          "endMs": 208903
+        },
+        {
+          "word": "Decision",
+          "start": 208.902,
+          "end": 209.352,
+          "startMs": 208902,
+          "endMs": 209352
+        },
+        {
+          "word": "Ledger",
+          "start": 209.365,
+          "end": 209.615,
+          "startMs": 209365,
+          "endMs": 209615
+        },
+        {
+          "word": "below",
+          "start": 209.615,
+          "end": 210.078,
+          "startMs": 209615,
+          "endMs": 210078
+        },
+        {
+          "word": "and",
+          "start": 210.539,
+          "end": 210.619,
+          "startMs": 210539,
+          "endMs": 210619
+        },
+        {
+          "word": "in",
+          "start": 210.602,
+          "end": 210.682,
+          "startMs": 210602,
+          "endMs": 210682
+        },
+        {
+          "word": "episode",
+          "start": 210.677,
+          "end": 211.152,
+          "startMs": 210677,
+          "endMs": 211152
+        },
+        {
+          "word": "two",
+          "start": 211.152,
+          "end": 211.514,
+          "startMs": 211152,
+          "endMs": 211514
+        },
+        {
+          "word": "we",
+          "start": 212.089,
+          "end": 212.252,
+          "startMs": 212089,
+          "endMs": 212252
+        },
+        {
+          "word": "will",
+          "start": 212.252,
+          "end": 212.44,
+          "startMs": 212252,
+          "endMs": 212440
+        },
+        {
+          "word": "run",
+          "start": 212.44,
+          "end": 212.665,
+          "startMs": 212440,
+          "endMs": 212665
+        },
+        {
+          "word": "the",
+          "start": 212.664,
+          "end": 212.744,
+          "startMs": 212664,
+          "endMs": 212744
+        },
+        {
+          "word": "exact",
+          "start": 212.727,
+          "end": 213.289,
+          "startMs": 212727,
+          "endMs": 213289
+        },
+        {
+          "word": "math",
+          "start": 213.289,
+          "end": 213.764,
+          "startMs": 213289,
+          "endMs": 213764
+        },
+        {
+          "word": "on",
+          "start": 213.865,
+          "end": 213.978,
+          "startMs": 213865,
+          "endMs": 213978
+        },
+        {
+          "word": "the",
+          "start": 213.977,
+          "end": 214.057,
+          "startMs": 213977,
+          "endMs": 214057
+        },
+        {
+          "word": "January",
+          "start": 214.052,
+          "end": 214.602,
+          "startMs": 214052,
+          "endMs": 214602
+        },
+        {
+          "word": "Debt",
+          "start": 214.615,
+          "end": 214.815,
+          "startMs": 214615,
+          "endMs": 214815
+        },
+        {
+          "word": "Reset",
+          "start": 214.815,
+          "end": 215.34,
+          "startMs": 214815,
+          "endMs": 215340
+        }
+      ],
+      "total_duration": 216.04,
+      "thumbnail_url": "/renders/ep01-400-christmas-money-trap/thumbnails/scene_08_january_bridge.jpg",
+      "audio_url": "/renders/ep01-400-christmas-money-trap/scenes_audio/07_scene_08_january_bridge.wav"
+    }
+  ]
+}
