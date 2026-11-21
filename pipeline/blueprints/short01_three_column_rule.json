@@ -1,0 +1,57 @@
+{
+  "id": "short01-three-column-gift-rule",
+  "format": "youtube_short_9_16",
+  "episode_number": 101,
+  "series": "Wave 1 Shorts // Avoiding Money Traps & Calm Budgeting",
+  "title": "The €400 Holiday Trap (And the 3-Column Rule That Saves €520)",
+  "channel": "The Decision Ledger",
+  "niche": "Practical Personal Finance & Calm Budgeting",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "scenes": [
+    {
+      "id": "short_s01_hook",
+      "narration": "Seventy-eight percent of people who set a four hundred euro holiday budget end up spending nine hundred and twenty euros by January fifteenth. That five hundred and twenty euro leak happens because you pick the item first and justify the price second.",
+      "visual": {
+        "type": "stat_card",
+        "stat": "€400 → €920",
+        "subtitle": "Never Pick the Item First and Justify the Price Second",
+        "accentColor": "#EF4444",
+        "backgroundImage": "broll/s01_receipts_desk.jpg"
+      }
+    },
+    {
+      "id": "short_s02_rule",
+      "narration": "Fix it in sixty seconds with the Three-Column Calm Budgeting Rule. Column one: slice off a fifteen percent friction vault for wrapping and shipping first. Column two: lock a strict euro cap next to every name. Column three: always buy at the top of a twenty euro category, never the bottom of a sixty euro category.",
+      "visual": {
+        "type": "decision_tree",
+        "title": "THE 3-COLUMN CALM BUDGETING RULE",
+        "rootQuestion": "HARD CEILING: €400 → LOCK €60 FRICTION VAULT BEFORE BUYING ITEM #1",
+        "branches": [
+          {
+            "label": "COL 1 // FRICTION VAULT",
+            "condition": "15% (€60) Reserved First",
+            "outcome": "Covers shipping, wrapping & host bottles.",
+            "costImpact": "€60.00",
+            "verdict": "neutral"
+          },
+          {
+            "label": "COL 2 // CORE CAPS",
+            "condition": "4 Core × €55 Fixed Cap",
+            "outcome": "Cap precedes product search.",
+            "costImpact": "€220.00",
+            "verdict": "optimal"
+          },
+          {
+            "label": "COL 3 // CATEGORY TOP",
+            "condition": "6 Extended × €20 Artisan",
+            "outcome": "90+ luxury score, zero January debt.",
+            "costImpact": "€120.00",
+            "verdict": "optimal"
+          }
+        ],
+        "accentColor": "#10B981",
+        "backgroundImage": "broll/s05_artisan_luxury.jpg"
+      }
+    }
+  ]
+}

@@ -55,9 +55,11 @@ async function main() {
     const cut = cuts[i];
     const sceneDur = cut.out_seconds - cut.in_seconds;
     const offsets = [
-      Math.min(0.55, sceneDur * 0.15),
-      Math.min(1.45, sceneDur * 0.35),
-      Math.min(2.8, sceneDur * 0.65),
+      Math.min(0.45, sceneDur * 0.08),
+      Math.min(1.15, sceneDur * 0.22),
+      Math.min(2.2, sceneDur * 0.42),
+      Math.min(4.2, sceneDur * 0.65),
+      Math.min(7.5, sceneDur * 0.85),
     ];
 
     const phaseFiles = [];
@@ -84,7 +86,7 @@ async function main() {
       phaseFiles.push({ frame, offset: offsets[p], file: outPng });
     }
     console.log(
-      `  ✔ Rendered 3 Remotion 1080p keyframes for Scene ${i + 1}/${cuts.length} (${cut.id} - ${cut.type})`
+      `  ✔ Rendered 5 Documentary 1080p keyframes for Scene ${i + 1}/${cuts.length} (${cut.id} - ${cut.type})`
     );
     manifestPhases.push({
       id: cut.id,

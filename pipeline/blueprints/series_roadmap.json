@@ -1,71 +1,156 @@
 {
-  "series_title": "The Decision Ledger — 90-Day High-RPM Launch Roadmap",
-  "positioning": "Practical Personal Finance, Behavioral Decision-Math & Consumer Autopsies",
-  "monetization_guardrails": {
-    "target_rpm": "$15–$28+",
-    "youtube_2026_compliance": "100% programmatic data storytelling — rotates 8+ React Remotion visual components (AnimatedSpreadsheet, DecisionTree, ReceiptComparison, KPIGrid, BarChart, LineChart, TerminalScene, ComparisonCard) with word-synced narration to eliminate repetitive slideshow flags.",
-    "educational_framing": "Transparent decision-math and empirical ledger comparisons — zero fake AI advisor personas."
+  "series_title": "The Decision Ledger — 12-Month Evergreen Money Traps & Calm Budgeting Engine",
+  "channel_identity": {
+    "core_mission": "Exposing everyday money traps and replacing financial anxiety with calm, deterministic household decision-math.",
+    "why_not_a_seasonal_channel": "Christmas is used strictly as November/December's timely entry trigger. The underlying product and channel brand are 100% evergreen Personal Finance, Anti-Debt, & Smart Spending.",
+    "target_rpm": "$18–$32+ (Personal Finance, Banking, Investing & Budgeting Advertisers)",
+    "year_round_digital_products": [
+      "The Calm Budgeting & Spending-Trap Toolkit (12-Month Master Ledger)",
+      "The 3-Column Gift & Seasonal Cap Sheet (Nov–Dec Lead Magnet)",
+      "The January Anti-Debt & Subscription Purge Kit (Dec 26–Jan 31)",
+      "The Real Cost of Ownership Calculator (Cars, Housing, Groceries — Feb+)"
+    ]
   },
+  "phases": [
+    {
+      "phase": "WAVE 1 // NOW → DEC 20 (PEAK HOLIDAY MONEY WAVE)",
+      "strategy": "Capture high-intent Q4 shopping traffic using holiday spending traps as the timely hook into the evergreen Calm Budgeting system. Pair long-form autopsies with 8–12 high-retention Shorts.",
+      "shorts_queue": [
+        {
+          "id": "short_01_400_christmas_trap",
+          "title": "The €400 Christmas Trap (Why 78% Spend €920)",
+          "hook": "Why your €400 holiday budget turns into a €920 January credit card bill—in 45 seconds.",
+          "rule": "Lock the 15% Friction Buffer (€60) before buying gift #1."
+        },
+        {
+          "id": "short_02_black_friday_fake_discount",
+          "title": "The Fake '40% Off' Anchor Trick",
+          "hook": "Stores raise the reference price 30 days early so a normal price looks like an urgent steal.",
+          "rule": "Judge the euro cap, never the percentage discount badge."
+        },
+        {
+          "id": "short_03_three_column_gift_rule",
+          "title": "The 3-Column Gift Rule That Stops Guilt Spending",
+          "hook": "Never pick the item first and justify the price second.",
+          "rule": "Column 1: Name. Column 2: Hard Euro Cap. Column 3: Top-of-Category Item."
+        },
+        {
+          "id": "short_04_48_hour_impulse_rule",
+          "title": "The 48-Hour Checkout Cooling Protocol",
+          "hook": "73% of cart items left in a browser tab for 48 hours are never purchased.",
+          "rule": "Mandatory 48-hour timer on any non-list item over €25."
+        }
+      ]
+    },
+    {
+      "phase": "WAVE 2 // DEC 26 → JAN 31 (SEAMLESS PIVOT TO JANUARY RESET & ANTI-DEBT)",
+      "strategy": "Zero dead season: the exact audience that watched the holiday money-trap videos wakes up Dec 26 wanting a clean financial slate. Pivot immediately into credit card hangover recovery, subscription audits, and No-Spend January.",
+      "shorts_queue": [
+        {
+          "id": "short_05_january_hangover_reset",
+          "title": "The Dec 26 Credit Card Hangover Reset",
+          "hook": "Don't split extra debt payments across 3 cards—it wastes €1,420 in interest.",
+          "rule": "The Hybrid Velocity Waterfall: crush the 24.9% store card in 90 days first."
+        },
+        {
+          "id": "short_06_zombie_subscription_purge",
+          "title": "The 15-Minute Zombie Subscription Audit",
+          "hook": "The average household leaks €195/month across 11 forgotten auto-renewals.",
+          "rule": "Export 90 days of recurring charges; cancel anything with >€2 cost-per-use."
+        },
+        {
+          "id": "short_07_no_spend_january_rules",
+          "title": "Why 'No-Spend January' Fails by Jan 12th (And How to Fix It)",
+          "hook": "Starvation budgets trigger rebound binges in February.",
+          "rule": "Use a 'Fixed Friction Allowance' instead of zero-euro deprivation."
+        },
+        {
+          "id": "short_08_grocery_eye_level_trap",
+          "title": "The Supermarket Eye-Level Margin Trap",
+          "hook": "Items placed at 1.4 meters height carry a 38% higher markup than bottom-shelf equivalents.",
+          "rule": "Shop the perimeter and bottom 2 shelves by unit-weight price."
+        }
+      ]
+    },
+    {
+      "phase": "WAVE 3 // FEB ONWARD (EVERGREEN COMPOUNDING & CALM HOUSEHOLD SYSTEMS)",
+      "strategy": "Year-round high-RPM compounding on everyday money traps, quiet-budgeting systems, car/housing math, and behavioral wealth rules.",
+      "shorts_queue": [
+        {
+          "id": "short_09_35k_car_illusion",
+          "title": "Why a €35,000 Car Actually Costs €74,200",
+          "hook": "The sticker price is only 47% of what leaves your net worth over 60 months.",
+          "rule": "The 20/4/10 Total Cost of Ownership Rule."
+        },
+        {
+          "id": "short_10_quiet_budgeting_system",
+          "title": "The 2-Account 'Quiet Budgeting' System (Zero Spreadsheets Required)",
+          "hook": "Why tracking 40 expense categories causes burnout in 3 weeks.",
+          "rule": "Automate Fixed + Invested on payday; spend the isolated Variable Card guilt-free."
+        }
+      ]
+    }
+  ],
   "episodes": [
     {
       "episode": 1,
-      "season": "Holiday Launch Series (Late Nov)",
+      "season": "Wave 1: Peak Holiday Trigger (Now)",
       "id": "ep01-400-christmas-money-trap",
       "title": "The €400 Christmas Money Trap: Why 78% of Shoppers Overspend by €520 (And the Exact Math to Beat It)",
       "status": "RENDERED_AND_READY",
-      "hook_tension": "€400 planned budget vs. €920 actual January bank statement",
+      "hook_tension": "€400 planned budget vs. €920 actual January bank statement (Timely entry into Calm Budgeting)",
       "key_visuals": ["StatCard", "AnimatedSpreadsheet", "KPIGrid", "DecisionTree", "BarChart", "ReceiptComparison", "TerminalScene", "ComparisonCard"],
-      "digital_product_cta": "€400 Zero-Leak Holiday Decision Ledger (Interactive & Printable)"
+      "digital_product_cta": "The Calm Budgeting & 3-Column Holiday Cap Toolkit"
     },
     {
       "episode": 2,
-      "season": "Holiday Launch Series (Early Dec)",
+      "season": "Wave 1: Peak Holiday Trigger (Early Dec)",
       "id": "ep02-black-friday-bnpl-trap",
-      "title": "Buy Now, Pay Later: The 4-Payment Illusion Draining €1,840/Year From Your Checking Account",
+      "title": "Buy Now, Pay Later & Fake Discounts: The 4-Payment Illusion Draining €1,840/Year From Your Bank Account",
       "status": "BLUEPRINT_QUEUED",
       "hook_tension": "Why splitting a €120 purchase into 4×€30 increases total annual cart spend by +42%",
       "key_visuals": ["ReceiptComparison", "LineChart", "DecisionTree", "AnimatedSpreadsheet"],
-      "digital_product_cta": "Impulse-Override Checkout Calculator"
+      "digital_product_cta": "The 48-Hour Impulse-Override Checkout Checklist"
     },
     {
       "episode": 3,
-      "season": "Holiday Launch Series (Mid Dec)",
-      "id": "ep03-gift-card-breakage-math",
-      "title": "The €24 Billion Gift Card Scam: Why Stores Love Selling You Plastic Cash",
-      "status": "BLUEPRINT_QUEUED",
-      "hook_tension": "How breakage, category locking, and overspend margins turn a €50 gift card into €72 of store profit",
-      "key_visuals": ["BarChart", "AnimatedSpreadsheet", "ComparisonCard", "DecisionTree"],
-      "digital_product_cta": "Asymmetric Gift Matrix"
+      "season": "Wave 2: Dec 26 → Jan 31 Pivot (Peak #2)",
+      "id": "ep03-january-debt-reset",
+      "title": "The January Debt Reset: Why Snowball vs. Avalanche Costs You €1,420 (And the Hybrid Velocity Protocol)",
+      "status": "BLUEPRINT_READY",
+      "hook_tension": "Eliminating post-holiday credit card hangover + auto debt 19 months faster",
+      "key_visuals": ["StatCard", "AnimatedSpreadsheet", "DecisionTree", "ComparisonCard"],
+      "digital_product_cta": "The January Anti-Debt & Velocity Waterfall Sheet"
     },
     {
       "episode": 4,
-      "season": "Holiday Launch Series (Late Dec)",
-      "id": "ep04-year-end-tax-and-subscription-purge",
-      "title": "The 48-Hour December Money Audit: 7 Silent Leaks to Cut Before January 1st",
+      "season": "Wave 2: Dec 26 → Jan 31 Pivot (Peak #2)",
+      "id": "ep04-no-spend-january-subscription-audit",
+      "title": "The January Money Audit: 7 Silent Subscription & Grocery Traps Draining €2,340/Year",
       "status": "BLUEPRINT_QUEUED",
-      "hook_tension": "Uncovering €2,340/year in zombie subscriptions, insurance creep, and lazy cash drag",
+      "hook_tension": "Why starvation 'No-Spend January' challenges fail and how a 48-hour fixed-friction audit permanently cuts €195/mo",
       "key_visuals": ["AnimatedSpreadsheet", "KPIGrid", "TerminalScene", "ReceiptComparison"],
-      "digital_product_cta": "Annual Cash-Flow Autopsy Template"
+      "digital_product_cta": "The Annual Subscription & Grocery Reset Kit"
     },
     {
       "episode": 5,
-      "season": "Evergreen Transition (January Week 1)",
-      "id": "ep05-january-debt-reset-math",
-      "title": "The January Debt Reset: Avalanche vs. Snowball vs. Velocity Banking (Simulated Over 36 Months)",
-      "status": "BLUEPRINT_QUEUED",
-      "hook_tension": "Running 10,000 simulations on €8,500 of credit & car debt to find the fastest mathematical exit",
-      "key_visuals": ["LineChart", "AnimatedSpreadsheet", "DecisionTree", "ComparisonCard"],
-      "digital_product_cta": "Debt Eradication Simulator Sheet"
-    },
-    {
-      "episode": 6,
-      "season": "Evergreen Transition (January Week 2)",
-      "id": "ep06-real-cost-of-35k-car",
+      "season": "Wave 3: Feb+ Evergreen Compounding",
+      "id": "ep05-real-cost-of-35k-car",
       "title": "Why a €35,000 Car Actually Costs You €74,200 (The 5-Year Total Cost of Ownership Autopsy)",
       "status": "BLUEPRINT_QUEUED",
       "hook_tension": "Depreciation curves, opportunity cost of down payments, insurance multipliers, and financing drag",
-      "key_visuals": ["AnimatedSpreadsheet", "LineChart", "ReceiptComparison", "DecisionTree"],
+      "key_visuals": ["AnimatedSpreadsheet", "BarChart", "ReceiptComparison", "DecisionTree"],
       "digital_product_cta": "True Car Cost vs. Net-Worth Calculator"
+    },
+    {
+      "episode": 6,
+      "season": "Wave 3: Feb+ Evergreen Compounding",
+      "id": "ep06-quiet-budgeting-two-account-system",
+      "title": "Quiet Budgeting: The 2-Account System That Automates Wealth Without Tracking Every Coffee",
+      "status": "BLUEPRINT_QUEUED",
+      "hook_tension": "Replacing 40-category spreadsheet burnout with an automated Fixed-Flow + Isolated Variable Card architecture",
+      "key_visuals": ["DecisionTree", "AnimatedSpreadsheet", "KPIGrid", "ComparisonCard"],
+      "digital_product_cta": "The 2-Account Calm Budgeting Operating System"
     }
   ]
 }

@@ -27,3 +27,10 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+remotion-composer/node_modules/
+remotion-composer/public/audio/*.wav
+public/renders/*/keyframes/
+public/renders/*/scenes_audio/*.wav
+public/renders/*/*.wav
+public/renders/*/visuals_only.mp4

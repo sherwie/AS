@@ -47,7 +47,7 @@ export const DecisionTree: React.FC<DecisionTreeProps> = ({
         background: backgroundColor,
         justifyContent: "center",
         alignItems: "center",
-        padding: "56px 88px",
+        padding: "105px 84px 115px 84px",
         opacity: fadeOut,
         fontFamily: "'Space Grotesk', 'Inter', system-ui, sans-serif",
       }}

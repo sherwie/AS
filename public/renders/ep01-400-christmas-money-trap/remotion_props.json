@@ -8,8 +8,14 @@
       "out_seconds": 23.054,
       "type": "stat_card",
       "stat": "€400 → €920",
-      "subtitle": "The +130% Holiday Overspend Illusion (Average Household Bank Ledger)",
-      "accentColor": "#EF4444"
+      "subtitle": "The +130% Holiday Overspend Illusion — Why a €400 Mental Cap Becomes a €920 January Clearing Bill",
+      "accentColor": "#EF4444",
+      "backgroundImage": "broll/s01_receipts_desk.jpg",
+      "backgroundOverlay": 0.62,
+      "chapterCode": "CHAPTER 01 // THE €920 ILLUSION",
+      "chapterTitle": "CONSUMER BANK LEDGER AUTOPSY",
+      "sourceCitation": "DATASET: Q4 HOUSEHOLD CARD CLEARING & ECB RETAIL TELEMETRY",
+      "cameraMotion": "zoom-in"
     },
     {
       "id": "scene_02_ledger_autopsy",
@@ -58,7 +64,13 @@
       "totalPlanned": "€400",
       "totalActual": "€920",
       "totalLeak": "+€520 LEAK",
-      "accentColor": "#22D3EE"
+      "accentColor": "#22D3EE",
+      "backgroundImage": "broll/s02_bank_ledger.jpg",
+      "backgroundOverlay": 0.68,
+      "chapterCode": "CHAPTER 02 // FORENSIC LEDGER",
+      "chapterTitle": "WHERE THE €520 ACTUALLY LEAKS",
+      "sourceCitation": "AUDIT: 4 UNBUDGETED MULTIPLIER VECTORS",
+      "cameraMotion": "pan-right"
     },
     {
       "id": "scene_03_retail_traps",
@@ -72,7 +84,7 @@
       "chartColors": [
         "#EF4444",
         "#F59E0B",
-        "#EC4899"
+        "#22D3EE"
       ],
       "chartData": [
         {
@@ -99,7 +111,14 @@
           "change": 42.0,
           "icon": "💳"
         }
-      ]
+      ],
+      "accentColor": "#F59E0B",
+      "backgroundImage": "broll/s03_retail_store.jpg",
+      "backgroundOverlay": 0.64,
+      "chapterCode": "CHAPTER 03 // RETAIL PSYCHOLOGY",
+      "chapterTitle": "HOW STORES HIJACK YOUR MENTAL CALCULATOR",
+      "sourceCitation": "JOURNAL OF CONSUMER RESEARCH // PRICING ARCHETYPE STUDY",
+      "cameraMotion": "zoom-out"
     },
     {
       "id": "scene_04_decision_tree",
@@ -132,7 +151,13 @@
           "verdict": "neutral"
         }
       ],
-      "accentColor": "#10B981"
+      "accentColor": "#10B981",
+      "backgroundImage": "broll/s04_vault_architecture.jpg",
+      "backgroundOverlay": 0.68,
+      "chapterCode": "CHAPTER 04 // CAPITAL ALLOCATION",
+      "chapterTitle": "THE €400 HARD-CAP DECISION TREE",
+      "sourceCitation": "PROTOCOL: ZERO-SPILLOVER TIERED ESCROW MODEL",
+      "cameraMotion": "zoom-in"
     },
     {
       "id": "scene_05_asymmetric_value",
@@ -160,14 +185,21 @@
           "value": 41
         },
         {
-          "label": "€22 Top-Tier Artisan Food",
+          "label": "€22 Top-Tier Artisan EVOO",
           "value": 88
         },
         {
-          "label": "€25 Curated Book + Note",
+          "label": "€25 Curated Book + Wax Note",
           "value": 92
         }
-      ]
+      ],
+      "accentColor": "#10B981",
+      "backgroundImage": "broll/s05_artisan_luxury.jpg",
+      "backgroundOverlay": 0.6,
+      "chapterCode": "CHAPTER 05 // VALUE ARBITRAGE",
+      "chapterTitle": "TOP OF A €20 CATEGORY BEATS BOTTOM OF A €60 CATEGORY",
+      "sourceCitation": "BENCHMARK: GIFT RECIPROCITY & PERCEIVED THOUGHTFULNESS INDEX",
+      "cameraMotion": "pan-left"
     },
     {
       "id": "scene_06_receipt_comparison",
@@ -224,7 +256,14 @@
         }
       ],
       "rightTotal": "€392.00",
-      "savingsBadge": "NET JANUARY WEALTH ADVANTAGE: +€528.00 SAVED (ZERO DEBT)"
+      "savingsBadge": "NET JANUARY WEALTH ADVANTAGE: +€528.00 SAVED (ZERO DEBT)",
+      "accentColor": "#10B981",
+      "backgroundImage": "broll/s06_checkout_terminal.jpg",
+      "backgroundOverlay": 0.68,
+      "chapterCode": "CHAPTER 06 // CHECKOUT AUTOPSY",
+      "chapterTitle": "10 RECIPIENTS: REACTIVE vs. ENGINEERED RECEIPT",
+      "sourceCitation": "VERIFIED DELTA: +€528.00 RETAINED CASH SURPLUS",
+      "cameraMotion": "zoom-in"
     },
     {
       "id": "scene_07_terminal_execution",
@@ -235,6 +274,12 @@
       "terminalTitle": "holiday-budget-engine — zsh — 1920×1080",
       "prompt": "ledger@decision-math ~ %",
       "accentColor": "#22D3EE",
+      "backgroundImage": "broll/s07_trading_terminal.jpg",
+      "backgroundOverlay": 0.7,
+      "chapterCode": "CHAPTER 07 // EXECUTION PROTOCOL",
+      "chapterTitle": "15-MINUTE ISOLATED SUB-ACCOUNT DEPLOYMENT",
+      "sourceCitation": "RULE: PRICE CAP PRECEDES PRODUCT SEARCH",
+      "cameraMotion": "pan-right",
       "steps": [
         {
           "kind": "cmd",
@@ -283,59 +328,19 @@
       "type": "comparison",
       "title": "10-YEAR COMPOUND IMPACT OF STOPPING THE €528 DECEMBER LEAK",
       "leftLabel": "10 Years of Reactive Decembers",
-      "leftValue": "-€5,280 Lost",
+      "leftValue": "-€5,280",
       "rightLabel": "€528/Yr Invested at 8% Return",
-      "rightValue": "+€8,261 Wealth",
-      "accentColor": "#10B981"
-    }
-  ],
-  "overlays": [
-    {
-      "type": "section_title",
-      "text": "01 // THE €920 HOLIDAY ILLUSION",
-      "subtitle": "Consumer Bank Ledger Autopsy",
-      "accentColor": "#EF4444",
-      "position": "top-left",
-      "in_seconds": 0.2,
-      "out_seconds": 22.754
-    },
-    {
-      "type": "stat_reveal",
-      "text": "-€520.00",
-      "subtitle": "Unplanned Cash Drain",
-      "accentColor": "#EF4444",
-      "position": "bottom-right",
-      "in_seconds": 23.254,
-      "out_seconds": 47.104
-    },
-    {
-      "type": "section_title",
-      "text": "03 // RETAIL PSYCHOLOGY FORMULAS",
-      "subtitle": "How Stores Hijack Your Mental Math",
-      "accentColor": "#F59E0B",
-      "position": "top-left",
-      "in_seconds": 47.604,
-      "out_seconds": 79.686
-    },
-    {
-      "type": "section_title",
-      "text": "05 // ASYMMETRIC VALUE ARBITRAGE",
-      "subtitle": "Top of a €20 Category Beats Bottom of a €60 Category",
+      "rightValue": "+€8,261",
       "accentColor": "#10B981",
-      "position": "top-left",
-      "in_seconds": 103.408,
-      "out_seconds": 132.154
-    },
-    {
-      "type": "section_title",
-      "text": "NEXT EPISODE // THE JANUARY DEBT RESET",
-      "subtitle": "Subscribe for Weekly Decision-Math Autopsies",
-      "accentColor": "#22D3EE",
-      "position": "top-left",
-      "in_seconds": 187.402,
-      "out_seconds": 215.74
+      "backgroundImage": "broll/s08_financial_skyline.jpg",
+      "backgroundOverlay": 0.62,
+      "chapterCode": "CHAPTER 08 // 10-YEAR WEALTH DELTA",
+      "chapterTitle": "COMPOUNDING THE €528 ANNUAL HOLIDAY SURPLUS",
+      "sourceCitation": "NEXT EPISODE: THE JANUARY DEBT RESET (AVALANCHE vs. VELOCITY)",
+      "cameraMotion": "zoom-out"
     }
   ],
+  "overlays": [],
   "captions": [
     {
       "word": "Every",

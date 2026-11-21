@@ -1,0 +1,8 @@
+file '/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/00_scene_01_hook.wav'
+file '/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/01_scene_02_ledger_autopsy.wav'
+file '/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/02_scene_03_retail_traps.wav'
+file '/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/03_scene_04_decision_tree.wav'
+file '/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/04_scene_05_asymmetric_value.wav'
+file '/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/05_scene_06_receipt_comparison.wav'
+file '/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/06_scene_07_terminal_execution.wav'
+file '/home/antigravity/sherwie/AS/public/renders/ep01-400-christmas-money-trap/scenes_audio/07_scene_08_january_bridge.wav'

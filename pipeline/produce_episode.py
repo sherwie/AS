@@ -60,7 +60,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,DejaVu Sans,44,&H00FCFAF8,&H00EED322,&H00140B07,&HB41A110B,-1,0,0,0,100,100,0,0,3,14,0,2,80,80,58,1
+Style: Default,DejaVu Sans,46,&H00FCFAF8,&H000B9EF5,&H00080503,&H96000000,-1,0,0,0,100,100,0.5,0,1,3.2,1.8,2,80,80,54,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -79,8 +79,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             for j, w in enumerate(page):
                 clean_w = str(w["word"]).replace("{", "").replace("}", "")
                 if j == active_idx:
-                    # Cyan highlight (#22D3EE -> BGR &H00EED322&)
-                    parts.append(r"{\c&H00EED322&}" + clean_w + r"{\c&H00FCFAF8&}")
+                    # Vox Warm Amber/Gold highlight (#F59E0B -> BGR &H000B9EF5&)
+                    parts.append(r"{\c&H000B9EF5&}" + clean_w + r"{\c&H00FCFAF8&}")
                 else:
                     parts.append(clean_w)
             line_text = " ".join(parts)
@@ -544,19 +544,23 @@ async def build_episode(blueprint_path: Path) -> dict[str, Any]:
         scene_clips = []
         for idx, sc in enumerate(phases_data):
             dur = round(sc["duration"], 3)
-            p0 = sc["phases"][0]["file"]
-            p1 = sc["phases"][1]["file"]
-            p2 = sc["phases"][2]["file"]
-            d0 = round(min(1.1, dur * 0.2), 3)
-            d1 = round(min(1.4, dur * 0.25), 3)
-            d2 = round(max(0.5, dur - d0 - d1), 3)
+            phases = sc["phases"]
+            weights = [0.08, 0.12, 0.22, 0.28, 0.30]
+            if len(phases) != len(weights):
+                weights = [1.0 / len(phases)] * len(phases)
+            lines = []
+            allocated = 0.0
+            for p_idx, ph in enumerate(phases):
+                if p_idx < len(phases) - 1:
+                    d_p = round(dur * weights[p_idx], 3)
+                    allocated += d_p
+                else:
+                    d_p = round(max(0.4, dur - allocated), 3)
+                lines.append(f"file '{ph['file']}'\nduration {d_p}")
+            lines.append(f"file '{phases[-1]['file']}'")
             sc_mp4 = keyframes_dir / f"scene_clip_{idx:02d}.mp4"
-            # Concatenate the 3 progressive Remotion animation phases for this scene with subtle 30fps motion
             concat_p = keyframes_dir / f"phases_{idx:02d}.txt"
-            concat_p.write_text(
-                f"file '{p0}'\nduration {d0}\nfile '{p1}'\nduration {d1}\nfile '{p2}'\nduration {d2}\nfile '{p2}'\n",
-                encoding="utf-8",
-            )
+            concat_p.write_text("\n".join(lines) + "\n", encoding="utf-8")
             run_cmd(
                 [
                     "ffmpeg",
@@ -568,7 +572,7 @@ async def build_episode(blueprint_path: Path) -> dict[str, Any]:
                     "-i",
                     str(concat_p),
                     "-vf",
-                    f"fps=30,scale=1920:1080,fade=t=in:st=0:d=0.25,fade=t=out:st={max(0.1, dur - 0.25)}:d=0.25",
+                    f"fps=30,scale=1920:1080,fade=t=in:st=0:d=0.28,fade=t=out:st={max(0.1, dur - 0.28)}:d=0.28",
                     "-c:v",
                     "libx264",
                     "-preset",
@@ -653,11 +657,11 @@ async def build_episode(blueprint_path: Path) -> dict[str, Any]:
         ]
     )
 
-    # Extract scene preview thumbnails for the Web Review Studio
+    # Extract scene preview thumbnails from the settled animation phase for the Web Review Studio
     thumbs_dir = work_dir / "thumbnails"
     thumbs_dir.mkdir(parents=True, exist_ok=True)
     for idx, rec in enumerate(scene_records):
-        mid_sec = round(rec["in_seconds"] + min(2.2, rec["duration"] * 0.45), 2)
+        mid_sec = round(rec["in_seconds"] + min(4.8, rec["duration"] * 0.65), 2)
         thumb_path = thumbs_dir / f"{rec['id']}.jpg"
         run_cmd(
             [

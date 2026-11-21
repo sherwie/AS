@@ -56,7 +56,7 @@ export const ReceiptComparison: React.FC<ReceiptComparisonProps> = ({
         background: backgroundColor,
         justifyContent: "center",
         alignItems: "center",
-        padding: "48px 96px",
+        padding: "105px 88px 115px 88px",
         opacity: fadeOut,
         fontFamily: "'Space Grotesk', 'Inter', system-ui, sans-serif",
       }}

@@ -39,6 +39,7 @@ import {
   ReceiptComparison,
   ReceiptItem,
 } from "./components/ReceiptComparison";
+import { DocumentaryStage } from "./components/DocumentaryStage";
 import { resolveAsset } from "./lib/resolveAsset";
 import type { ParticleType } from "./components/ParticleOverlay";
 import { resolveTheme, type ThemeConfig, DEFAULT_THEME } from "./Root";
@@ -278,6 +279,11 @@ interface Cut {
   rightItems?: ReceiptItem[];
   rightTotal?: string;
   savingsBadge?: string;
+  // DocumentaryStage editorial props
+  chapterCode?: string;
+  chapterTitle?: string;
+  sourceCitation?: string;
+  cameraMotion?: "zoom-in" | "zoom-out" | "pan-right" | "pan-left";
 }
 
 interface Overlay {
@@ -566,7 +572,9 @@ const BackgroundVideoLayer: React.FC<{
 };
 
 const SceneRenderer: React.FC<{ cut: Cut; theme: ThemeConfig }> = ({ cut, theme }) => {
-  // Wrap component with background video or image if specified
+  const accent = cut.accentColor || theme.accentColor;
+
+  // Wrap component with DocumentaryStage (B-roll plate + 3D camera dolly + Vox blueprint grid + broadcast telemetry header)
   const maybeWrapWithBg = (element: React.ReactElement) => {
     if (cut.backgroundVideo) {
       return (
@@ -579,26 +587,27 @@ const SceneRenderer: React.FC<{ cut: Cut; theme: ThemeConfig }> = ({ cut, theme 
         </BackgroundVideoLayer>
       );
     }
-    if (cut.backgroundImage) {
-      return (
-        <BackgroundImageLayer
-          src={cut.backgroundImage}
-          overlayOpacity={cut.backgroundOverlay ?? 0.55}
-        >
-          {element}
-        </BackgroundImageLayer>
-      );
-    }
-    return element;
+    return (
+      <DocumentaryStage
+        backgroundImage={cut.backgroundImage}
+        overlayOpacity={cut.backgroundOverlay ?? 0.68}
+        chapterCode={cut.chapterCode || "CASE FILE // 2026-Q4"}
+        chapterTitle={cut.chapterTitle || cut.title || "EMPIRICAL DECISION LEDGER"}
+        sourceCitation={
+          cut.sourceCitation ||
+          "SOURCE: ECB HOUSEHOLD TRANSACTION DATASET & RETAIL TELEMETRY"
+        }
+        accentColor={accent}
+        cameraMotion={cut.cameraMotion || "zoom-in"}
+      >
+        {element}
+      </DocumentaryStage>
+    );
   };
 
-  // Resolve the scene element based on cut type, then wrap with backgroundImage if set
-  // Use transparent bg so the animated gradient background shows through
-  // When no explicit backgroundColor on the cut, inherit from theme
-  const rawBg = (cut.backgroundImage || cut.backgroundVideo) ? "transparent" : (cut.backgroundColor || theme.surfaceColor);
-  const bgColor = (rawBg === theme.backgroundColor || rawBg === "#0F172A" || rawBg === "#0f172a") ? "transparent" : rawBg;
+  // Use transparent bg on foreground cards so DocumentaryStage B-roll and blueprint grid show through
+  const bgColor = "transparent";
   const textColor = cut.color || theme.textColor;
-  const accent = cut.accentColor || theme.accentColor;
 
   // Explicit component types — use theme-derived defaults for colors
   if (cut.type === "text_card" && cut.text) {

@@ -32,104 +32,19 @@ export const ComparisonCard: React.FC<ComparisonCardProps> = ({
   rightLabel,
   leftValue,
   rightValue,
-  leftColor = "#2563EB",
+  leftColor = "#EF4444",
   rightColor = "#10B981",
   title,
-  changeIndicator,
-  changeDirection = "neutral",
-  backgroundColor = "#FFFFFF",
-  cardBackgroundColor = "#F3F4F6",
-  textColor = "#1F2937",
-  fontFamily = "Inter, system-ui, sans-serif",
-  titleFontSize = 44,
-  labelFontSize = 28,
-  valueFontSize = 72,
+  backgroundColor = "transparent",
+  textColor = "#F8FAFC",
+  fontFamily = "'Space Grotesk', 'Inter', system-ui, sans-serif",
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // Phase 1: Title + left side appears
-  const titleOpacity = spring({
-    frame,
-    fps,
-    config: { damping: 20 },
-  });
-
-  const leftOpacity = spring({
-    frame: frame - 6,
-    fps,
-    config: { damping: 18 },
-  });
-  const leftSlide = spring({
-    frame: frame - 6,
-    fps,
-    config: { damping: 14, stiffness: 90 },
-    from: -40,
-    to: 0,
-  });
-  const leftScale = spring({
-    frame: frame - 6,
-    fps,
-    config: { damping: 12, stiffness: 100 },
-    from: 0.9,
-    to: 1,
-  });
-
-  // Phase 2: Divider draws in (vertical line)
-  const dividerDraw = spring({
-    frame: frame - 16,
-    fps,
-    config: { damping: 14, stiffness: 80 },
-  });
-
-  // Phase 3: Right side appears
-  const rightOpacity = spring({
-    frame: frame - 24,
-    fps,
-    config: { damping: 18 },
-  });
-  const rightSlide = spring({
-    frame: frame - 24,
-    fps,
-    config: { damping: 14, stiffness: 90 },
-    from: 40,
-    to: 0,
-  });
-  const rightScale = spring({
-    frame: frame - 24,
-    fps,
-    config: { damping: 12, stiffness: 100 },
-    from: 0.9,
-    to: 1,
-  });
-
-  // Phase 4: Change indicator
-  const indicatorOpacity = spring({
-    frame: frame - 32,
-    fps,
-    config: { damping: 15 },
-  });
-  const indicatorScale = spring({
-    frame: frame - 32,
-    fps,
-    config: { damping: 10, stiffness: 130 },
-    from: 0.6,
-    to: 1,
-  });
-
-  // Arrow glyph based on direction
-  const directionArrow =
-    changeDirection === "up"
-      ? "\u2191"
-      : changeDirection === "down"
-        ? "\u2193"
-        : "\u2194";
-  const directionColor =
-    changeDirection === "up"
-      ? "#10B981"
-      : changeDirection === "down"
-        ? "#EF4444"
-        : "#9CA3AF";
+  const leftSpring = spring({ frame: frame - 4, fps, config: { damping: 14 } });
+  const rightSpring = spring({ frame: frame - 14, fps, config: { damping: 14 } });
+  const deltaSpring = spring({ frame: frame - 24, fps, config: { damping: 12 } });
 
   return (
     <AbsoluteFill
@@ -137,28 +52,26 @@ export const ComparisonCard: React.FC<ComparisonCardProps> = ({
         background: backgroundColor,
         justifyContent: "center",
         alignItems: "center",
+        padding: "105px 88px 115px 88px",
+        fontFamily,
       }}
     >
       <div
         style={{
+          width: "100%",
+          maxWidth: 1640,
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          width: "80%",
-          maxWidth: 1540,
-          gap: 32,
+          gap: 28,
         }}
       >
-        {/* Title */}
         {title && (
           <div
             style={{
-              fontFamily,
-              fontWeight: 700,
-              fontSize: titleFontSize,
-              color: textColor,
               textAlign: "center",
-              opacity: titleOpacity,
+              fontSize: 40,
+              fontWeight: 900,
+              color: textColor,
               letterSpacing: "-0.02em",
             }}
           >
@@ -166,191 +79,207 @@ export const ComparisonCard: React.FC<ComparisonCardProps> = ({
           </div>
         )}
 
-        {/* Comparison container */}
         <div
           style={{
-            display: "flex",
-            flexDirection: "row",
+            display: "grid",
+            gridTemplateColumns: "1fr 120px 1fr",
             alignItems: "stretch",
-            width: "100%",
-            borderRadius: 16,
-            backgroundColor: cardBackgroundColor,
-            overflow: "hidden",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-            minHeight: 280,
+            gap: 24,
           }}
         >
-          {/* Left side */}
+          {/* Left Path (Wealth Destruction) */}
           <div
             style={{
-              flex: 1,
+              background:
+                "linear-gradient(155deg, rgba(24, 11, 18, 0.92) 0%, rgba(10, 6, 12, 0.96) 100%)",
+              border: "2px solid rgba(239, 68, 68, 0.65)",
+              borderRadius: 24,
+              padding: "42px 44px",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "48px 32px",
-              opacity: leftOpacity,
-              transform: `translateX(${leftSlide}px) scale(${leftScale})`,
-              gap: 16,
+              justifyContent: "space-between",
+              gap: 24,
+              boxShadow: "0 30px 70px rgba(239, 68, 68, 0.18)",
+              opacity: leftSpring,
+              transform: `translateX(${interpolate(leftSpring, [0, 1], [-40, 0])}px)`,
             }}
           >
-            {/* Left color accent bar */}
-            <div
-              style={{
-                width: 48,
-                height: 4,
-                backgroundColor: leftColor,
-                borderRadius: 2,
-                marginBottom: 8,
-              }}
-            />
-            <div
-              style={{
-                fontFamily,
-                fontWeight: 600,
-                fontSize: labelFontSize,
-                color: textColor,
-                opacity: 0.7,
-                textTransform: "uppercase" as const,
-                letterSpacing: "0.05em",
-              }}
-            >
-              {leftLabel}
-            </div>
-            <div
-              style={{
-                fontFamily,
-                fontWeight: 800,
-                fontSize: valueFontSize,
-                color: leftColor,
-                lineHeight: 1.1,
-              }}
-            >
-              {leftValue}
-            </div>
-          </div>
-
-          {/* Center divider + change indicator */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              width: 80,
-              position: "relative",
-            }}
-          >
-            {/* Vertical divider line */}
-            <div
-              style={{
-                width: 2,
-                height: `${dividerDraw * 100}%`,
-                backgroundColor: "#D1D5DB",
-                position: "absolute",
-                top: `${((1 - dividerDraw) / 2) * 100}%`,
-              }}
-            />
-
-            {/* Change indicator badge */}
-            {changeIndicator && (
-              <div
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span
                 style={{
-                  position: "relative",
-                  zIndex: 1,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  gap: 4,
-                  opacity: indicatorOpacity,
-                  transform: `scale(${indicatorScale})`,
+                  padding: "6px 14px",
+                  borderRadius: 6,
+                  background: "rgba(239, 68, 68, 0.2)",
+                  color: "#FCA5A5",
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: 15,
+                  fontWeight: 800,
                 }}
               >
-                <div
-                  style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: 24,
-                    backgroundColor,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    boxShadow: "0 1px 4px rgba(0,0,0,0.1)",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily,
-                      fontWeight: 700,
-                      fontSize: 24,
-                      color: directionColor,
-                    }}
-                  >
-                    {directionArrow}
-                  </span>
-                </div>
-                <div
-                  style={{
-                    fontFamily,
-                    fontWeight: 700,
-                    fontSize: 18,
-                    color: directionColor,
-                    whiteSpace: "nowrap" as const,
-                  }}
-                >
-                  {changeIndicator}
-                </div>
+                PATH A // REACTIVE CONSUMER
+              </span>
+              <span style={{ fontSize: 16, fontFamily: "monospace", color: "#EF4444" }}>
+                -€528/YR DRAIN
+              </span>
+            </div>
+
+            <div>
+              <div
+                style={{
+                  fontSize: 24,
+                  fontWeight: 700,
+                  color: "#CBD5E1",
+                  marginBottom: 12,
+                }}
+              >
+                {leftLabel}
               </div>
-            )}
+              <div
+                style={{
+                  fontSize: 80,
+                  fontWeight: 900,
+                  color: leftColor,
+                  fontFamily: "'JetBrains Mono', monospace",
+                  lineHeight: 1.05,
+                  textShadow: "0 0 36px rgba(239, 68, 68, 0.45)",
+                }}
+              >
+                {leftValue}
+              </div>
+            </div>
+
+            <div
+              style={{
+                paddingTop: 18,
+                borderTop: "1px solid rgba(239, 68, 68, 0.25)",
+                fontSize: 18,
+                color: "#FCA5A5",
+                lineHeight: 1.45,
+              }}
+            >
+              10 consecutive winters of unplanned €528 holiday overspending + zero compounding return.
+            </div>
           </div>
 
-          {/* Right side */}
+          {/* Center VS Delta Badge */}
           <div
             style={{
-              flex: 1,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              padding: "48px 32px",
-              opacity: rightOpacity,
-              transform: `translateX(${rightSlide}px) scale(${rightScale})`,
-              gap: 16,
+              gap: 14,
+              opacity: deltaSpring,
+              transform: `scale(${interpolate(deltaSpring, [0, 1], [0.7, 1])})`,
             }}
           >
-            {/* Right color accent bar */}
             <div
               style={{
-                width: 48,
-                height: 4,
-                backgroundColor: rightColor,
-                borderRadius: 2,
-                marginBottom: 8,
-              }}
-            />
-            <div
-              style={{
-                fontFamily,
-                fontWeight: 600,
-                fontSize: labelFontSize,
-                color: textColor,
-                opacity: 0.7,
-                textTransform: "uppercase" as const,
-                letterSpacing: "0.05em",
+                width: 84,
+                height: 84,
+                borderRadius: "50%",
+                background: "rgba(15, 23, 42, 0.95)",
+                border: "2px solid #F59E0B",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: 24,
+                fontWeight: 900,
+                color: "#F59E0B",
+                boxShadow: "0 0 30px rgba(245, 158, 11, 0.35)",
               }}
             >
-              {rightLabel}
+              VS
             </div>
             <div
               style={{
-                fontFamily,
+                padding: "6px 12px",
+                borderRadius: 8,
+                background: "rgba(16, 185, 129, 0.2)",
+                border: "1px solid #10B981",
+                color: "#6EE7B7",
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: 14,
                 fontWeight: 800,
-                fontSize: valueFontSize,
-                color: rightColor,
-                lineHeight: 1.1,
+                textAlign: "center",
               }}
             >
-              {rightValue}
+              €13,541 SWING
+            </div>
+          </div>
+
+          {/* Right Path (Compounded Capital) */}
+          <div
+            style={{
+              background:
+                "linear-gradient(155deg, rgba(8, 26, 24, 0.92) 0%, rgba(5, 14, 15, 0.96) 100%)",
+              border: "2px solid rgba(16, 185, 129, 0.75)",
+              borderRadius: 24,
+              padding: "42px 44px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              gap: 24,
+              boxShadow: "0 30px 70px rgba(16, 185, 129, 0.22)",
+              opacity: rightSpring,
+              transform: `translateX(${interpolate(rightSpring, [0, 1], [40, 0])}px)`,
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span
+                style={{
+                  padding: "6px 14px",
+                  borderRadius: 6,
+                  background: "rgba(16, 185, 129, 0.2)",
+                  color: "#6EE7B7",
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: 15,
+                  fontWeight: 800,
+                }}
+              >
+                PATH B // ENGINEERED PROTOCOL
+              </span>
+              <span style={{ fontSize: 16, fontFamily: "monospace", color: "#10B981" }}>
+                8.0% CAGR INDEX
+              </span>
+            </div>
+
+            <div>
+              <div
+                style={{
+                  fontSize: 24,
+                  fontWeight: 700,
+                  color: "#CBD5E1",
+                  marginBottom: 12,
+                }}
+              >
+                {rightLabel}
+              </div>
+              <div
+                style={{
+                  fontSize: 80,
+                  fontWeight: 900,
+                  color: rightColor,
+                  fontFamily: "'JetBrains Mono', monospace",
+                  lineHeight: 1.05,
+                  textShadow: "0 0 36px rgba(16, 185, 129, 0.45)",
+                }}
+              >
+                {rightValue}
+              </div>
+            </div>
+
+            <div
+              style={{
+                paddingTop: 18,
+                borderTop: "1px solid rgba(16, 185, 129, 0.25)",
+                fontSize: 18,
+                color: "#6EE7B7",
+                lineHeight: 1.45,
+              }}
+            >
+              Redirecting the €528 annual holiday surplus into a global equity index every January 2nd.
             </div>
           </div>
         </div>
