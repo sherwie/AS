@@ -4,15 +4,14 @@ Local Mac Apple Silicon Voice Cloning & Timestamp Engine
 ========================================================
 Uses your local Mac install of:
   1. `mlx-audio` + `mlx-community/Qwen3-TTS-12Hz-0.6B-Base-8bit`
-     Takes a 5–15s reference voice recording (`--ref-audio`) and its reference
-     transcript (`--ref-text`) to clone your chosen narrator voice across every
-     scene or chapter in the JSON blueprint.
-  2. Automatic Sentence Chunking (~30–35s chunks) so `Qwen3-TTS` never trips the
+     Accepts ANY reference audio or video file (`.wav`, `.mp3`, `.m4a`, `.mp4`, `.mov` —
+     for example `~/AS/episodes/001_airline_banks/v2_cinematic/ep01_cold_open_v2_cinematic_r2_1920x1080.mp4`),
+     automatically extracts a clean 12-second 24kHz mono voice reference clip,
+     and auto-transcribes `--ref-text` via `whisper.cpp` if `--ref-text` is omitted or `"auto"`.
+  2. Automatic Sentence Chunking (~25–30s chunks) so `Qwen3-TTS` never trips the
      macOS Metal GPU watchdog (which caps single-pass generation at ~500 tokens / ~40s).
-  3. Local Mac `whisper.cpp` (`whisper-cli -oj -ml 1`) or `mlx_audio.stt` to
-     extract exact millisecond word-level timestamps (`*.words.json`) from your
-     cloned voice audio so all 30fps numbers, charts, and captions lock to the
-     exact spoken word.
+  3. Local Mac `whisper.cpp` (`whisper-cli -oj -ml 1`) to extract exact millisecond
+     word-level timestamps (`*.words.json`) from your cloned voice audio.
 """
 
 from __future__ import annotations
@@ -27,10 +26,74 @@ from pathlib import Path
 from typing import Any
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
+_LOADED_MLX_MODEL: Any = None
+
+
+def prepare_reference_voice_and_text(
+    ref_input: Path, ref_text: str, work_dir: Path
+) -> tuple[Path, str]:
+    """Extract a clean 12-second 24kHz mono WAV from any input audio/video (.mp4/.wav/.m4a)
+    and auto-transcribe ref_text via whisper.cpp if ref_text == 'auto' or empty."""
+    work_dir.mkdir(parents=True, exist_ok=True)
+    clean_ref_wav = work_dir / "ref_voice_12s_24k.wav"
+    subprocess.run(
+        [
+            "ffmpeg",
+            "-y",
+            "-i",
+            str(ref_input.expanduser().resolve()),
+            "-t",
+            "12",
+            "-vn",
+            "-ar",
+            "24000",
+            "-ac",
+            "1",
+            str(clean_ref_wav),
+        ],
+        check=True,
+        capture_output=True,
+    )
+
+    if not ref_text or ref_text.strip().lower() == "auto":
+        whisper_bin = shutil.which("whisper-cli") or shutil.which("whisper-cpp")
+        model_candidates = list(Path.home().glob("**/ggml-*.bin"))
+        if whisper_bin and model_candidates:
+            out_prefix = work_dir / "ref_voice_transcript"
+            subprocess.run(
+                [
+                    whisper_bin,
+                    "-m",
+                    str(model_candidates[0]),
+                    "-f",
+                    str(clean_ref_wav),
+                    "-oj",
+                    "-of",
+                    str(out_prefix),
+                ],
+                check=False,
+                capture_output=True,
+            )
+            json_out = Path(f"{out_prefix}.json")
+            if json_out.exists():
+                data = json.loads(json_out.read_text(encoding="utf-8"))
+                auto_txt = " ".join(
+                    seg.get("text", "").strip()
+                    for seg in data.get("transcription", [])
+                    if seg.get("text", "").strip()
+                ).strip()
+                if auto_txt:
+                    print(f"  [whisper.cpp] Auto-transcribed reference voice: \"{auto_txt}\"")
+                    return clean_ref_wav, auto_txt
+
+        ref_text = "Most people do not blow their budget on one big reckless purchase."
+        print(f"  [info] Using default reference prompt text: \"{ref_text}\"")
+
+    return clean_ref_wav, ref_text
 
 
 def split_into_metal_safe_chunks(text: str, max_words: int = 55) -> list[str]:
-    """Split long chapter narration into ~25-35s sentence chunks (<500 tokens at 12Hz)
+    """Split long chapter narration into ~25-30s sentence chunks (<500 tokens at 12Hz)
     to prevent Apple Silicon Metal GPU watchdog timeouts."""
     sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s.strip()]
     chunks: list[str] = []
@@ -59,17 +122,20 @@ def generate_qwen3_cloned_voice_mac(
     lang_code: str = "English",
 ) -> None:
     """Synthesize speech using mlx-audio + Qwen3-TTS-0.6B (8-bit quantized) with voice cloning."""
+    global _LOADED_MLX_MODEL
     out_wav.parent.mkdir(parents=True, exist_ok=True)
     chunks = split_into_metal_safe_chunks(text, max_words=55)
 
     try:
-        # Path A: Direct Python mlx_audio API (loads model weights once in unified memory)
         from mlx_audio.tts.utils import load_model
         import soundfile as sf
         import numpy as np
 
-        print(f"  [mlx-audio] Loading {model_id} on Apple Silicon Metal GPU...")
-        model = load_model(model_id)
+        if _LOADED_MLX_MODEL is None:
+            print(f"  [mlx-audio] Loading {model_id} once into Apple Silicon unified memory...")
+            _LOADED_MLX_MODEL = load_model(model_id)
+
+        model = _LOADED_MLX_MODEL
         all_audio = []
         sr = 24000
 
@@ -86,8 +152,7 @@ def generate_qwen3_cloned_voice_mac(
                 audio_np = np.array(res.audio, dtype=np.float32)
                 sr = getattr(res, "sample_rate", 24000)
                 all_audio.append(audio_np)
-                # 0.22s natural breath pause between sentence groups
-                all_audio.append(np.zeros(int(sr * 0.22), dtype=np.float32))
+                all_audio.append(np.zeros(int(sr * 0.16), dtype=np.float32))
 
         merged = np.concatenate(all_audio) if all_audio else np.zeros(24000, dtype=np.float32)
         tmp_raw = out_wav.with_suffix(".raw24k.wav")
@@ -102,7 +167,6 @@ def generate_qwen3_cloned_voice_mac(
     except ImportError:
         pass
 
-    # Path B: CLI fallback (`python -m mlx_audio.tts.generate`)
     chunk_wavs: list[Path] = []
     for idx, chunk_text in enumerate(chunks):
         c_prefix = out_wav.parent / f"{out_wav.stem}_part{idx:02d}"
@@ -161,7 +225,6 @@ def extract_whisper_cpp_word_timestamps(
     to extract exact millisecond word-level timestamps."""
     whisper_bin = shutil.which("whisper-cli") or shutil.which("whisper-cpp")
     if whisper_bin:
-        # Locate standard whisper ggml model on Mac
         model_candidates = list(Path.home().glob("**/ggml-*.bin"))
         if model_candidates:
             out_prefix = audio_wav.with_suffix("")
@@ -178,7 +241,7 @@ def extract_whisper_cpp_word_timestamps(
                     "-of",
                     str(out_prefix),
                 ],
-                check=True,
+                check=False,
                 capture_output=True,
             )
             json_out = Path(f"{out_prefix}.json")
@@ -195,7 +258,6 @@ def extract_whisper_cpp_word_timestamps(
                 if words:
                     return words
 
-    # Fallback proportional word timing if whisper model path is custom
     dur_out = subprocess.check_output(
         [
             "ffprobe",
@@ -220,7 +282,7 @@ def extract_whisper_cpp_word_timestamps(
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Clone your reference voice with mlx-audio + Qwen3-TTS-12Hz-0.6B-Base-8bit for any episode blueprint."
+        description="Clone your reference voice (.wav or .mp4) with mlx-audio + Qwen3-TTS-12Hz-0.6B-Base-8bit."
     )
     parser.add_argument(
         "--blueprint",
@@ -231,13 +293,13 @@ def main() -> int:
         "--ref-audio",
         type=Path,
         required=True,
-        help="Path to your 5-20s reference voice WAV file (e.g. voices/my_voice.wav)",
+        help="Path to any reference voice .wav or .mp4 video file",
     )
     parser.add_argument(
         "--ref-text",
         type=str,
-        required=True,
-        help="Exact transcript spoken in your reference voice WAV file",
+        default="auto",
+        help="Reference transcript (or 'auto' to transcribe automatically via whisper.cpp)",
     )
     parser.add_argument(
         "--model",
@@ -250,8 +312,13 @@ def main() -> int:
     bp = json.loads(args.blueprint.read_text(encoding="utf-8"))
     ep_id = bp["id"]
     items = bp.get("chapters") or bp.get("scenes") or []
-    audio_dir = ROOT_DIR / "public" / "renders" / ep_id / "scenes_audio"
+    ep_out_dir = ROOT_DIR / "public" / "renders" / ep_id
+    audio_dir = ep_out_dir / "scenes_audio"
     audio_dir.mkdir(parents=True, exist_ok=True)
+
+    clean_ref_wav, resolved_ref_text = prepare_reference_voice_and_text(
+        args.ref_audio, args.ref_text, audio_dir
+    )
 
     print(f"=== Voice Cloning {len(items)} Chapters with {args.model} ===")
     for idx, item in enumerate(items):
@@ -263,8 +330,8 @@ def main() -> int:
         generate_qwen3_cloned_voice_mac(
             text=item["narration"],
             out_wav=wav_path,
-            ref_audio=args.ref_audio,
-            ref_text=args.ref_text,
+            ref_audio=clean_ref_wav,
+            ref_text=resolved_ref_text,
             model_id=args.model,
         )
         subprocess.run(["ffmpeg", "-y", "-i", str(wav_path), str(mp3_path)], check=True, capture_output=True)
@@ -272,8 +339,17 @@ def main() -> int:
         words_path.write_text(json.dumps(words, indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"  ✔ Cloned & Whisper-synced {cid}: {wav_path.name} ({len(words)} words)")
 
-    print("\n✅ All chapters cloned! Now rendering 30fps 1080p video + -14 LUFS master + DaVinci .otio...")
-    subprocess.run([sys.executable, str(ROOT_DIR / "pipeline" / "longform_30fps_engine.py"), "--blueprint", str(args.blueprint)], check=True)
+    # Clear cached master audio & chapter clips so longform_30fps_engine rebuilds with the cloned voice
+    for stale in [ep_out_dir / "Master_Audio_14LUFS.wav", ep_out_dir / "A1_Voiceover_Master.wav"]:
+        stale.unlink(missing_ok=True)
+    if (ep_out_dir / "chapter_clips").exists():
+        shutil.rmtree(ep_out_dir / "chapter_clips", ignore_errors=True)
+
+    print("\n✅ All chapters cloned! Re-rendering 30fps 1080p video + -14 LUFS master + DaVinci .otio...")
+    subprocess.run(
+        [sys.executable, str(ROOT_DIR / "pipeline" / "longform_30fps_engine.py"), "--blueprint", str(args.blueprint)],
+        check=True,
+    )
     return 0
 
 
