@@ -342,13 +342,13 @@ def main() -> int:
     # Clear cached master audio & chapter clips so v2_cinematic_documentary_engine rebuilds with the cloned voice
     for stale in [ep_out_dir / "Master_Audio_14LUFS.wav", ep_out_dir / "A1_Voiceover_Master.wav"]:
         stale.unlink(missing_ok=True)
-    for d in ["chapter_clips", "v2_chapter_clips"]:
+    for d in ["chapter_clips", "v2_chapter_clips", "v3_chapter_clips"]:
         if (ep_out_dir / d).exists():
             shutil.rmtree(ep_out_dir / d, ignore_errors=True)
 
-    print("\n✅ All chapters cloned! Re-rendering v2_cinematic 30fps 1080p documentary + -14 LUFS master...")
+    print("\n✅ All chapters cloned! Re-rendering v3_editorial_cinema 30fps 1080p documentary + -14 LUFS master...")
     subprocess.run(
-        [sys.executable, str(ROOT_DIR / "pipeline" / "v2_cinematic_documentary_engine.py"), "--mode", "both", "--blueprint", str(args.blueprint)],
+        [sys.executable, str(ROOT_DIR / "pipeline" / "v3_editorial_cinema_engine.py"), "--mode", "both", "--blueprint", str(args.blueprint)],
         check=True,
     )
     return 0

@@ -44,3 +44,8 @@ public/renders/*/v2_chapter_work/
 public/renders/*/v2_chapter_clips/
 public/renders/*/visuals_v2_cinematic_30fps.mp4
 public/renders/sample-45s-v2-cinematic/
+
+public/renders/*/v3_chapter_work/
+public/renders/*/v3_chapter_clips/
+public/renders/*/visuals_v3_editorial_30fps.mp4
+public/renders/sample-45s-v3-editorial/
