@@ -20,6 +20,6 @@ if [ -f "$REF_AUDIO" ] && python3 -c "import mlx_audio" >/dev/null 2>&1; then
     --model "$MODEL"
 else
   echo "ℹ Note: Either '$REF_AUDIO' was not found or mlx_audio is not installed in this python3."
-  echo "  Running 30fps render engine..."
-  python3 pipeline/longform_30fps_engine.py --blueprint "$BLUEPRINT"
+  echo "  Running v2_cinematic live-action documentary engine..."
+  python3 pipeline/v2_cinematic_documentary_engine.py --mode both --blueprint "$BLUEPRINT"
 fi

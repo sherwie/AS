@@ -339,15 +339,16 @@ def main() -> int:
         words_path.write_text(json.dumps(words, indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"  ✔ Cloned & Whisper-synced {cid}: {wav_path.name} ({len(words)} words)")
 
-    # Clear cached master audio & chapter clips so longform_30fps_engine rebuilds with the cloned voice
+    # Clear cached master audio & chapter clips so v2_cinematic_documentary_engine rebuilds with the cloned voice
     for stale in [ep_out_dir / "Master_Audio_14LUFS.wav", ep_out_dir / "A1_Voiceover_Master.wav"]:
         stale.unlink(missing_ok=True)
-    if (ep_out_dir / "chapter_clips").exists():
-        shutil.rmtree(ep_out_dir / "chapter_clips", ignore_errors=True)
+    for d in ["chapter_clips", "v2_chapter_clips"]:
+        if (ep_out_dir / d).exists():
+            shutil.rmtree(ep_out_dir / d, ignore_errors=True)
 
-    print("\n✅ All chapters cloned! Re-rendering 30fps 1080p video + -14 LUFS master + DaVinci .otio...")
+    print("\n✅ All chapters cloned! Re-rendering v2_cinematic 30fps 1080p documentary + -14 LUFS master...")
     subprocess.run(
-        [sys.executable, str(ROOT_DIR / "pipeline" / "longform_30fps_engine.py"), "--blueprint", str(args.blueprint)],
+        [sys.executable, str(ROOT_DIR / "pipeline" / "v2_cinematic_documentary_engine.py"), "--mode", "both", "--blueprint", str(args.blueprint)],
         check=True,
     )
     return 0
