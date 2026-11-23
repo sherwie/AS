@@ -355,7 +355,7 @@ def render_one_v5_chapter(args_tuple: tuple[int, dict, float, list[dict], Path])
     )
 
     # 4. Smooth-fading Bebas Neue Chapter Title + 2 Sliding Lower-Thirds + 0.000s Karaoke Subtitles
-    t_up = ch_title.upper()
+    t_up = ch_title.replace("→", "TO").upper()
     if len(t_up) > 26:
         wt = t_up.split()
         mid = len(wt) // 2
@@ -363,11 +363,16 @@ def render_one_v5_chapter(args_tuple: tuple[int, dict, float, list[dict], Path])
     else:
         t_lines = [t_up]
 
-    tp_open = create_title_png(ch_dir / "tp_open.png", ch_code, t_lines, quote_txt[:88], accent_rgb)
+    # Clean word-boundary truncation for quote subtitle (no mid-word cutoff)
+    q_clean = quote_txt
+    if len(q_clean) > 84:
+        q_clean = q_clean[:84].rsplit(" ", 1)[0].rstrip(",;:") + "..."
+
+    tp_open = create_title_png(ch_dir / "tp_open.png", ch_code, t_lines, q_clean, accent_rgb)
     lt1 = create_lower_third_png(
         ch_dir / "lt1.png",
         ch.get("eyebrow_start", ch_code),
-        f"{u_pre}{s_val:,}{u_suf}  →  {u_pre}{e_val:,}{u_suf}",
+        f"{u_pre}{s_val:,}{u_suf} TO {u_pre}{e_val:,}{u_suf}",
         delta_badge,
         accent_rgb,
     )
@@ -375,7 +380,7 @@ def render_one_v5_chapter(args_tuple: tuple[int, dict, float, list[dict], Path])
         ch_dir / "lt2.png",
         f"DECISION PROTOCOL  •  CH {idx+1:02d}",
         delta_badge[:36] or ch_title[:36],
-        quote_txt[:82],
+        q_clean[:80],
         (16, 185, 129),
     )
 
@@ -405,6 +410,7 @@ def render_one_v5_chapter(args_tuple: tuple[int, dict, float, list[dict], Path])
             "-t", f"{target_dur:.3f}",
             "-c:v", "libx264",
             "-preset", "veryfast",
+            "-g", "60",
             "-crf", "26",
             "-maxrate", "395k",
             "-bufsize", "1600k",
