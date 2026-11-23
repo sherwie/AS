@@ -53,3 +53,9 @@ public/renders/sample-45s-v3-editorial/
 public/renders/sample-45s-v4-master/
 
 public/renders/sample-v5-flagship/
+
+public/renders/*/v5_chapter_work/
+public/renders/*/v5_chapter_clips/
+public/renders/*/v5_studio_audio/
+public/renders/*/v5_Master_Audio_14LUFS.wav
+public/renders/*/visuals_v5_flagship_30fps.mp4
